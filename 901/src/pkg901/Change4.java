@@ -6,6 +6,5 @@ public class Change4 {
     //Stalin Comrade
     //Boys, Run i
 
-memz virus here
 }
 
