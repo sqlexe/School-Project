@@ -20,15 +20,10 @@ import java.util.ArrayList;
     Image image;
     Graphics2D g;
     
-    Image outerSpaceImage;
+   
 
 
-    Rocket rocket;
- 
-    boolean gameOver;
-    int timeCount;
-    double frameRate = 25;
-    
+   
     static SpaceShip frame;
     public static void main(String[] args) {
         frame = new SpaceShip();
@@ -73,19 +68,18 @@ import java.util.ArrayList;
 
             public void keyPressed(KeyEvent e) {
                 
-                if (gameOver)
-                    return;
+              
                 
                 if (e.VK_UP == e.getKeyCode()) {
-                    rocket.incYSpeed(1);
+                
                 } else if (e.VK_DOWN == e.getKeyCode()) {
-                    rocket.incYSpeed(-1);
+               
                 } else if (e.VK_LEFT == e.getKeyCode()) {
-                    rocket.incXSpeed(-1);
+                    
                 } else if (e.VK_RIGHT == e.getKeyCode()) {
-                    rocket.incXSpeed(1);
+                  
                 } else if (e.VK_SPACE == e.getKeyCode()) {
-                    Missile.Add(rocket);
+                   
                 }
 
                 repaint();
@@ -134,20 +128,9 @@ import java.util.ArrayList;
             return;
         }
 
-        g.drawImage(outerSpaceImage,Window.getX(0),Window.getY(0),
-                Window.getWidth2(),Window.getHeight2(),this);
+       
 
-        rocket.draw();
-   
-        Star.Draw();
-        Missile.Draw();
-        
-        if (gameOver)
-        {
-            g.setColor(Color.white);
-            g.setFont(new Font("Arial",Font.PLAIN,50));
-            g.drawString("Game Over", 60, 360);        
-        }            
+    
         gOld.drawImage(image, 0, 0, null);
     }
 
@@ -158,7 +141,7 @@ import java.util.ArrayList;
             animate();
             repaint();
 //            double seconds = .04;    //time that 1 frame takes.
-            double seconds = 1/frameRate;    //time that 1 frame takes.
+            double seconds = 1/5;    //time that 1 frame takes.
             int miliseconds = (int) (1000.0 * seconds);
             try {
                 Thread.sleep(miliseconds);
@@ -168,11 +151,7 @@ import java.util.ArrayList;
     }
 /////////////////////////////////////////////////////////////////////////
     public void reset() {
-        timeCount = 0;
-        gameOver = false;
-        rocket = new Rocket();
-        Star.Init();
-        Missile.Init();
+   
 
     }
 /////////////////////////////////////////////////////////////////////////
@@ -182,27 +161,11 @@ import java.util.ArrayList;
             if (Window.xsize != getSize().width || Window.ysize != getSize().height) {
                 Window.xsize = getSize().width;
                 Window.ysize = getSize().height;
-            }
-            outerSpaceImage = Toolkit.getDefaultToolkit().getImage("./outerSpace.jpg");
+            }  
+         
             reset();                  
         }
-        if (gameOver)
-            return;
-        
-//added code        
-        Missile.CheckHit();
-        
-        if (Star.Move(rocket))
-        {
-            gameOver = true;                
-        }
-        Missile.Move();
-        rocket.move();
-
-        if (timeCount % frameRate == frameRate-1)
-            Star.Add();
-        
-        timeCount++;
+      
     }
 
 ////////////////////////////////////////////////////////////////////////////
@@ -266,252 +229,11 @@ class Window {
     }    
 }
 
-class Rocket {
-    private static Image image = Toolkit.getDefaultToolkit().getImage("./rocket.GIF");    
-    
-    private int xPos;
-    private int yPos;
-    private int xSpeed;
-    private int ySpeed;
-   
-    Rocket()
-    {
-        xPos = Window.getWidth2()/2;
-        yPos = Window.getHeight2()/2;  
-        xSpeed = 1;
-        ySpeed = 0;
-    }
-
-    public void draw()
-    {
-        Drawing.drawImage(image,Window.getX(xPos),Window.getYNormal(yPos),0.0,1.0,1.0 );
-    }
-    public void move()
-    { 
-        
-        yPos += ySpeed;
-        
-//Stop the rocket when it gets to the top or bottom of the window.        
-        if (yPos < 0)
-        {
-            yPos = 0;
-            ySpeed = 0;
-        }
-        if (yPos > Window.getHeight2())
-        {
-            yPos = Window.getHeight2();
-            ySpeed = 0;
-        }
-                
-    }   
-    public void incYSpeed(int speed) {
-        ySpeed += speed;
-    }
-    public void incXSpeed(int speed) {
-        xSpeed += speed;
-        if (xSpeed <= 0)
-            xSpeed = 1;        
-    } 
-    public int getXPos() {
-        return (xPos);
-    }
-    public int getYPos() {
-        return (yPos);
-    }
-    public int getXSpeed() {
-        return (xSpeed);
-    }
-        
-}
-
-class Star { 
-    private static Image image = Toolkit.getDefaultToolkit().getImage("./starAnim.GIF");    
-    private static ArrayList<Star> stars = new ArrayList<Star>();     
-    private static int numlives = 3; 
-    
-    
-    
-    
-    private int xPos;
-    private int yPos;
-
-    public static void Init() {
-        stars.clear();      
-    }    
-    public static void Add() {
-        Star star = new Star();
-        stars.add(star);
-        star.xPos = Window.getWidth2();
-    }
-    public static void Draw()
-    {
-        for (int i = 0;i<stars.size();i++) {
-            stars.get(i).draw();
-        }
-    }
-    public static boolean Move(Rocket rocket) {
-        for (int i=0;i < stars.size();i++) {
-            if (stars.get(i).collide(rocket.getXPos(),rocket.getYPos()))
-            {
-                return (true);                
-            }
-            stars.get(i).move(rocket.getXSpeed());
-            if (stars.get(i).checkRemove())
-                i--;
-        }           
-        
-        return (false);
-    }    
-
-//added code      
-   
-    
-    
-    
-    
-    
-    public static boolean CheckHit(int objXPos,int objYPos)
-    {
-        for (int i=0;i<stars.size();i++)
-        {
-            if (stars.get(i).collide(objXPos,objYPos))
-            {
-                stars.remove(i);
-                return true;
-            }
-        }
-        return false;
-    }
-    
-    Star()
-    {
-        xPos = (int)(Math.random()* Window.getWidth2());
-        yPos = (int)(Math.random()* Window.getHeight2());        
-         
-    }
-    private void draw()
-    {
-        Drawing.drawImage(image,Window.getX(xPos),Window.getYNormal(yPos),0.0,1.0,1.0);
-    }
-    private void move(int rocketSpeed)
-    {
-        xPos -= rocketSpeed;    
-    }   
-    private boolean checkRemove()
-    {
-        if (xPos < 0)
-        {
-            stars.remove(this);
-            return true;
-        }         
-        return false;
-    }       
-    
-//added code  
-    private boolean collide(int objXPos,int objYPos)
-    {
-        if (xPos+10 > objXPos &&
-        xPos-10 < objXPos &&
-        yPos+10 > objYPos &&
-        yPos-10 < objYPos)    
-        {
-            numlives--;
-            System.out.println(numlives);
-           if(numlives<=0)
-           
-            return (true);
-       }
-        return (false);
-    }    
-}
 
 
 
-class Missile { 
-    private static ArrayList<Missile> missiles = new ArrayList<Missile>();     
-    
-    private int xPos;
-    private int yPos;
-    private int speed;
-    private static int score = 0; 
-    private static int highScore = 0; 
-    public static void Init() {
-        missiles.clear();      
-    }    
-    public static void Add(Rocket rocket) {
-        Missile missile = new Missile();
-        missiles.add(missile);
-        missile.xPos = rocket.getXPos();
-        missile.yPos = rocket.getYPos();
-    }
-    public static void Draw()
-    {
-        for (int i=0;i<missiles.size();i++) {
-            missiles.get(i).draw();
-        }
-    }
-    public static boolean Move() {
-        for (int i=0;i < missiles.size();i++) {
-//            if (missiles.get(i).collide(rocket.getXPos(),rocket.getYPos()))
-//            {
-//                return (true);                
-//            }
-            missiles.get(i).move();
-            if (missiles.get(i).checkRemove())
-            {
-                missiles.remove(i);
-                i--;
-            }
-        }           
-        
-        return (false);
-    }  
-    public void print(){
-            System.out.println(  "score is" +score);
-             System.out.println("highscore is" + highScore);
-        
-        
-        }
-    
-    
-    
-//added code      
-    public static void CheckHit() {
-        for (int i=0;i < missiles.size();i++) {
-            if (Star.CheckHit(missiles.get(i).xPos,missiles.get(i).yPos))
-            {
-                score++;
-                highScore++;
-                missiles.remove(i);
-                i--;
-            }
-        }
-    }
-        
-       
-    
-    Missile()
-    {
-        speed = 2;
-    }
-    private void draw()
-    {
-        Drawing.drawCircle(Window.getX(xPos),Window.getYNormal(yPos),0.0,.4,.4,Color.red);
-    }
-    private void move()
-    {
-        xPos += speed;    
-    }   
-    private boolean checkRemove()
-    {
-        if (xPos > Window.getWidth2())
-        {
-            return true;
-        }         
-        return false;
-    }       
 
-}
+
 
 
 class Drawing {
@@ -523,19 +245,7 @@ class Drawing {
         mainClassInst = _mainClassInst;
     }
 ////////////////////////////////////////////////////////////////////////////
-    public static void drawCircle(int xpos,int ypos,double rot,double xscale,double yscale,Color color)
-    {
-        g.translate(xpos,ypos);
-        g.rotate(rot  * Math.PI/180.0);
-        g.scale( xscale , yscale );
-
-        g.setColor(color);
-        g.fillOval(-10,-10,20,20);
-
-        g.scale( 1.0/xscale,1.0/yscale );
-        g.rotate(-rot  * Math.PI/180.0);
-        g.translate(-xpos,-ypos);
-    }
+  
 ////////////////////////////////////////////////////////////////////////////
     public static void drawImage(Image image,int xpos,int ypos,double rot,double xscale,
             double yscale) {
