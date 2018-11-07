@@ -132,8 +132,8 @@ import java.util.ArrayList;
         g.drawImage(FeltBG,Window.getX(0),Window.getY(0),
                 Window.getWidth2(),Window.getHeight2(),this);
         
-        g.drawImage(Middle,Window.getX(80),Window.getY(80),
-                Window.getX(160),Window.getY(160),this);
+        g.drawImage(Middle,Window.getX(Window.WINDOW_WIDTH/2-150),Window.getY(Window.WINDOW_HEIGHT/2-150),
+                Window.getX(300),Window.getY(300),this);
 
     
         gOld.drawImage(image, 0, 0, null);
