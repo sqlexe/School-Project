@@ -22,6 +22,11 @@ import java.util.ArrayList;
     
     Image FeltBG;
     Image Middle;
+    Image MrYee;
+    Image Alex;
+    Image Student;
+    Image Tamperer;
+    Image Blank;
 
 
    
@@ -134,6 +139,15 @@ import java.util.ArrayList;
         
         g.drawImage(Middle,Window.getX(80),Window.getY(80),
                 Window.getX(160),Window.getY(160),this);
+        
+        g.drawImage(MrYee,Window.getX(200),Window.getY(160),
+                Window.getX(180),Window.getY(200),this);
+        
+        g.drawImage(Alex,Window.getX(100),Window.getY(100),
+                Window.getX(160),Window.getY(160),this);
+        
+        g.drawImage(Tamperer,Window.getX(120),Window.getY(120),
+                Window.getX(160),Window.getY(160),this);
 
     
         gOld.drawImage(image, 0, 0, null);
@@ -169,6 +183,11 @@ import java.util.ArrayList;
             }
             FeltBG = Toolkit.getDefaultToolkit().getImage("./FeltBG.jpg");
             Middle = Toolkit.getDefaultToolkit().getImage("./blackHole.gif");
+            Tamperer = Toolkit.getDefaultToolkit().getImage("./Tamperer.jpg");
+            MrYee = Toolkit.getDefaultToolkit().getImage("./Mr.Yee.jpg");
+            Alex = Toolkit.getDefaultToolkit().getImage("./Alex.jpg");
+            
+            
             reset();                  
         }
       
