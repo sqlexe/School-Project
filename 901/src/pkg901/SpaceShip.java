@@ -139,8 +139,13 @@ import java.util.ArrayList;
         
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         g.drawImage(Middle,Window.getX(80),Window.getY(80),
                 Window.getX(160),Window.getY(160),this);
+=======
+//        g.drawImage(Middle,Window.getX(80),Window.getY(80),
+//                Window.getX(160),Window.getY(160),this);
+>>>>>>> 32e264831e1bba10c6406ad63cd3a79d10d052cd
 =======
 //        g.drawImage(Middle,Window.getX(80),Window.getY(80),
 //                Window.getX(160),Window.getY(160),this);
