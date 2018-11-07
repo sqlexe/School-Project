@@ -20,7 +20,7 @@ import java.util.ArrayList;
     Image image;
     Graphics2D g;
     
-   
+    Image FeltBG;
 
 
    
@@ -128,7 +128,8 @@ import java.util.ArrayList;
             return;
         }
 
-       
+        g.drawImage(FeltBG,Window.getX(0),Window.getY(0),
+                Window.getWidth2(),Window.getHeight2(),this);
 
     
         gOld.drawImage(image, 0, 0, null);
@@ -161,8 +162,8 @@ import java.util.ArrayList;
             if (Window.xsize != getSize().width || Window.ysize != getSize().height) {
                 Window.xsize = getSize().width;
                 Window.ysize = getSize().height;
-            }  
-         
+            }
+            FeltBG = Toolkit.getDefaultToolkit().getImage("./FeltBG.jpg");
             reset();                  
         }
       
@@ -187,45 +188,44 @@ import java.util.ArrayList;
 ////////////////////////////////////////////////////////////////////////////
 
 class Window {
-    private static final int XBORDER = 20;
+    
     
 //    private static final int YBORDER = 20;
     
-    private static final int TOP_BORDER = 40;
-    private static final int BOTTOM_BORDER = 20;
+   
     
     private static final int YTITLE = 30;
     private static final int WINDOW_BORDER = 8;
-    static final int WINDOW_WIDTH = 2*(WINDOW_BORDER + XBORDER) + 600;
-    static final int WINDOW_HEIGHT = YTITLE + WINDOW_BORDER + 600;
+    static final int WINDOW_WIDTH = 2*(WINDOW_BORDER) + 1900;
+    static final int WINDOW_HEIGHT = YTITLE + WINDOW_BORDER + 1000;
     static int xsize = -1;
     static int ysize = -1;
 
 
 /////////////////////////////////////////////////////////////////////////
     public static int getX(int x) {
-        return (x + XBORDER + WINDOW_BORDER);
+        return (x  + WINDOW_BORDER);
     }
 
     public static int getY(int y) {
 //        return (y + YBORDER + YTITLE );
-        return (y + TOP_BORDER + YTITLE );
+        return (y  + YTITLE );
         
     }
 
     public static int getYNormal(int y) {
 //          return (-y + YBORDER + YTITLE + getHeight2());
-      return (-y + TOP_BORDER + YTITLE + getHeight2());
+      return (-y + YTITLE + getHeight2());
         
     }
     
     public static int getWidth2() {
-        return (xsize - 2 * (XBORDER + WINDOW_BORDER));
+        return (xsize - 2 * (WINDOW_BORDER));
     }
 
     public static int getHeight2() {
 //        return (ysize - 2 * YBORDER - WINDOW_BORDER - YTITLE);
-        return (ysize - (BOTTOM_BORDER + TOP_BORDER) - WINDOW_BORDER - YTITLE);
+        return (ysize  - WINDOW_BORDER - YTITLE);
     }    
 }
 
