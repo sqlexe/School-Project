@@ -138,9 +138,15 @@ import java.util.ArrayList;
                 Window.getWidth2(),Window.getHeight2(),this);
 
 
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
                 Window.getWidth2(),Window.getHeight2(),this);
         
+<<<<<<< HEAD
        g.drawImage(MrYee,Window.getX(440),Window.getY(50),
+=======
 
    
         g.drawImage(MrYee,Window.getX(200),Window.getY(160),
@@ -151,6 +157,7 @@ import java.util.ArrayList;
         
 
         g.drawImage(MrYee,Window.getX(440),Window.getY(50),
+>>>>>>> 07ce77724c084e08fd8a9c6e0aec50c51a34e20e
                 Window.getX(220),Window.getY(260),this);
 
        
@@ -160,7 +167,22 @@ import java.util.ArrayList;
         g.drawImage(Tamperer,Window.getX(1240),Window.getY(50),
                 Window.getX(220),Window.getY(260),this);
 
+<<<<<<< HEAD
 =======
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> d4ad065c8b6740010a45733d4ef9faf796522ac1
+>>>>>>> a1f0f5004c735a81e20425e7b3ba5da7d630db9a
+>>>>>>> c63cdf9d7f7345d9a3041f18ad2e6e8223fcb74c
+>>>>>>> b9184e03265d26c8153686a29b0408c341994d1b
+=======
+>>>>>>> d5d3fa1a3a9e1876dd8f802f4cea2762e48cfadb
+>>>>>>> 2b4d8ed57f5bdc8933fdb8c92d277fe9c6d7644d
+>>>>>>> 07ce77724c084e08fd8a9c6e0aec50c51a34e20e
+>>>>>>> 219594c6863067c96b399d1dfec1a71c4d82d4b0
 
         g.drawImage(Middle,Window.getX(Window.WINDOW_WIDTH/2-150),Window.getY(Window.WINDOW_HEIGHT/2-150),
                 Window.getX(300),Window.getY(300),this);
