@@ -14,7 +14,7 @@ import java.util.ArrayList;
     
     
     
-    public class SpaceShip extends JFrame implements Runnable {
+    public class Room901 extends JFrame implements Runnable {
 
     boolean animateFirstTime = true;
     Image image;
@@ -30,15 +30,15 @@ import java.util.ArrayList;
 
 
    
-    static SpaceShip frame;
+    static Room901 frame;
     public static void main(String[] args) {
-        frame = new SpaceShip();
+        frame = new Room901();
         frame.setSize(Window.WINDOW_WIDTH, Window.WINDOW_HEIGHT);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
     }
 
-    public SpaceShip() {
+    public Room901() {
         addMouseListener(new MouseAdapter() {
             public void mousePressed(MouseEvent e) {
                 if (e.BUTTON1 == e.getButton()) {
@@ -137,15 +137,7 @@ import java.util.ArrayList;
         g.drawImage(FeltBG,Window.getX(0),Window.getY(0),
                 Window.getWidth2(),Window.getHeight2(),this);
         
-
-   
-        g.drawImage(MrYee,Window.getX(200),Window.getY(160),
-                Window.getX(220),Window.getY(260),this);
         
-        g.drawImage(Alex,Window.getX(300),Window.getY(100),
-                Window.getX(220),Window.getY(260),this);
-        
-
         g.drawImage(MrYee,Window.getX(440),Window.getY(50),
                 Window.getX(220),Window.getY(260),this);
 
@@ -155,6 +147,22 @@ import java.util.ArrayList;
         
         g.drawImage(Tamperer,Window.getX(1240),Window.getY(50),
                 Window.getX(220),Window.getY(260),this);
+
+        
+        g.drawImage(Student,Window.getX(440),Window.getY(500),
+                Window.getX(220),Window.getY(260),this);
+        
+        g.drawImage(Blank,Window.getX(1240),Window.getY(500),
+                Window.getX(220),Window.getY(260),this);
+         g.drawImage(Blank,Window.getX(150),Window.getY(400),
+                Window.getX(200),Window.getY(100),this);
+
+        
+        
+        
+        
+
+
 
 
 
@@ -199,6 +207,8 @@ import java.util.ArrayList;
             Tamperer = Toolkit.getDefaultToolkit().getImage("./Tamperer.jpg");
             MrYee = Toolkit.getDefaultToolkit().getImage("./Mr.Yee.jpg");
             Alex = Toolkit.getDefaultToolkit().getImage("./Alex.jpg");
+            Student = Toolkit.getDefaultToolkit().getImage("./Student.jpg");
+            Blank = Toolkit.getDefaultToolkit().getImage("./InkBlank.jpg");
             
             
             reset();                  
@@ -275,9 +285,9 @@ class Window {
 
 class Drawing {
     private static Graphics2D g;
-    private static SpaceShip mainClassInst;
+    private static Room901 mainClassInst;
 
-    public static void setDrawingInfo(Graphics2D _g,SpaceShip _mainClassInst) {
+    public static void setDrawingInfo(Graphics2D _g,Room901 _mainClassInst) {
         g = _g;
         mainClassInst = _mainClassInst;
     }
