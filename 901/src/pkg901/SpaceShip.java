@@ -136,10 +136,17 @@ import java.util.ArrayList;
         //KEEP THESE THEYRE ARE CORRECT 
         g.drawImage(FeltBG,Window.getX(0),Window.getY(0),
                 Window.getWidth2(),Window.getHeight2(),this);
+        
+
    
+        g.drawImage(MrYee,Window.getX(200),Window.getY(160),
+                Window.getX(220),Window.getY(260),this);
+        
+        g.drawImage(Alex,Window.getX(300),Window.getY(100),
+                Window.getX(220),Window.getY(260),this);
+        
 
         g.drawImage(MrYee,Window.getX(440),Window.getY(50),
-
                 Window.getX(220),Window.getY(260),this);
 
        
@@ -148,6 +155,7 @@ import java.util.ArrayList;
         
         g.drawImage(Tamperer,Window.getX(1240),Window.getY(50),
                 Window.getX(220),Window.getY(260),this);
+<<<<<<< HEAD
         
         g.drawImage(Student,Window.getX(440),Window.getY(500),
                 Window.getX(220),Window.getY(260),this);
@@ -156,6 +164,10 @@ import java.util.ArrayList;
                 Window.getX(220),Window.getY(260),this);
          g.drawImage(Blank,Window.getX(150),Window.getY(400),
                 Window.getX(200),Window.getY(100),this);
+=======
+
+
+>>>>>>> 5c71d915395b43de2b0ddcf5c0a37add04639ea4
 
         g.drawImage(Middle,Window.getX(Window.WINDOW_WIDTH/2-150),Window.getY(Window.WINDOW_HEIGHT/2-150),
                 Window.getX(300),Window.getY(300),this);
@@ -198,8 +210,6 @@ import java.util.ArrayList;
             Tamperer = Toolkit.getDefaultToolkit().getImage("./Tamperer.jpg");
             MrYee = Toolkit.getDefaultToolkit().getImage("./Mr.Yee.jpg");
             Alex = Toolkit.getDefaultToolkit().getImage("./Alex.jpg");
-            Student = Toolkit.getDefaultToolkit().getImage("./Student.jpg");
-            Blank = Toolkit.getDefaultToolkit().getImage("./Blank.jpg");
             
             
             reset();                  
