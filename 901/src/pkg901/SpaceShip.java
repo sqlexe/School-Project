@@ -133,60 +133,18 @@ import java.util.ArrayList;
             gOld.drawImage(image, 0, 0, null);
             return;
         }
-
+        //KEEP THESE THEYRE ARE CORRECT 
         g.drawImage(FeltBG,Window.getX(0),Window.getY(0),
-                Window.getWidth2(),Window.getHeight2(),this);
-<<<<<<< HEAD
-   
-        g.drawImage(MrYee,Window.getX(200),Window.getY(160),
-                Window.getX(220),Window.getY(260),this);
-        
-        g.drawImage(Alex,Window.getX(300),Window.getY(100),
-                Window.getX(220),Window.getY(260),this);
-        
-        g.drawImage(Tamperer,Window.getX(400),Window.getY(120),
-                Window.getX(220),Window.getY(260),this);
-=======
-
-
-
-        
-
-
-
-       
-
-//        g.drawImage(Middle,Window.getX(80),Window.getY(80),
-//                Window.getX(160),Window.getY(160),this);
-
-
-//        g.drawImage(Middle,Window.getX(80),Window.getY(80),
-//                Window.getX(160),Window.getY(160),this);
-
-
-//        g.drawImage(Middle,Window.getX(80),Window.getY(80),
-//                Window.getX(160),Window.getY(160),this);
-
-        
+                Window.getWidth2(),Window.getHeight2(),this);  
         g.drawImage(MrYee,Window.getX(440),Window.getY(50),
                 Window.getX(220),Window.getY(260),this);
-        
-
        
-        
- 
-
         g.drawImage(Alex,Window.getX(840),Window.getY(50),
                 Window.getX(220),Window.getY(260),this);
         
         g.drawImage(Tamperer,Window.getX(1240),Window.getY(50),
                 Window.getX(220),Window.getY(260),this);
-<<<<<<< HEAD
 
-=======
->>>>>>> d4ad065c8b6740010a45733d4ef9faf796522ac1
->>>>>>> a1f0f5004c735a81e20425e7b3ba5da7d630db9a
->>>>>>> c63cdf9d7f7345d9a3041f18ad2e6e8223fcb74c
 
         g.drawImage(Middle,Window.getX(Window.WINDOW_WIDTH/2-150),Window.getY(Window.WINDOW_HEIGHT/2-150),
                 Window.getX(300),Window.getY(300),this);
