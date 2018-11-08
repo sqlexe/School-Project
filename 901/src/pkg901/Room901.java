@@ -14,7 +14,7 @@ import java.util.ArrayList;
     
     
     
-    public class SpaceShip extends JFrame implements Runnable {
+    public class Room901 extends JFrame implements Runnable {
 
     boolean animateFirstTime = true;
     Image image;
@@ -30,15 +30,15 @@ import java.util.ArrayList;
 
 
    
-    static SpaceShip frame;
+    static Room901 frame;
     public static void main(String[] args) {
-        frame = new SpaceShip();
+        frame = new Room901();
         frame.setSize(Window.WINDOW_WIDTH, Window.WINDOW_HEIGHT);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
     }
 
-    public SpaceShip() {
+    public Room901() {
         addMouseListener(new MouseAdapter() {
             public void mousePressed(MouseEvent e) {
                 if (e.BUTTON1 == e.getButton()) {
@@ -275,9 +275,9 @@ class Window {
 
 class Drawing {
     private static Graphics2D g;
-    private static SpaceShip mainClassInst;
+    private static Room901 mainClassInst;
 
-    public static void setDrawingInfo(Graphics2D _g,SpaceShip _mainClassInst) {
+    public static void setDrawingInfo(Graphics2D _g,Room901 _mainClassInst) {
         g = _g;
         mainClassInst = _mainClassInst;
     }
