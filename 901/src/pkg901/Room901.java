@@ -78,8 +78,9 @@ import java.util.ArrayList;
                 
                 if (e.VK_UP == e.getKeyCode()) {
                 
-                } else if (e.VK_DOWN == e.getKeyCode()) {
-               
+                } else if (e.VK_DOWN == e.getKeyCode()) 
+               {
+                      homescreen=false;
                 } else if (e.VK_LEFT == e.getKeyCode()) {
                     
                 } else if (e.VK_RIGHT == e.getKeyCode()) {
