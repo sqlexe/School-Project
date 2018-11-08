@@ -26,7 +26,7 @@ import java.util.ArrayList;
     Image Alex;
     Image Student;
     Image Tamperer;
-    Image Blank;
+    Image Back;
 
 
    
@@ -149,19 +149,18 @@ import java.util.ArrayList;
         g.drawImage(Tamperer,Window.getX(1240),Window.getY(50),
                 Window.getX(220),Window.getY(260),this);
 
-<<<<<<< HEAD
-        g.drawImage(Blank,Window.getX(1240),Window.getY(400),
+        g.drawImage(Back,Window.getX(1240),Window.getY(400),
                    Window.getX(220),Window.getY(260),this);
         
         g.drawImage(Student,Window.getX(440),Window.getY(400),
                 Window.getX(220),Window.getY(260),this);
-=======
-        
+
         g.drawImage(Middle,Window.getX(Window.WINDOW_WIDTH/2-150),Window.getY(Window.WINDOW_HEIGHT/2-150),
                 Window.getX(300),Window.getY(300),this);
 
         g.setColor(Color.RED);
         g.drawRect(Window.getX(440),Window.getY(400),Window.getX(220),Window.getY(260));
+        
     
         gOld.drawImage(image, 0, 0, null);
     }
@@ -200,7 +199,7 @@ import java.util.ArrayList;
             MrYee = Toolkit.getDefaultToolkit().getImage("./Mr.Yee.jpg");
             Alex = Toolkit.getDefaultToolkit().getImage("./Alex.jpg");
             Student = Toolkit.getDefaultToolkit().getImage("./Student.jpg");
-            Blank = Toolkit.getDefaultToolkit().getImage("./InkBlank.jpg");
+            Back = Toolkit.getDefaultToolkit().getImage("./Back.jpg");
             
             
             reset();                  
