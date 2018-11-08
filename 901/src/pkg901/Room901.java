@@ -27,7 +27,7 @@ import java.util.ArrayList;
     Image Student;
     Image Tamperer;
     Image Blank;
-
+    boolean homescreen =true;
 
    
     static Room901 frame;
@@ -134,6 +134,9 @@ import java.util.ArrayList;
             return;
         }
         //KEEP THESE THEYRE ARE RIGHT 
+        
+        
+        
         g.drawImage(FeltBG,Window.getX(0),Window.getY(0),
                 Window.getWidth2(),Window.getHeight2(),this);
         
@@ -163,6 +166,14 @@ import java.util.ArrayList;
         g.setColor(Color.RED);
         g.drawRect(Window.getX(440),Window.getY(400),Window.getX(220),Window.getY(260));
     
+        
+        if(homescreen)
+        {
+             g.drawImage(Blank,Window.getX(0),Window.getY(0),
+               Window.getWidth2(),Window.getHeight2(),this);
+        }
+        
+        
         gOld.drawImage(image, 0, 0, null);
     }
 
