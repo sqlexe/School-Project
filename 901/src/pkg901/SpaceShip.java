@@ -133,19 +133,11 @@ import java.util.ArrayList;
             gOld.drawImage(image, 0, 0, null);
             return;
         }
-        //KEEP THESE THEYRE ARE CORRECT 
+        //KEEP THESE THEYRE ARE RIGHT 
         g.drawImage(FeltBG,Window.getX(0),Window.getY(0),
                 Window.getWidth2(),Window.getHeight2(),this);
         
-
-   
-        g.drawImage(MrYee,Window.getX(200),Window.getY(160),
-                Window.getX(220),Window.getY(260),this);
         
-        g.drawImage(Alex,Window.getX(300),Window.getY(100),
-                Window.getX(220),Window.getY(260),this);
-        
-
         g.drawImage(MrYee,Window.getX(440),Window.getY(50),
                 Window.getX(220),Window.getY(260),this);
 
@@ -156,6 +148,7 @@ import java.util.ArrayList;
         g.drawImage(Tamperer,Window.getX(1240),Window.getY(50),
                 Window.getX(220),Window.getY(260),this);
 <<<<<<< HEAD
+<<<<<<< HEAD
         
         g.drawImage(Student,Window.getX(440),Window.getY(500),
                 Window.getX(220),Window.getY(260),this);
@@ -165,6 +158,14 @@ import java.util.ArrayList;
          g.drawImage(Blank,Window.getX(150),Window.getY(400),
                 Window.getX(200),Window.getY(100),this);
 =======
+=======
+        
+        g.drawImage(Blank,Window.getX(1240),Window.getY(400),
+                Window.getX(220),Window.getY(260),this);
+        
+        g.drawImage(Student,Window.getX(440),Window.getY(400),
+                Window.getX(220),Window.getY(260),this);
+>>>>>>> 993c17fea50538efb3e70099572fd3571c9ee857
 
 
 >>>>>>> 5c71d915395b43de2b0ddcf5c0a37add04639ea4
@@ -210,6 +211,8 @@ import java.util.ArrayList;
             Tamperer = Toolkit.getDefaultToolkit().getImage("./Tamperer.jpg");
             MrYee = Toolkit.getDefaultToolkit().getImage("./Mr.Yee.jpg");
             Alex = Toolkit.getDefaultToolkit().getImage("./Alex.jpg");
+            Student = Toolkit.getDefaultToolkit().getImage("./Student.jpg");
+            Blank = Toolkit.getDefaultToolkit().getImage("./InkBlank.jpg");
             
             
             reset();                  
