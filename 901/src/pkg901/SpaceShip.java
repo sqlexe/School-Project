@@ -133,7 +133,7 @@ import java.util.ArrayList;
             gOld.drawImage(image, 0, 0, null);
             return;
         }
-        //KEEP THESE THEYRE ARE CORRECT 
+        //KEEP THESE THEYRE ARE RIGHT 
         g.drawImage(FeltBG,Window.getX(0),Window.getY(0),
                 Window.getWidth2(),Window.getHeight2(),this);
    
