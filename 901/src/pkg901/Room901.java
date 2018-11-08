@@ -26,8 +26,13 @@ import java.util.ArrayList;
     Image Alex;
     Image Student;
     Image Tamperer;
+<<<<<<< HEAD
     Image Back;
 
+=======
+    Image Blank;
+    boolean homescreen =true;
+>>>>>>> e96aa99f8627894425f5d5c1d53e68cb9e96b934
 
    
     static Room901 frame;
@@ -78,8 +83,9 @@ import java.util.ArrayList;
                 
                 if (e.VK_UP == e.getKeyCode()) {
                 
-                } else if (e.VK_DOWN == e.getKeyCode()) {
-               
+                } else if (e.VK_DOWN == e.getKeyCode()) 
+               {
+                      homescreen=false;
                 } else if (e.VK_LEFT == e.getKeyCode()) {
                     
                 } else if (e.VK_RIGHT == e.getKeyCode()) {
@@ -134,6 +140,9 @@ import java.util.ArrayList;
             return;
         }
         //KEEP THESE THEYRE ARE RIGHT 
+        
+        
+        
         g.drawImage(FeltBG,Window.getX(0),Window.getY(0),
                 Window.getWidth2(),Window.getHeight2(),this);
         
@@ -149,12 +158,21 @@ import java.util.ArrayList;
         g.drawImage(Tamperer,Window.getX(1240),Window.getY(50),
                 Window.getX(220),Window.getY(260),this);
 
+<<<<<<< HEAD
         g.drawImage(Back,Window.getX(1240),Window.getY(400),
+=======
+
+        g.drawImage(Blank,Window.getX(1240),Window.getY(400),
+>>>>>>> e96aa99f8627894425f5d5c1d53e68cb9e96b934
                    Window.getX(220),Window.getY(260),this);
         
         g.drawImage(Student,Window.getX(440),Window.getY(400),
                 Window.getX(220),Window.getY(260),this);
 
+<<<<<<< HEAD
+=======
+        
+>>>>>>> e96aa99f8627894425f5d5c1d53e68cb9e96b934
         g.drawImage(Middle,Window.getX(Window.WINDOW_WIDTH/2-150),Window.getY(Window.WINDOW_HEIGHT/2-150),
                 Window.getX(300),Window.getY(300),this);
 
@@ -162,6 +180,14 @@ import java.util.ArrayList;
         g.drawRect(Window.getX(440),Window.getY(400),Window.getX(220),Window.getY(260));
         
     
+        
+        if(homescreen)
+        {
+             g.drawImage(Blank,Window.getX(0),Window.getY(0),
+               Window.getWidth2(),Window.getHeight2(),this);
+        }
+        
+        
         gOld.drawImage(image, 0, 0, null);
     }
 
