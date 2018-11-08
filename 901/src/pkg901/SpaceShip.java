@@ -136,6 +136,17 @@ import java.util.ArrayList;
 
         g.drawImage(FeltBG,Window.getX(0),Window.getY(0),
                 Window.getWidth2(),Window.getHeight2(),this);
+<<<<<<< HEAD
+   
+        g.drawImage(MrYee,Window.getX(200),Window.getY(160),
+                Window.getX(220),Window.getY(260),this);
+        
+        g.drawImage(Alex,Window.getX(300),Window.getY(100),
+                Window.getX(220),Window.getY(260),this);
+        
+        g.drawImage(Tamperer,Window.getX(400),Window.getY(120),
+                Window.getX(220),Window.getY(260),this);
+=======
 
 
 
@@ -170,7 +181,12 @@ import java.util.ArrayList;
         
         g.drawImage(Tamperer,Window.getX(1240),Window.getY(50),
                 Window.getX(220),Window.getY(260),this);
+<<<<<<< HEAD
 
+=======
+>>>>>>> d4ad065c8b6740010a45733d4ef9faf796522ac1
+>>>>>>> a1f0f5004c735a81e20425e7b3ba5da7d630db9a
+>>>>>>> c63cdf9d7f7345d9a3041f18ad2e6e8223fcb74c
 
         g.drawImage(Middle,Window.getX(Window.WINDOW_WIDTH/2-150),Window.getY(Window.WINDOW_HEIGHT/2-150),
                 Window.getX(300),Window.getY(300),this);
