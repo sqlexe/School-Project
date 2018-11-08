@@ -142,8 +142,7 @@ import java.util.ArrayList;
         
 
 
-        g.drawImage(Middle,Window.getX(80),Window.getY(80),
-                Window.getX(160),Window.getY(160),this);
+       
 
 //        g.drawImage(Middle,Window.getX(80),Window.getY(80),
 //                Window.getX(160),Window.getY(160),this);
@@ -156,10 +155,10 @@ import java.util.ArrayList;
         g.drawImage(MrYee,Window.getX(200),Window.getY(160),
                 Window.getX(220),Window.getY(260),this);
         
-        g.drawImage(Alex,Window.getX(100),Window.getY(100),
+        g.drawImage(Alex,Window.getX(600),Window.getY(100),
                 Window.getX(160),Window.getY(160),this);
         
-        g.drawImage(Tamperer,Window.getX(120),Window.getY(120),
+        g.drawImage(Tamperer,Window.getX(1000),Window.getY(120),
                 Window.getX(160),Window.getY(160),this);
 
         g.drawImage(Middle,Window.getX(Window.WINDOW_WIDTH/2-150),Window.getY(Window.WINDOW_HEIGHT/2-150),
