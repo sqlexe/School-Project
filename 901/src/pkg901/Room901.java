@@ -147,14 +147,28 @@ import java.util.ArrayList;
         
         g.drawImage(Tamperer,Window.getX(1240),Window.getY(50),
                 Window.getX(220),Window.getY(260),this);
+<<<<<<< HEAD
+<<<<<<< HEAD
+        
+        g.drawImage(Student,Window.getX(440),Window.getY(500),
+                Window.getX(220),Window.getY(260),this);
+        
+        g.drawImage(Blank,Window.getX(1240),Window.getY(500),
+                Window.getX(220),Window.getY(260),this);
+         g.drawImage(Blank,Window.getX(150),Window.getY(400),
+                Window.getX(200),Window.getY(100),this);
+=======
+=======
         
         g.drawImage(Blank,Window.getX(1240),Window.getY(400),
                 Window.getX(220),Window.getY(260),this);
         
         g.drawImage(Student,Window.getX(440),Window.getY(400),
                 Window.getX(220),Window.getY(260),this);
+>>>>>>> 993c17fea50538efb3e70099572fd3571c9ee857
 
 
+>>>>>>> 5c71d915395b43de2b0ddcf5c0a37add04639ea4
 
         g.drawImage(Middle,Window.getX(Window.WINDOW_WIDTH/2-150),Window.getY(Window.WINDOW_HEIGHT/2-150),
                 Window.getX(300),Window.getY(300),this);
