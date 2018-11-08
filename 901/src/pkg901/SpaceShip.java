@@ -198,7 +198,7 @@ import java.util.ArrayList;
             MrYee = Toolkit.getDefaultToolkit().getImage("./Mr.Yee.jpg");
             Alex = Toolkit.getDefaultToolkit().getImage("./Alex.jpg");
             Student = Toolkit.getDefaultToolkit().getImage("./Student.jpg");
-            Blank = Toolkit.getDefaultToolkit().getImage("./Blank.jpg");
+            Blank = Toolkit.getDefaultToolkit().getImage("./InkBlank.jpg");
             
             
             reset();                  
