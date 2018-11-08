@@ -138,6 +138,16 @@ import java.util.ArrayList;
                 Window.getWidth2(),Window.getHeight2(),this);
 
 
+                Window.getWidth2(),Window.getHeight2(),this);
+        
+       g.drawImage(MrYee,Window.getX(440),Window.getY(50),
+
+   
+        g.drawImage(MrYee,Window.getX(200),Window.getY(160),
+                Window.getX(220),Window.getY(260),this);
+        
+        g.drawImage(Alex,Window.getX(300),Window.getY(100),
+                Window.getX(220),Window.getY(260),this);
         
 
         g.drawImage(MrYee,Window.getX(440),Window.getY(50),
