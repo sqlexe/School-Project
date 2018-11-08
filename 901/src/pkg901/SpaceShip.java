@@ -154,6 +154,7 @@ import java.util.ArrayList;
         
         g.drawImage(Alex,Window.getX(300),Window.getY(100),
                 Window.getX(220),Window.getY(260),this);
+>>>>>>> 219594c6863067c96b399d1dfec1a71c4d82d4b0
         
 
         g.drawImage(MrYee,Window.getX(440),Window.getY(50),
