@@ -168,10 +168,7 @@ import java.util.ArrayList;
         g.setColor(Color.RED);
         g.drawRect(Window.getX(440),Window.getY(400),Window.getX(220),Window.getY(260));
         
-
-        
-        if(homescreen = true)
-         
+   
         
         if(homescreen)
         {
