@@ -182,6 +182,7 @@ import javax.sound.sampled.*;
 
             HomeScreen(Window.getX(0),Window.getY(0),0,Window.getWidth2(),Window.getHeight2());
 
+>>>>>>> f0ba736f51e948a4fe3a8cdc81308f25b7665521
             g.fillRect(Window.getX(0),Window.getY(0), Window.getWidth2(),Window.getHeight2());
            
             g.setColor(Color.white);
@@ -193,11 +194,15 @@ import javax.sound.sampled.*;
            
             g.setColor(Color.white);
             g.setFont(new Font("Arial",Font.PLAIN,100));
+<<<<<<< HEAD
+            g.drawString( numPlayers +"", 950,250);    
+=======
 
             g.drawString( numPlayers +"", 950, 370);    
 
 
             
+>>>>>>> f0ba736f51e948a4fe3a8cdc81308f25b7665521
 
         }
         
