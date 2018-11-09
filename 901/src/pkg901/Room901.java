@@ -266,7 +266,7 @@ import javax.sound.sampled.*;
                 Student = Toolkit.getDefaultToolkit().getImage("./Student.jpg");
                 Back = Toolkit.getDefaultToolkit().getImage("./Blank.jpg");
 
-                bgSound = new sound("bensound-onceagain.wav");
+                bgSound = new sound("bgsound.wav");
                 reset();
            
             
