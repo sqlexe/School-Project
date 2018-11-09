@@ -28,6 +28,7 @@ import java.util.ArrayList;
     Image Tamperer;
     Image Back;
     boolean homescreen = true;
+    int numPlayers =1;
 
    
     static Room901 frame;
@@ -93,6 +94,7 @@ import java.util.ArrayList;
                 else if (e.VK_SPACE == e.getKeyCode()) {
                    
                 }
+                
 
                 repaint();
             }
@@ -173,7 +175,7 @@ import java.util.ArrayList;
         if(homescreen)
         {
             g.setColor(Color.BLACK);
-            g.fillRect(Window.getX(0),Window.getY(0), Window.getWidth2(),Window.getHeight2());
+            HomeScreen(Window.getX(0),Window.getY(0),0,Window.getWidth2(),Window.getHeight2());
         }
         
            
@@ -188,6 +190,7 @@ import java.util.ArrayList;
 
         g.setColor(Color.BLACK);
         g.fillRect(Window.getX(0),Window.getY(0), Window.getWidth2(),Window.getHeight2());
+        
         
         g.scale( 1.0/xscale,1.0/yscale );
         g.rotate(-rot  * Math.PI/180.0);
@@ -228,7 +231,8 @@ import java.util.ArrayList;
             Alex = Toolkit.getDefaultToolkit().getImage("./Alex.jpg");
             Student = Toolkit.getDefaultToolkit().getImage("./Student.jpg");
             Back = Toolkit.getDefaultToolkit().getImage("./Blank.jpg");
-            
+            numPlayers =1;
+            homescreen =true; 
             
             reset();                  
         }
