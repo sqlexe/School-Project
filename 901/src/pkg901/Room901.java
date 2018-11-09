@@ -171,7 +171,7 @@ import javax.sound.sampled.*;
         g.drawRect(Window.getX(440),Window.getY(400),Window.getX(220),Window.getY(260));
         
 
-        if(homescreen == true)
+        
         if(homescreen)
         {
             g.setColor(Color.BLACK);
@@ -193,6 +193,8 @@ import javax.sound.sampled.*;
             g.fillRect(Window.getX(920),Window.getY(240),Window.getX(100),Window.getY(100));
            
             g.setColor(Color.white);
+            g.setFont(new Font("Arial",Font.PLAIN,100));
+            g.drawString( numPlayers +"", 950, 370);    
             g.setFont(new Font("Arial",Font.PLAIN,100));    
             g.drawString( numPlayers +"", 950, 370);    
 
@@ -218,12 +220,7 @@ import javax.sound.sampled.*;
         g.scale( 1.0/xscale,1.0/yscale );
         g.rotate(-rot  * Math.PI/180.0);
         g.translate(-xpos,-ypos);
-   
-    
-    
-    
-    
-    
+
     }
 ////////////////////////////////////////////////////////////////////////////
 // needed for     implement runnable
@@ -242,8 +239,9 @@ import javax.sound.sampled.*;
     }
 /////////////////////////////////////////////////////////////////////////
     public void reset() {
-   
+        
 
+           
     }
 /////////////////////////////////////////////////////////////////////////
     public void animate() {
@@ -263,11 +261,19 @@ import javax.sound.sampled.*;
 
                 bgSound = new sound("bensound-onceagain.wav");
                 reset();
-            }
+            FeltBG = Toolkit.getDefaultToolkit().getImage("./FeltBG.jpg");
+            Middle = Toolkit.getDefaultToolkit().getImage("./blackHole.gif");
+            Tamperer = Toolkit.getDefaultToolkit().getImage("./Tamperer.jpg");
+            MrYee = Toolkit.getDefaultToolkit().getImage("./Mr.Yee.jpg");
+            Alex = Toolkit.getDefaultToolkit().getImage("./Alex.jpg");
+            Student = Toolkit.getDefaultToolkit().getImage("./Student.jpg");
+            Back = Toolkit.getDefaultToolkit().getImage("./Blank.jpg");
+            bgSound = new sound("bensound-onceagain.wav");
             
-        
+            }
             if (bgSound.donePlaying)       
                 bgSound = new sound("bensound-onceagain.wav");
+             
             numPlayers =1;
             
                              
