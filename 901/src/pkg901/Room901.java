@@ -175,14 +175,6 @@ import javax.sound.sampled.*;
         if(homescreen)
         {
             g.setColor(Color.BLACK);
-
-
-            HomeScreen(Window.getX(0),Window.getY(0),0,Window.getWidth2(),Window.getHeight2());
-
-
-            HomeScreen(Window.getX(0),Window.getY(0),0,Window.getWidth2(),Window.getHeight2());
-
-
             g.fillRect(Window.getX(0),Window.getY(0), Window.getWidth2(),Window.getHeight2());
            
             g.setColor(Color.white);
@@ -192,15 +184,13 @@ import javax.sound.sampled.*;
             g.setColor(Color.GRAY);
             g.fillRect(Window.getX(920),Window.getY(240),Window.getX(100),Window.getY(100));
            
-            g.setColor(Color.white);
-            g.setFont(new Font("Arial",Font.PLAIN,100));
-            g.drawString( numPlayers +"", 950, 370);    
+            g.setColor(Color.white);   
             g.setFont(new Font("Arial",Font.PLAIN,100));    
-            g.drawString( numPlayers +"", 950, 370);    
-
-
+            g.drawString( numPlayers +"", 950, 370); 
             
-
+            g.setColor(Color.white);   
+            g.setFont(new Font("Castellar",Font.PLAIN,100));    
+            g.drawString("Room 901",1400/2,250); 
         }
         
            
@@ -340,11 +330,6 @@ class Window {
         return (ysize  - WINDOW_BORDER - YTITLE);
     }    
 }
-
-
-
-
-
 
 
 
