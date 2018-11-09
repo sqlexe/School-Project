@@ -175,9 +175,9 @@ import java.util.ArrayList;
         if(homescreen)
         {
             g.setColor(Color.BLACK);
-<<<<<<< HEAD
+
             HomeScreen(Window.getX(0),Window.getY(0),0,Window.getWidth2(),Window.getHeight2());
-=======
+
             g.fillRect(Window.getX(0),Window.getY(0), Window.getWidth2(),Window.getHeight2());
            
             g.setColor(Color.white);
@@ -185,12 +185,12 @@ import java.util.ArrayList;
             g.drawString("Amount of Players", 60, 360);     
             
             g.setColor(Color.GRAY);
-            g.fillRect(Window.getX(950),Window.getY(250),Window.getX(100),Window.getY(100));
+            g.fillRect(Window.getX(920),Window.getY(240),Window.getX(100),Window.getY(100));
            
             g.setColor(Color.white);
             g.setFont(new Font("Arial",Font.PLAIN,100));
-            g.drawString( numPlayers +"", 950, 250);    
->>>>>>> 0b87f87ba843711136c49707d2432154cc40beff
+            g.drawString( numPlayers +"", 950, 370);    
+
         }
         
            
