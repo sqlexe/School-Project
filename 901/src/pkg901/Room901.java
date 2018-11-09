@@ -174,6 +174,17 @@ import java.util.ArrayList;
         {
             g.setColor(Color.BLACK);
             g.fillRect(Window.getX(0),Window.getY(0), Window.getWidth2(),Window.getHeight2());
+           
+            g.setColor(Color.white);
+            g.setFont(new Font("Arial",Font.PLAIN,100));
+            g.drawString("Amount of Players", 60, 360);     
+            
+            g.setColor(Color.GRAY);
+            g.fillRect(Window.getX(950),Window.getY(250),Window.getX(100),Window.getY(100));
+           
+            g.setColor(Color.white);
+            g.setFont(new Font("Arial",Font.PLAIN,100));
+            g.drawString( numPlayers +"", 950, 250);    
         }
         
            
@@ -192,6 +203,12 @@ import java.util.ArrayList;
         g.scale( 1.0/xscale,1.0/yscale );
         g.rotate(-rot  * Math.PI/180.0);
         g.translate(-xpos,-ypos);
+   
+    
+    
+    
+    
+    
     }
 ////////////////////////////////////////////////////////////////////////////
 // needed for     implement runnable
