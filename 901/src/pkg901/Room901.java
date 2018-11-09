@@ -48,7 +48,7 @@ import java.util.ArrayList;
                     int xpos = e.getX();
                     int ypos = e.getY();
                     
-                    Board.AddTokenPixel(e.getX() - Window.getX(0),
+                    Player.click(e.getX() - Window.getX(0),
                         e.getY() - Window.getY(0));  
 
                 }
