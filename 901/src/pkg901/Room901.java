@@ -175,9 +175,13 @@ import java.util.ArrayList;
         if(homescreen)
         {
             g.setColor(Color.BLACK);
+<<<<<<< HEAD
 
             HomeScreen(Window.getX(0),Window.getY(0),0,Window.getWidth2(),Window.getHeight2());
 
+=======
+            HomeScreen(Window.getX(0),Window.getY(0),0,Window.getWidth2(),Window.getHeight2());
+>>>>>>> 56633eb696350bdcb99bea45f8289dde45140cca
             g.fillRect(Window.getX(0),Window.getY(0), Window.getWidth2(),Window.getHeight2());
            
             g.setColor(Color.white);
@@ -189,8 +193,12 @@ import java.util.ArrayList;
            
             g.setColor(Color.white);
             g.setFont(new Font("Arial",Font.PLAIN,100));
+<<<<<<< HEAD
             g.drawString( numPlayers +"", 950, 370);    
 
+=======
+            g.drawString( numPlayers +"", 950, 250);    
+>>>>>>> 56633eb696350bdcb99bea45f8289dde45140cca
         }
         
            
