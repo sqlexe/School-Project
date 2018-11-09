@@ -268,11 +268,11 @@ import javax.sound.sampled.*;
             Alex = Toolkit.getDefaultToolkit().getImage("./Alex.jpg");
             Student = Toolkit.getDefaultToolkit().getImage("./Student.jpg");
             Back = Toolkit.getDefaultToolkit().getImage("./Blank.jpg");
-            bgSound = new sound("bensound-onceagain.wav");
+            bgSound = new sound("bgsound.wav");
             
             }
             if (bgSound.donePlaying)       
-                bgSound = new sound("bensound-onceagain.wav");
+                bgSound = new sound("bgsound.wav");
              
             numPlayers =1;
             
