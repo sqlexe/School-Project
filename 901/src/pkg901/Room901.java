@@ -171,18 +171,10 @@ import javax.sound.sampled.*;
         g.drawRect(Window.getX(440),Window.getY(400),Window.getX(220),Window.getY(260));
         
 
-        if(homescreen == true)
+        
         if(homescreen)
         {
             g.setColor(Color.BLACK);
-
-
-            HomeScreen(Window.getX(0),Window.getY(0),0,Window.getWidth2(),Window.getHeight2());
-
-
-            HomeScreen(Window.getX(0),Window.getY(0),0,Window.getWidth2(),Window.getHeight2());
-
->>>>>>> f0ba736f51e948a4fe3a8cdc81308f25b7665521
             g.fillRect(Window.getX(0),Window.getY(0), Window.getWidth2(),Window.getHeight2());
            
             g.setColor(Color.white);
@@ -194,16 +186,7 @@ import javax.sound.sampled.*;
            
             g.setColor(Color.white);
             g.setFont(new Font("Arial",Font.PLAIN,100));
-<<<<<<< HEAD
-            g.drawString( numPlayers +"", 950,250);    
-=======
-
             g.drawString( numPlayers +"", 950, 370);    
-
-
-            
->>>>>>> f0ba736f51e948a4fe3a8cdc81308f25b7665521
-
         }
         
            
@@ -223,12 +206,7 @@ import javax.sound.sampled.*;
         g.scale( 1.0/xscale,1.0/yscale );
         g.rotate(-rot  * Math.PI/180.0);
         g.translate(-xpos,-ypos);
-   
-    
-    
-    
-    
-    
+
     }
 ////////////////////////////////////////////////////////////////////////////
 // needed for     implement runnable
@@ -247,8 +225,9 @@ import javax.sound.sampled.*;
     }
 /////////////////////////////////////////////////////////////////////////
     public void reset() {
-   
+        
 
+           
     }
 /////////////////////////////////////////////////////////////////////////
     public void animate() {
@@ -265,15 +244,11 @@ import javax.sound.sampled.*;
             Alex = Toolkit.getDefaultToolkit().getImage("./Alex.jpg");
             Student = Toolkit.getDefaultToolkit().getImage("./Student.jpg");
             Back = Toolkit.getDefaultToolkit().getImage("./Blank.jpg");
-
             bgSound = new sound("bensound-onceagain.wav");
             }
-            
-        
             if (bgSound.donePlaying)       
                 bgSound = new sound("bensound-onceagain.wav");
-            numPlayers =1;
-            homescreen =true; 
+             
             
             reset();                  
         
