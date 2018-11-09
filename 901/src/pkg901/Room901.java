@@ -171,7 +171,7 @@ import javax.sound.sampled.*;
         g.drawRect(Window.getX(440),Window.getY(400),Window.getX(220),Window.getY(260));
         
 
-        if(homescreen == true)
+        
         if(homescreen)
         {
             g.setColor(Color.BLACK);
@@ -276,9 +276,12 @@ import javax.sound.sampled.*;
             Alex = Toolkit.getDefaultToolkit().getImage("./Alex.jpg");
             Student = Toolkit.getDefaultToolkit().getImage("./Student.jpg");
             Back = Toolkit.getDefaultToolkit().getImage("./Blank.jpg");
+<<<<<<< HEAD
               bgSound = new sound("bensound-onceagain.wav");
            
+=======
             bgSound = new sound("bgsound.wav");
+>>>>>>> 67d06909ce60514b888d468f583bacfd66415192
             
             }
             if (bgSound.donePlaying)       
