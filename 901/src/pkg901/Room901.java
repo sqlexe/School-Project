@@ -199,8 +199,10 @@ import javax.sound.sampled.*;
              g.setColor(Color.white);
             g.setFont(new Font("Arial",Font.PLAIN,200));    
             g.drawString(  "-", 950, 760);    
-       
-           
+            
+            bgSound = new sound("bgsound.wav");
+                 if (bgSound.donePlaying)       
+                bgSound = new sound("bgsound.wav");
        
         
         }
