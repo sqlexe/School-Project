@@ -193,6 +193,8 @@ import javax.sound.sampled.*;
             g.fillRect(Window.getX(920),Window.getY(480),Window.getX(100),Window.getY(100));
            
             g.setColor(Color.white);
+            g.setFont(new Font("Arial",Font.PLAIN,100));
+            g.drawString( numPlayers +"", 950, 370);    
             g.setFont(new Font("Arial",Font.PLAIN,100));    
             g.drawString( numPlayers +"", 950, 610);    
 
@@ -226,12 +228,7 @@ import javax.sound.sampled.*;
         g.scale( 1.0/xscale,1.0/yscale );
         g.rotate(-rot  * Math.PI/180.0);
         g.translate(-xpos,-ypos);
-   
-    
-    
-    
-    
-    
+
     }
 ////////////////////////////////////////////////////////////////////////////
 // needed for     implement runnable
@@ -250,8 +247,9 @@ import javax.sound.sampled.*;
     }
 /////////////////////////////////////////////////////////////////////////
     public void reset() {
-   
+        
 
+           
     }
 /////////////////////////////////////////////////////////////////////////
     public void animate() {
@@ -261,6 +259,16 @@ import javax.sound.sampled.*;
                 Window.xsize = getSize().width;
                 Window.ysize = getSize().height;
             }
+                FeltBG = Toolkit.getDefaultToolkit().getImage("./FeltBG.jpg");
+                Middle = Toolkit.getDefaultToolkit().getImage("./blackHole.gif");
+                Tamperer = Toolkit.getDefaultToolkit().getImage("./Tamperer.jpg");
+                MrYee = Toolkit.getDefaultToolkit().getImage("./Mr.Yee.jpg");
+                Alex = Toolkit.getDefaultToolkit().getImage("./Alex.jpg");
+                Student = Toolkit.getDefaultToolkit().getImage("./Student.jpg");
+                Back = Toolkit.getDefaultToolkit().getImage("./Blank.jpg");
+
+                bgSound = new sound("bensound-onceagain.wav");
+                reset();
             FeltBG = Toolkit.getDefaultToolkit().getImage("./FeltBG.jpg");
             Middle = Toolkit.getDefaultToolkit().getImage("./blackHole.gif");
             Tamperer = Toolkit.getDefaultToolkit().getImage("./Tamperer.jpg");
@@ -270,15 +278,15 @@ import javax.sound.sampled.*;
             Back = Toolkit.getDefaultToolkit().getImage("./Blank.jpg");
               bgSound = new sound("bensound-onceagain.wav");
            
+            bgSound = new sound("bgsound.wav");
             
             }
-            
-        
             if (bgSound.donePlaying)       
-                bgSound = new sound("bensound-onceagain.wav");
+                bgSound = new sound("bgsound.wav");
+             
             numPlayers =1;
             
-            reset();                  
+                             
         
       
     }
