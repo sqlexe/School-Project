@@ -187,18 +187,26 @@ import javax.sound.sampled.*;
            
             g.setColor(Color.white);
             g.setFont(new Font("Arial",Font.PLAIN,100));
-            g.drawString("Amount of Players", 60, 360);     
+            g.drawString("Amount of Players", 60, 600);     
             
             g.setColor(Color.GRAY);
-            g.fillRect(Window.getX(920),Window.getY(240),Window.getX(100),Window.getY(100));
+            g.fillRect(Window.getX(920),Window.getY(480),Window.getX(100),Window.getY(100));
            
             g.setColor(Color.white);
             g.setFont(new Font("Arial",Font.PLAIN,100));    
-            g.drawString( numPlayers +"", 950, 370);    
+            g.drawString( numPlayers +"", 950, 610);    
 
-
+             g.setColor(Color.white);
+            g.setFont(new Font("Arial",Font.PLAIN,200));    
+            g.drawString(  "+", 925, 490);    
             
-
+             g.setColor(Color.white);
+            g.setFont(new Font("Arial",Font.PLAIN,200));    
+            g.drawString(  "-", 950, 760);    
+       
+           
+       
+        
         }
         
            
@@ -260,8 +268,8 @@ import javax.sound.sampled.*;
             Alex = Toolkit.getDefaultToolkit().getImage("./Alex.jpg");
             Student = Toolkit.getDefaultToolkit().getImage("./Student.jpg");
             Back = Toolkit.getDefaultToolkit().getImage("./Blank.jpg");
-
-            bgSound = new sound("bensound-onceagain.wav");
+              bgSound = new sound("bensound-onceagain.wav");
+           
             
             }
             
