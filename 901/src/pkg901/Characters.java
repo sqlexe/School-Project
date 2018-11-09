@@ -18,7 +18,7 @@ public class Characters {
         Tamperer, Alex, Yee, Student
     }
     
-    public void Draw()
+    public void Draw(int x, int y, int l, int w, Character c)
     {
         
     }
