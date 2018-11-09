@@ -253,16 +253,16 @@ import javax.sound.sampled.*;
                 Window.xsize = getSize().width;
                 Window.ysize = getSize().height;
             }
-            FeltBG = Toolkit.getDefaultToolkit().getImage("./FeltBG.jpg");
-            Middle = Toolkit.getDefaultToolkit().getImage("./blackHole.gif");
-            Tamperer = Toolkit.getDefaultToolkit().getImage("./Tamperer.jpg");
-            MrYee = Toolkit.getDefaultToolkit().getImage("./Mr.Yee.jpg");
-            Alex = Toolkit.getDefaultToolkit().getImage("./Alex.jpg");
-            Student = Toolkit.getDefaultToolkit().getImage("./Student.jpg");
-            Back = Toolkit.getDefaultToolkit().getImage("./Blank.jpg");
+                FeltBG = Toolkit.getDefaultToolkit().getImage("./FeltBG.jpg");
+                Middle = Toolkit.getDefaultToolkit().getImage("./blackHole.gif");
+                Tamperer = Toolkit.getDefaultToolkit().getImage("./Tamperer.jpg");
+                MrYee = Toolkit.getDefaultToolkit().getImage("./Mr.Yee.jpg");
+                Alex = Toolkit.getDefaultToolkit().getImage("./Alex.jpg");
+                Student = Toolkit.getDefaultToolkit().getImage("./Student.jpg");
+                Back = Toolkit.getDefaultToolkit().getImage("./Blank.jpg");
 
-            bgSound = new sound("bensound-onceagain.wav");
-            
+                bgSound = new sound("bensound-onceagain.wav");
+                reset();
             }
             
         
@@ -270,7 +270,7 @@ import javax.sound.sampled.*;
                 bgSound = new sound("bensound-onceagain.wav");
             numPlayers =1;
             
-            reset();                  
+                             
         
       
     }
