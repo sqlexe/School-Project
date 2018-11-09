@@ -175,27 +175,24 @@ import javax.sound.sampled.*;
         if(homescreen)
         {
             g.setColor(Color.BLACK);
-
-
-            HomeScreen(Window.getX(0),Window.getY(0),0,Window.getWidth2(),Window.getHeight2());
-
-
-            HomeScreen(Window.getX(0),Window.getY(0),0,Window.getWidth2(),Window.getHeight2());
-
-
             g.fillRect(Window.getX(0),Window.getY(0), Window.getWidth2(),Window.getHeight2());
            
             g.setColor(Color.white);
             g.setFont(new Font("Arial",Font.PLAIN,100));
+            g.drawString("Amount of Players", 60, 360);     
             g.drawString("Amount of Players", 60, 600);     
             
             g.setColor(Color.GRAY);
+            g.fillRect(Window.getX(920),Window.getY(240),Window.getX(100),Window.getY(100));
             g.fillRect(Window.getX(920),Window.getY(480),Window.getX(100),Window.getY(100));
-           
-            g.setColor(Color.white);
-                
+
+            g.setColor(Color.white);   
             g.setFont(new Font("Arial",Font.PLAIN,100));    
-            g.drawString( numPlayers +"", 950, 610);    
+            g.drawString( numPlayers +"", 950, 370); 
+            
+            g.setColor(Color.white);   
+            g.setFont(new Font("Castellar",Font.PLAIN,100));    
+            g.drawString("Room 901",1400/2,250); 
 
              g.setColor(Color.white);
             g.setFont(new Font("Arial",Font.PLAIN,200));    
@@ -270,7 +267,15 @@ import javax.sound.sampled.*;
 
                 bgSound = new sound("bgsound.wav");
                 reset();
-           
+            FeltBG = Toolkit.getDefaultToolkit().getImage("./FeltBG.jpg");
+            Middle = Toolkit.getDefaultToolkit().getImage("./blackHole.gif");
+            Tamperer = Toolkit.getDefaultToolkit().getImage("./Tamperer.jpg");
+            MrYee = Toolkit.getDefaultToolkit().getImage("./Mr.Yee.jpg");
+            Alex = Toolkit.getDefaultToolkit().getImage("./Alex.jpg");
+            Student = Toolkit.getDefaultToolkit().getImage("./Student.jpg");
+            Back = Toolkit.getDefaultToolkit().getImage("./Blank.jpg");
+              bgSound = new sound("bensound-onceagain.wav");
+            bgSound = new sound("bgsound.wav");
             
             }
             if (bgSound.donePlaying)       
@@ -342,11 +347,6 @@ class Window {
         return (ysize  - WINDOW_BORDER - YTITLE);
     }    
 }
-
-
-
-
-
 
 
 
