@@ -49,7 +49,7 @@ import javax.sound.sampled.*;
                     int xpos = e.getX();
                     int ypos = e.getY();
                     
-                    Board.AddTokenPixel(e.getX() - Window.getX(0),
+                    Player.click(e.getX() - Window.getX(0),
                         e.getY() - Window.getY(0));  
 
                 }
@@ -175,6 +175,17 @@ import javax.sound.sampled.*;
         if(homescreen)
         {
             g.setColor(Color.BLACK);
+<<<<<<< HEAD
+=======
+
+
+            HomeScreen(Window.getX(0),Window.getY(0),0,Window.getWidth2(),Window.getHeight2());
+
+
+            HomeScreen(Window.getX(0),Window.getY(0),0,Window.getWidth2(),Window.getHeight2());
+
+
+>>>>>>> 8c447be3043c4da7cc66c0cf9cf355b27ee4462b
             g.fillRect(Window.getX(0),Window.getY(0), Window.getWidth2(),Window.getHeight2());
            
             g.setColor(Color.white);
@@ -185,8 +196,17 @@ import javax.sound.sampled.*;
             g.fillRect(Window.getX(920),Window.getY(240),Window.getX(100),Window.getY(100));
            
             g.setColor(Color.white);
+<<<<<<< HEAD
             g.setFont(new Font("Arial",Font.PLAIN,100));
             g.drawString( numPlayers +"", 950, 370);    
+=======
+            g.setFont(new Font("Arial",Font.PLAIN,100));    
+            g.drawString( numPlayers +"", 950, 370);    
+
+
+            
+
+>>>>>>> 8c447be3043c4da7cc66c0cf9cf355b27ee4462b
         }
         
            
@@ -245,10 +265,15 @@ import javax.sound.sampled.*;
             Student = Toolkit.getDefaultToolkit().getImage("./Student.jpg");
             Back = Toolkit.getDefaultToolkit().getImage("./Blank.jpg");
             bgSound = new sound("bensound-onceagain.wav");
+            
             }
             if (bgSound.donePlaying)       
                 bgSound = new sound("bensound-onceagain.wav");
+<<<<<<< HEAD
              
+=======
+            numPlayers =1;
+>>>>>>> 8c447be3043c4da7cc66c0cf9cf355b27ee4462b
             
             reset();                  
         
