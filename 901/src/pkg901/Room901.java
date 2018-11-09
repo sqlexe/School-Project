@@ -168,10 +168,9 @@ import java.util.ArrayList;
         g.setColor(Color.RED);
         g.drawRect(Window.getX(440),Window.getY(400),Window.getX(220),Window.getY(260));
         
-         g.setColor(Color.BLACK);
-         g.fillRect(Window.getX(0),Window.getY(0), Window.getWidth2(),Window.getHeight2());
+         
         
-        if(homescreen == true)
+        if(homescreen)
         {
             g.setColor(Color.BLACK);
             g.fillRect(Window.getX(0),Window.getY(0), Window.getWidth2(),Window.getHeight2());
@@ -179,6 +178,20 @@ import java.util.ArrayList;
         
            
         gOld.drawImage(image, 0, 0, null);
+    }
+/////////////////////////////////////////////////////////////////////////////      
+     public void HomeScreen(int xpos,int ypos,double rot,double xscale,double yscale)
+    {
+        g.translate(xpos,ypos);
+        g.rotate(rot  * Math.PI/180.0);
+        g.scale( xscale , yscale );
+
+        g.setColor(Color.BLACK);
+        g.fillRect(Window.getX(0),Window.getY(0), Window.getWidth2(),Window.getHeight2());
+        
+        g.scale( 1.0/xscale,1.0/yscale );
+        g.rotate(-rot  * Math.PI/180.0);
+        g.translate(-xpos,-ypos);
     }
 ////////////////////////////////////////////////////////////////////////////
 // needed for     implement runnable
