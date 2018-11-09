@@ -186,6 +186,7 @@ import javax.sound.sampled.*;
             g.fillRect(Window.getX(920),Window.getY(240),Window.getX(100),Window.getY(100));
             g.fillRect(Window.getX(920),Window.getY(480),Window.getX(100),Window.getY(100));
            
+<<<<<<< HEAD
             g.setColor(Color.white);   
             g.setFont(new Font("Arial",Font.PLAIN,100));    
             g.drawString( numPlayers +"", 950, 370); 
