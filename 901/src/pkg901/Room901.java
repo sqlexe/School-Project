@@ -47,6 +47,9 @@ import java.util.ArrayList;
 // location of the cursor.
                     int xpos = e.getX();
                     int ypos = e.getY();
+                    
+                    Board.AddTokenPixel(e.getX() - Window.getX(0),
+                        e.getY() - Window.getY(0));  
 
                 }
                 if (e.BUTTON3 == e.getButton()) {
