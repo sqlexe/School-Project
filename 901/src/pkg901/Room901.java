@@ -8,7 +8,7 @@ import java.awt.event.*;
 import javax.swing.*;
 import java.io.File;
 import java.util.ArrayList;
-
+import javax.sound.sampled.*;
 
     
     
@@ -28,6 +28,7 @@ import java.util.ArrayList;
     Image Tamperer;
     Image Back;
     boolean homescreen = true;
+    sound bgSound = null;
     int numPlayers =1;
 
    
@@ -94,7 +95,6 @@ import java.util.ArrayList;
                 else if (e.VK_SPACE == e.getKeyCode()) {
                    
                 }
-                
 
                 repaint();
             }
@@ -170,12 +170,19 @@ import java.util.ArrayList;
         g.setColor(Color.RED);
         g.drawRect(Window.getX(440),Window.getY(400),Window.getX(220),Window.getY(260));
         
-   
-        
+
+        if(homescreen == true)
         if(homescreen)
         {
             g.setColor(Color.BLACK);
+
+
             HomeScreen(Window.getX(0),Window.getY(0),0,Window.getWidth2(),Window.getHeight2());
+
+
+            HomeScreen(Window.getX(0),Window.getY(0),0,Window.getWidth2(),Window.getHeight2());
+
+>>>>>>> f0ba736f51e948a4fe3a8cdc81308f25b7665521
             g.fillRect(Window.getX(0),Window.getY(0), Window.getWidth2(),Window.getHeight2());
            
             g.setColor(Color.white);
@@ -183,11 +190,20 @@ import java.util.ArrayList;
             g.drawString("Amount of Players", 60, 360);     
             
             g.setColor(Color.GRAY);
-            g.fillRect(Window.getX(950),Window.getY(250),Window.getX(100),Window.getY(100));
+            g.fillRect(Window.getX(920),Window.getY(240),Window.getX(100),Window.getY(100));
            
             g.setColor(Color.white);
             g.setFont(new Font("Arial",Font.PLAIN,100));
-            g.drawString( numPlayers +"", 950, 250);    
+<<<<<<< HEAD
+            g.drawString( numPlayers +"", 950,250);    
+=======
+
+            g.drawString( numPlayers +"", 950, 370);    
+
+
+            
+>>>>>>> f0ba736f51e948a4fe3a8cdc81308f25b7665521
+
         }
         
            
@@ -249,11 +265,18 @@ import java.util.ArrayList;
             Alex = Toolkit.getDefaultToolkit().getImage("./Alex.jpg");
             Student = Toolkit.getDefaultToolkit().getImage("./Student.jpg");
             Back = Toolkit.getDefaultToolkit().getImage("./Blank.jpg");
+
+            bgSound = new sound("bensound-onceagain.wav");
+            }
+            
+        
+            if (bgSound.donePlaying)       
+                bgSound = new sound("bensound-onceagain.wav");
             numPlayers =1;
             homescreen =true; 
             
             reset();                  
-        }
+        
       
     }
 
@@ -353,4 +376,43 @@ class Drawing {
    
 
 }
+class sound implements Runnable {
+    Thread myThread;
+    File soundFile;
+    public boolean donePlaying = false;
+    sound(String _name)
+    {
+        soundFile = new File(_name);
+        myThread = new Thread(this);
+        myThread.start();
+    }
+    public void run()
+    {
+        try {
+        AudioInputStream ais = AudioSystem.getAudioInputStream(soundFile);
+        AudioFormat format = ais.getFormat();
+    //    System.out.println("Format: " + format);
+        DataLine.Info info = new DataLine.Info(SourceDataLine.class, format);
+        SourceDataLine source = (SourceDataLine) AudioSystem.getLine(info);
+        source.open(format);
+        source.start();
+        int read = 0;
+        byte[] audioData = new byte[16384];
+        while (read > -1){
+            read = ais.read(audioData,0,audioData.length);
+            if (read >= 0) {
+                source.write(audioData,0,read);
+            }
+        }
+        donePlaying = true;
 
+        source.drain();
+        source.close();
+        }
+        catch (Exception exc) {
+            System.out.println("error: " + exc.getMessage());
+            exc.printStackTrace();
+        }
+    }
+
+}
