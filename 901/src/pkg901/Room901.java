@@ -27,7 +27,7 @@ import java.util.ArrayList;
     Image Student;
     Image Tamperer;
     Image Back;
-    boolean homescreen = false;
+    boolean homescreen = true;
 
    
     static Room901 frame;
