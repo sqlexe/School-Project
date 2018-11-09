@@ -262,13 +262,13 @@ import javax.sound.sampled.*;
             Back = Toolkit.getDefaultToolkit().getImage("./Blank.jpg");
 
             bgSound = new sound("bensound-onceagain.wav");
+            
             }
             
         
             if (bgSound.donePlaying)       
                 bgSound = new sound("bensound-onceagain.wav");
             numPlayers =1;
-            homescreen =true; 
             
             reset();                  
         
