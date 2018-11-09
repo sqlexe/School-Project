@@ -27,7 +27,7 @@ import java.util.ArrayList;
     Image Student;
     Image Tamperer;
     Image Back;
-    boolean homescreen = false;
+    boolean homescreen = true;
 
    
     static Room901 frame;
@@ -43,7 +43,6 @@ import java.util.ArrayList;
             public void mousePressed(MouseEvent e) {
                 if (e.BUTTON1 == e.getButton()) {
                     //left button
-
 // location of the cursor.
                     int xpos = e.getX();
                     int ypos = e.getY();
@@ -77,15 +76,18 @@ import java.util.ArrayList;
               
                 
                 if (e.VK_UP == e.getKeyCode()) {
-                
-                } else if (e.VK_DOWN == e.getKeyCode()) 
-               {
-                      homescreen=false;
-                } else if (e.VK_LEFT == e.getKeyCode()) {
+                } 
+                else if (e.VK_DOWN == e.getKeyCode()) 
+               {     
+                    homescreen = false;
+               } 
+                else if (e.VK_LEFT == e.getKeyCode()) {
                     
-                } else if (e.VK_RIGHT == e.getKeyCode()) {
+                } 
+                else if (e.VK_RIGHT == e.getKeyCode()) {
                   
-                } else if (e.VK_SPACE == e.getKeyCode()) {
+                } 
+                else if (e.VK_SPACE == e.getKeyCode()) {
                    
                 }
 
@@ -135,9 +137,7 @@ import java.util.ArrayList;
             return;
         }
         //KEEP THESE THEYRE ARE RIGHT 
-        
-        
-        
+
         g.drawImage(FeltBG,Window.getX(0),Window.getY(0),
                 Window.getWidth2(),Window.getHeight2(),this);
         
@@ -165,18 +165,18 @@ import java.util.ArrayList;
         g.setColor(Color.RED);
         g.drawRect(Window.getX(440),Window.getY(400),Window.getX(220),Window.getY(260));
         
-    
+         g.setColor(Color.BLACK);
+         g.fillRect(Window.getX(0),Window.getY(0), Window.getWidth2(),Window.getHeight2());
         
-        if(homescreen)
+        if(homescreen == true)
         {
-             g.drawImage(Back,Window.getX(0),Window.getY(0),
-               Window.getWidth2(),Window.getHeight2(),this);
+            g.setColor(Color.BLACK);
+            g.fillRect(Window.getX(0),Window.getY(0), Window.getWidth2(),Window.getHeight2());
         }
         
-        
+           
         gOld.drawImage(image, 0, 0, null);
     }
-
 ////////////////////////////////////////////////////////////////////////////
 // needed for     implement runnable
     public void run() {
