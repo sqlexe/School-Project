@@ -265,8 +265,7 @@ import javax.sound.sampled.*;
                 reset();
             
             }
-            if (bgSound.donePlaying)       
-                bgSound = new sound("bgsound.wav");
+           
              
             numPlayers =1;
             
