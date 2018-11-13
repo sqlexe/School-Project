@@ -20,7 +20,22 @@ public class Characters {
     
     public void Draw()
     {
-        
+       
+    }
+    public void Assign(){
+        int role = (int)(Math.random()*4);
+            if (role == 0){
+               // tamperer
+            }
+            else if (role == 1){
+                //Alex
+            }
+            else if (role == 2){
+                //Yee
+            }
+            else if (role == 3){
+                //Student
+            }
     }
     
     
