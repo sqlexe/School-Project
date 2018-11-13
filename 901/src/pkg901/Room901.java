@@ -49,7 +49,7 @@ import javax.sound.sampled.*;
                     int xpos = e.getX();
                     int ypos = e.getY();
                     
-                    Player.click(e.getX() - Window.getX(0),
+                    Board.click(e.getX() - Window.getX(0),
                         e.getY() - Window.getY(0));  
 
                 }
