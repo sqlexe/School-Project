@@ -200,9 +200,7 @@ import javax.sound.sampled.*;
             g.setFont(new Font("Arial",Font.PLAIN,200));    
             g.drawString(  "-", 950, 760);    
             
-         
-       
-        
+ 
         }
 
         gOld.drawImage(image, 0, 0, null);
