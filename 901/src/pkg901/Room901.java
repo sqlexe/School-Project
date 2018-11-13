@@ -84,7 +84,7 @@ import javax.sound.sampled.*;
                 } 
                 else if (e.VK_DOWN == e.getKeyCode()) 
                {     
-                    homescreen = false;
+                    
                } 
                 else if (e.VK_LEFT == e.getKeyCode()) {
                     
@@ -94,6 +94,9 @@ import javax.sound.sampled.*;
                 } 
                 else if (e.VK_SPACE == e.getKeyCode()) {
                    
+                }
+                else if (e.VK_ENTER == e.getKeyCode()) {
+                   homescreen = false;
                 }
 
                 repaint();
