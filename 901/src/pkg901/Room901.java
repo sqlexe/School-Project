@@ -51,7 +51,8 @@ import javax.sound.sampled.*;
                     
 
                     if(xpos>950&&xpos<1020&&ypos>650&&ypos<750)
-                        numPlayers--;
+                        if(numPlayers>1)
+                            numPlayers--;
                     if(!homescreen)
                     Board.click(e.getX(),
                         e.getY());  
