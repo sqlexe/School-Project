@@ -53,12 +53,24 @@ import javax.sound.sampled.*;
                     int xpos = e.getX();
                     int ypos = e.getY();
                     
-                    Player.click(e.getX() - Window.getX(0),
+                    Board.click(e.getX() - Window.getX(0),
                         e.getY() - Window.getY(0));  
                     
                     if(xpos>xLeft1 && xpos <xLeft2 && ypos>365 && ypos<470)
                         if(numPlayers <7)
                         numPlayers++;
+
+
+                      if(xpos>950)
+                        if(xpos<1020)
+                        if(ypos>650&&ypos<750)
+                        if(numPlayers>1)
+                            numPlayers--;
+                    if(!homescreen)
+                    Board.click(e.getX(),
+                        e.getY());  
+
+
                 }
                 if (e.BUTTON3 == e.getButton()) {
                     //right button
@@ -249,7 +261,7 @@ import javax.sound.sampled.*;
 /////////////////////////////////////////////////////////////////////////
     public void reset() {
         
-
+            numPlayers =1;
            
     }
 /////////////////////////////////////////////////////////////////////////
@@ -273,7 +285,7 @@ import javax.sound.sampled.*;
             }
            
              
-         
+
             
                              
         
