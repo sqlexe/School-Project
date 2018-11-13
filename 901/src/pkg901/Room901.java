@@ -29,10 +29,14 @@ import javax.sound.sampled.*;
     Image Back;
     boolean homescreen = true;
     sound bgSound = null;
-    int numPlayers =1;
-
+    int numPlayers=1;
+    int xLeft1=930;
+   int xLeft2=1035;
+    int yTop1=490;
+   int yTop2=540;
    
-    static Room901 frame;
+   
+   static Room901 frame;
     public static void main(String[] args) {
         frame = new Room901();
         frame.setSize(Window.WINDOW_WIDTH, Window.WINDOW_HEIGHT);
@@ -51,7 +55,10 @@ import javax.sound.sampled.*;
                     
                     Player.click(e.getX() - Window.getX(0),
                         e.getY() - Window.getY(0));  
-
+                    
+                    if(xpos>xLeft1 && xpos <xLeft2 && ypos>365 && ypos<470)
+                        if(numPlayers <7)
+                        numPlayers++;
                 }
                 if (e.BUTTON3 == e.getButton()) {
                     //right button
@@ -149,7 +156,7 @@ import javax.sound.sampled.*;
         g.drawImage(FeltBG,Window.getX(0),Window.getY(0),
                 Window.getWidth2(),Window.getHeight2(),this);
         
-        
+        System.out.println(numPlayers+"");
         
         g.drawImage(MrYee,Window.getX(440),Window.getY(50),
                 Window.getX(220),Window.getY(260),this);
@@ -266,7 +273,7 @@ import javax.sound.sampled.*;
             }
            
              
-            numPlayers =1;
+         
             
                              
         
