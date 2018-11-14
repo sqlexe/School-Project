@@ -29,10 +29,14 @@ import javax.sound.sampled.*;
     Image Back;
     boolean homescreen = true;
     sound bgSound = null;
-    int numPlayers =1;
-
+    int numPlayers=1;
+    int xLeft1=930;
+   int xLeft2=1035;
+    int yTop1=490;
+   int yTop2=540;
    
-    static Room901 frame;
+   
+   static Room901 frame;
     public static void main(String[] args) {
         frame = new Room901();
         frame.setSize(Window.WINDOW_WIDTH, Window.WINDOW_HEIGHT);
@@ -49,13 +53,23 @@ import javax.sound.sampled.*;
                     int xpos = e.getX();
                     int ypos = e.getY();
                     
+                    Board.click(e.getX() - Window.getX(0),
+                        e.getY() - Window.getY(0));  
+                    
+                    if(xpos>xLeft1 && xpos <xLeft2 && ypos>365 && ypos<470)
+                        if(numPlayers <7)
+                        numPlayers++;
 
-                    if(xpos>950&&xpos<1020&&ypos>650&&ypos<750)
+
+                      if(xpos>950)
+                        if(xpos<1020)
+                        if(ypos>650&&ypos<750)
                         if(numPlayers>1)
                             numPlayers--;
                     if(!homescreen)
                     Board.click(e.getX(),
                         e.getY());  
+
 
                 }
                 if (e.BUTTON3 == e.getButton()) {
@@ -154,7 +168,7 @@ import javax.sound.sampled.*;
         g.drawImage(FeltBG,Window.getX(0),Window.getY(0),
                 Window.getWidth2(),Window.getHeight2(),this);
         
-        
+
         
         g.drawImage(MrYee,Window.getX(440),Window.getY(50),
                 Window.getX(220),Window.getY(260),this);
@@ -207,6 +221,10 @@ import javax.sound.sampled.*;
              g.setColor(Color.white);
             g.setFont(new Font("Arial",Font.PLAIN,200));    
             g.drawString(  "-", 950, 760);    
+            
+            g.setColor(Color.white);   
+            g.setFont(new Font("Arial",Font.PLAIN,50));    
+            g.drawString("Press ENTER when ready",1400/2,890); 
             
  
         }
