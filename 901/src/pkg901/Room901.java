@@ -74,6 +74,7 @@ import javax.sound.sampled.*;
                 }
                 if (e.BUTTON3 == e.getButton()) {
                     //right button
+                    if(!homescreen)
                     reset();
                 }
                 repaint();
@@ -269,7 +270,6 @@ import javax.sound.sampled.*;
     public void reset() {
             homescreen = true;
             numPlayers =1;
-            bgSound = null;
             bgSound = new sound ("bgsound.wav");
     }
 /////////////////////////////////////////////////////////////////////////
@@ -287,7 +287,7 @@ import javax.sound.sampled.*;
                 Alex = Toolkit.getDefaultToolkit().getImage("./Alex.jpg");
                 Student = Toolkit.getDefaultToolkit().getImage("./Student.jpg");
                 Back = Toolkit.getDefaultToolkit().getImage("./Blank.jpg");
-                bgSound = new sound("bgsound.wav");
+                
                 reset();
             
             }
