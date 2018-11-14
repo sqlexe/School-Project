@@ -16,7 +16,7 @@ class sound implements Runnable {
     Thread myThread;
     File soundFile;
     public boolean donePlaying = false;
-    public boolean stopPlaying = false;
+    private boolean stopPlaying = false;
     sound(String _name)
     {
         soundFile = new File(_name);
@@ -55,5 +55,8 @@ class sound implements Runnable {
             exc.printStackTrace();
         }
     }
-
+    public void getPlay(boolean b)
+    {
+        stopPlaying = b;
+    }
 }
