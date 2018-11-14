@@ -29,6 +29,7 @@ import javax.sound.sampled.*;
     Image Back;
     boolean homescreen = true;
     sound bgSound = null;
+    sound NightMusic = null;
     int numPlayers=1;
     int xLeft1=930;
    int xLeft2=1035;
@@ -69,6 +70,7 @@ import javax.sound.sampled.*;
                         if(ypos>650&&ypos<750)
                         if(numPlayers>1)
                             numPlayers--;
+<<<<<<< HEAD
  // 
                  }
                     //Player 1
@@ -116,6 +118,9 @@ import javax.sound.sampled.*;
                         
                         
                         if(!homescreen)
+=======
+                    
+>>>>>>> 9f337e8603c0761c3e6bf5cbe4d018ebb2f99fa4
                     Board.click(e.getX(),
                         e.getY());  
 
@@ -123,6 +128,7 @@ import javax.sound.sampled.*;
                 }
                 if (e.BUTTON3 == e.getButton()) {
                     //right button
+                   if(!homescreen)
                     reset();
                 }
                 repaint();
@@ -213,7 +219,10 @@ import javax.sound.sampled.*;
             return;
         }
         //KEEP THESE THEYRE ARE RIGHT 
-
+        if(!homescreen)
+        {
+            bgSound.getPlay(true);
+            NightMusic = new sound("NightMusic.wav");
         g.drawImage(FeltBG,Window.getX(0),Window.getY(0),
                 Window.getWidth2(),Window.getHeight2(),this);
         
@@ -237,7 +246,7 @@ import javax.sound.sampled.*;
 
         g.drawImage(Middle,Window.getX(Window.WINDOW_WIDTH/2-150),Window.getY(Window.WINDOW_HEIGHT/2-150),
                 Window.getX(300),Window.getY(300),this);
-
+        }
         g.setColor(Color.RED);
         g.drawRect(Window.getX(440),Window.getY(400),Window.getX(220),Window.getY(260));
       
@@ -362,7 +371,9 @@ import javax.sound.sampled.*;
     public void reset() {
             homescreen = true;
             numPlayers =1;
-            
+            NightMusic = new sound ("NightMusic.wav");
+            NightMusic.getPlay(true);
+            bgSound = new sound ("bgsound.wav");
     }
 /////////////////////////////////////////////////////////////////////////
     public void animate() {
@@ -379,7 +390,7 @@ import javax.sound.sampled.*;
                 Alex = Toolkit.getDefaultToolkit().getImage("./Alex.jpg");
                 Student = Toolkit.getDefaultToolkit().getImage("./Student.jpg");
                 Back = Toolkit.getDefaultToolkit().getImage("./Blank.jpg");
-                bgSound = new sound("bgsound.wav");
+                
                 reset();
             
             }
@@ -483,43 +494,4 @@ class Drawing {
    
 
 }
-class sound implements Runnable {
-    Thread myThread;
-    File soundFile;
-    public boolean donePlaying = false;
-    sound(String _name)
-    {
-        soundFile = new File(_name);
-        myThread = new Thread(this);
-        myThread.start();
-    }
-    public void run()
-    {
-        try {
-        AudioInputStream ais = AudioSystem.getAudioInputStream(soundFile);
-        AudioFormat format = ais.getFormat();
-    //    System.out.println("Format: " + format);
-        DataLine.Info info = new DataLine.Info(SourceDataLine.class, format);
-        SourceDataLine source = (SourceDataLine) AudioSystem.getLine(info);
-        source.open(format);
-        source.start();
-        int read = 0;
-        byte[] audioData = new byte[16384];
-        while (read > -1){
-            read = ais.read(audioData,0,audioData.length);
-            if (read >= 0) {
-                source.write(audioData,0,read);
-            }
-        }
-        donePlaying = true;
 
-        source.drain();
-        source.close();
-        }
-        catch (Exception exc) {
-            System.out.println("error: " + exc.getMessage());
-            exc.printStackTrace();
-        }
-    }
-
-}
