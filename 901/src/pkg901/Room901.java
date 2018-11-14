@@ -222,6 +222,10 @@ import javax.sound.sampled.*;
             g.setFont(new Font("Arial",Font.PLAIN,200));    
             g.drawString(  "-", 950, 760);    
             
+            g.setColor(Color.white);   
+            g.setFont(new Font("Arial",Font.PLAIN,50));    
+            g.drawString("Press ENTER when ready",1400/2,890); 
+            
  
         }
 
@@ -260,9 +264,9 @@ import javax.sound.sampled.*;
     }
 /////////////////////////////////////////////////////////////////////////
     public void reset() {
-        
+            homescreen = true;
             numPlayers =1;
-           
+            
     }
 /////////////////////////////////////////////////////////////////////////
     public void animate() {
