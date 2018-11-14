@@ -164,7 +164,10 @@ import javax.sound.sampled.*;
             return;
         }
         //KEEP THESE THEYRE ARE RIGHT 
-
+        if(!homescreen)
+        {
+        bgSound.stopPlaying = true;
+        
         g.drawImage(FeltBG,Window.getX(0),Window.getY(0),
                 Window.getWidth2(),Window.getHeight2(),this);
         
@@ -188,7 +191,7 @@ import javax.sound.sampled.*;
 
         g.drawImage(Middle,Window.getX(Window.WINDOW_WIDTH/2-150),Window.getY(Window.WINDOW_HEIGHT/2-150),
                 Window.getX(300),Window.getY(300),this);
-
+        }
         g.setColor(Color.RED);
         g.drawRect(Window.getX(440),Window.getY(400),Window.getX(220),Window.getY(260));
         
@@ -266,7 +269,7 @@ import javax.sound.sampled.*;
     public void reset() {
             homescreen = true;
             numPlayers =1;
-            
+            bgSound = new sound("bgsound.wav");
     }
 /////////////////////////////////////////////////////////////////////////
     public void animate() {
@@ -283,7 +286,7 @@ import javax.sound.sampled.*;
                 Alex = Toolkit.getDefaultToolkit().getImage("./Alex.jpg");
                 Student = Toolkit.getDefaultToolkit().getImage("./Student.jpg");
                 Back = Toolkit.getDefaultToolkit().getImage("./Blank.jpg");
-                bgSound = new sound("bgsound.wav");
+                
                 reset();
             
             }
@@ -391,6 +394,7 @@ class sound implements Runnable {
     Thread myThread;
     File soundFile;
     public boolean donePlaying = false;
+    public boolean stopPlaying = false;
     sound(String _name)
     {
         soundFile = new File(_name);
@@ -413,9 +417,13 @@ class sound implements Runnable {
             read = ais.read(audioData,0,audioData.length);
             if (read >= 0) {
                 source.write(audioData,0,read);
+                if(stopPlaying)
+                    read = -1;
             }
-        }
+        }        
+        
         donePlaying = true;
+
 
         source.drain();
         source.close();
