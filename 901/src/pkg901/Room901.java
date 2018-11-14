@@ -167,7 +167,7 @@ import javax.sound.sampled.*;
         //KEEP THESE THEYRE ARE RIGHT 
         if(!homescreen)
         {
-        bgSound.stopPlaying = true;
+            bgSound.getPlay(true);
         
         g.drawImage(FeltBG,Window.getX(0),Window.getY(0),
                 Window.getWidth2(),Window.getHeight2(),this);
@@ -270,7 +270,7 @@ import javax.sound.sampled.*;
     public void reset() {
             homescreen = true;
             numPlayers =1;
-            bgSound = null;
+            
             bgSound = new sound ("bgsound.wav");
     }
 /////////////////////////////////////////////////////////////////////////
