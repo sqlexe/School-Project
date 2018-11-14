@@ -66,7 +66,7 @@ import javax.sound.sampled.*;
                         if(ypos>650&&ypos<750)
                         if(numPlayers>1)
                             numPlayers--;
-                    if(!homescreen)
+                    
                     Board.click(e.getX(),
                         e.getY());  
 
@@ -74,6 +74,7 @@ import javax.sound.sampled.*;
                 }
                 if (e.BUTTON3 == e.getButton()) {
                     //right button
+                   if(!homescreen)
                     reset();
                 }
                 repaint();
