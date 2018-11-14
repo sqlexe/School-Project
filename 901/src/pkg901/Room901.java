@@ -29,6 +29,7 @@ import javax.sound.sampled.*;
     Image Back;
     boolean homescreen = true;
     sound bgSound = null;
+    sound NightMusic = null;
     int numPlayers=1;
     int xLeft1=930;
    int xLeft2=1035;
@@ -168,7 +169,7 @@ import javax.sound.sampled.*;
         if(!homescreen)
         {
             bgSound.getPlay(true);
-        
+            NightMusic = new sound("NightMusic.wav");
         g.drawImage(FeltBG,Window.getX(0),Window.getY(0),
                 Window.getWidth2(),Window.getHeight2(),this);
         
@@ -270,7 +271,8 @@ import javax.sound.sampled.*;
     public void reset() {
             homescreen = true;
             numPlayers =1;
-            
+            NightMusic = new sound ("NightMusic.wav");
+            NightMusic.getPlay(true);
             bgSound = new sound ("bgsound.wav");
     }
 /////////////////////////////////////////////////////////////////////////
