@@ -288,7 +288,7 @@ import javax.sound.sampled.*;
                 Alex = Toolkit.getDefaultToolkit().getImage("./Alex.jpg");
                 Student = Toolkit.getDefaultToolkit().getImage("./Student.jpg");
                 Back = Toolkit.getDefaultToolkit().getImage("./Blank.jpg");
-                bgSound = new sound("bgsound.wav");
+                
                 reset();
             
             }
