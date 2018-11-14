@@ -70,7 +70,7 @@ import javax.sound.sampled.*;
                         if(ypos>650&&ypos<750)
                         if(numPlayers>1)
                             numPlayers--;
-<<<<<<< HEAD
+
  // 
                  }
                     //Player 1
@@ -118,9 +118,7 @@ import javax.sound.sampled.*;
                         
                         
                         if(!homescreen)
-=======
-                    
->>>>>>> 9f337e8603c0761c3e6bf5cbe4d018ebb2f99fa4
+
                     Board.click(e.getX(),
                         e.getY());  
 
