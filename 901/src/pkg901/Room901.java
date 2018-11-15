@@ -27,7 +27,7 @@ import javax.sound.sampled.*;
 //    Image Student;
 //    Image Tamperer;
 //    Image Back;
-   
+    boolean gamescreen=false;
     boolean nightime = false;
     boolean homescreen = true;
     sound bgSound = null;
@@ -178,7 +178,9 @@ import javax.sound.sampled.*;
                    {
                        Player.Create(numPlayers);
                    }
-                    homescreen = false;
+                   homescreen=false;
+                   nightime=true;
+               
                 }
 
                 repaint();
@@ -229,9 +231,17 @@ import javax.sound.sampled.*;
         //KEEP THESE THEYRE ARE RIGHT 
         if (bgSound.donePlaying)
                 bgSound = new sound ("bgsound.wav");
-        if(!homescreen)
+          if(nightime)     
+             {
+                 g.drawImage(nightSky,Window.getX(0),Window.getY(0),
+                Window.getWidth2(),Window.getHeight2(),this);
+             }
+        
+        
+        
+        if(!homescreen && !nightime)
         {
-
+            if(gamescreen){
         g.drawImage(FeltBG,Window.getX(0),Window.getY(0),
                 Window.getWidth2(),Window.getHeight2(),this);
         
@@ -342,11 +352,8 @@ import javax.sound.sampled.*;
                            g.setFont(new Font("Arial",Font.PLAIN,60));
                                g.drawString("Player 7", 1610, 240);       
                            }
-             if(nightime)     
-             {
-                 g.drawImage(nightSky,Window.getX(0),Window.getY(0),
-                Window.getWidth2(),Window.getHeight2(),this);
-             }
+        }
+               
               
               
       
