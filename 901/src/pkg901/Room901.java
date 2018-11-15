@@ -387,12 +387,12 @@ import javax.sound.sampled.*;
             }
                 FeltBG = Toolkit.getDefaultToolkit().getImage("./FeltBG.jpg");
                 Middle = Toolkit.getDefaultToolkit().getImage("./blackHole.gif");
-                Tamperer = Toolkit.getDefaultToolkit().getImage("./Tamperer.jpg");
-                MrYee = Toolkit.getDefaultToolkit().getImage("./Mr.Yee.jpg");
-                Alex = Toolkit.getDefaultToolkit().getImage("./Alex.jpg");
-                Student = Toolkit.getDefaultToolkit().getImage("./Student.jpg");
-                Back = Toolkit.getDefaultToolkit().getImage("./Blank.jpg");
-                
+//                Tamperer = Toolkit.getDefaultToolkit().getImage("./Tamperer.jpg");
+//                MrYee = Toolkit.getDefaultToolkit().getImage("./Mr.Yee.jpg");
+//                Alex = Toolkit.getDefaultToolkit().getImage("./Alex.jpg");
+//                Student = Toolkit.getDefaultToolkit().getImage("./Student.jpg");
+//                Back = Toolkit.getDefaultToolkit().getImage("./Blank.jpg");
+//                
                 reset();
             
             }
