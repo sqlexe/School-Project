@@ -9,11 +9,11 @@ import java.io.File;
 import java.util.ArrayList;
 
 public class Characters {
-    private Image MrYee;
-    private Image Alex;
-    private Image Student;
-    private Image Tamperer;
-    private Image Back;
+    private Image MrYee = Toolkit.getDefaultToolkit().getImage("./Mr.Yee.jpg");
+    private Image Alex = Toolkit.getDefaultToolkit().getImage("./Alex.jpg");
+    private Image Student = Toolkit.getDefaultToolkit().getImage("./Student.jpg");
+    private Image Tamperer = Toolkit.getDefaultToolkit().getImage("./Tamperer.jpg");;
+    private Image Back = Toolkit.getDefaultToolkit().getImage("./Blank.jpg");
     private Graphics2D g;
     
     
@@ -39,7 +39,7 @@ public class Characters {
                 Window.getX(220),Window.getY(260),instance);
 
     }
-    public void Assign(){
+    public Characters.Character Assign(){
         int role = (int)(Math.random()*4);
             if (role == 0){
                // tamperer
@@ -48,11 +48,12 @@ public class Characters {
                 //Alex
             }
             else if (role == 2){
-                //Yee
+                return Character.Yee;
             }
             else if (role == 3){
-                //Student
+                return Character.Student;
             }
+            return null;
     }
     
     
