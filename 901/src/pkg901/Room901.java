@@ -233,22 +233,6 @@ import javax.sound.sampled.*;
                 Window.getWidth2(),Window.getHeight2(),this);
         
 
-        
-//        g.drawImage(MrYee,Window.getX(440),Window.getY(50),
-//                Window.getX(220),Window.getY(260),this);
-//
-//       
-//        g.drawImage(Alex,Window.getX(840),Window.getY(50),
-//                Window.getX(220),Window.getY(260),this);
-//        
-//        g.drawImage(Tamperer,Window.getX(1240),Window.getY(50),
-//                Window.getX(220),Window.getY(260),this);
-//
-//        g.drawImage(Back,Window.getX(1240),Window.getY(400),
-//                   Window.getX(220),Window.getY(260),this);
-//        
-//        g.drawImage(Student,Window.getX(440),Window.getY(400),
-//                Window.getX(220),Window.getY(260),this);
 
         g.drawImage(Middle,Window.getX(Window.WINDOW_WIDTH/2-150),Window.getY(Window.WINDOW_HEIGHT/2-150),
                 Window.getX(300),Window.getY(300),this);
