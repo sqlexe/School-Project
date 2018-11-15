@@ -19,7 +19,7 @@ import javax.sound.sampled.*;
     boolean animateFirstTime = true;
     Image image;
     Graphics2D g;
-    
+    Image nightSky;
     Image FeltBG;
     Image Middle;
 //    Image MrYee;
@@ -27,6 +27,8 @@ import javax.sound.sampled.*;
 //    Image Student;
 //    Image Tamperer;
 //    Image Back;
+   
+    boolean nightime = false;
     boolean homescreen = true;
     sound bgSound = null;
     sound NightMusic = null;
@@ -160,7 +162,7 @@ import javax.sound.sampled.*;
                 } 
                 else if (e.VK_DOWN == e.getKeyCode()) 
                {     
-                    
+                    nightime=true;
                } 
                 else if (e.VK_LEFT == e.getKeyCode()) {
                     
@@ -340,8 +342,11 @@ import javax.sound.sampled.*;
                            g.setFont(new Font("Arial",Font.PLAIN,60));
                                g.drawString("Player 7", 1610, 240);       
                            }
-                  
-
+             if(nightime)     
+             {
+                 g.drawImage(nightSky,Window.getX(0),Window.getY(0),
+                Window.getWidth2(),Window.getHeight2(),this);
+             }
               
               
       
@@ -424,6 +429,7 @@ import javax.sound.sampled.*;
 /////////////////////////////////////////////////////////////////////////
     public void reset() {
             homescreen = true;
+            nightime=false;
             numPlayers =1;
             if(bgSound != null)
                 bgSound.getPlay(true);
@@ -437,7 +443,8 @@ import javax.sound.sampled.*;
                 Window.xsize = getSize().width;
                 Window.ysize = getSize().height;
             }
-                FeltBG = Toolkit.getDefaultToolkit().getImage("./FeltBG.jpg");
+               nightSky = Toolkit.getDefaultToolkit().getImage("./nightSky.jpg");
+            FeltBG = Toolkit.getDefaultToolkit().getImage("./FeltBG.jpg");
                 Middle = Toolkit.getDefaultToolkit().getImage("./blackHole.gif");
 //                Tamperer = Toolkit.getDefaultToolkit().getImage("./Tamperer.jpg");
 //                MrYee = Toolkit.getDefaultToolkit().getImage("./Mr.Yee.jpg");
