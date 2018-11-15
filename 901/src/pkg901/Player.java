@@ -10,6 +10,7 @@ import java.util.ArrayList;
 
 public class Player {
     static Player players[]=new Player[6];
+    static Player currentPlayer;
     Characters.Character character;
     private boolean alive;
     
@@ -19,6 +20,7 @@ public class Player {
         {
             players[i]=new Player();
         }
+        currentPlayer=players[1];
     }
     
     Player()
