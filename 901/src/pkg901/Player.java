@@ -11,15 +11,19 @@ import java.util.ArrayList;
 public class Player {
     static Player players[]=new Player[6];
     Characters.Character character;
+    private boolean alive;
     
     public static void Create(int numPlayers)
     {
-        
+        for(int i=0; i<numPlayers;i++)
+        {
+            players[i]=new Player();
+        }
     }
     
     Player()
     {
-        
+        alive=true;
     }
     
 
