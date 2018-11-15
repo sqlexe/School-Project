@@ -9,21 +9,21 @@ import java.io.File;
 import java.util.ArrayList;
 
 public class Characters {
-    private Image MrYee = Toolkit.getDefaultToolkit().getImage("./Mr.Yee.jpg");
-    private Image Alex = Toolkit.getDefaultToolkit().getImage("./Alex.jpg");
-    private Image Student = Toolkit.getDefaultToolkit().getImage("./Student.jpg");
-    private Image Tamperer = Toolkit.getDefaultToolkit().getImage("./Tamperer.jpg");;
-    private Image Back = Toolkit.getDefaultToolkit().getImage("./Blank.jpg");
-    private Graphics2D g;
+    private static Image MrYee = Toolkit.getDefaultToolkit().getImage("./Mr.Yee.jpg");
+    private static Image Alex = Toolkit.getDefaultToolkit().getImage("./Alex.jpg");
+    private static Image Student = Toolkit.getDefaultToolkit().getImage("./Student.jpg");
+    private static Image Tamperer = Toolkit.getDefaultToolkit().getImage("./Tamperer.jpg");;
+    private static Image Back = Toolkit.getDefaultToolkit().getImage("./Blank.jpg");
+    private static Graphics2D g;
     
     
     public static enum Character {
         Tamperer, Alex, Yee, Student
     }
     
-    public void Draw(Room901 instance)
+    public  static void Draw(Room901 instance)
     {
-       g.drawImage(MrYee,Window.getX(440),Window.getY(50),
+        g.drawImage(MrYee,Window.getX(440),Window.getY(50),
                 Window.getX(220),Window.getY(260),instance);
        
         g.drawImage(Alex,Window.getX(840),Window.getY(50),
