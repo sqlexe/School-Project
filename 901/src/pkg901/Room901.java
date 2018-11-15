@@ -77,43 +77,43 @@ import javax.sound.sampled.*;
                         if(xpos>100)
                         if(xpos<325)
                        if(ypos>200&&ypos<270)
-                         reset();
+                       Player.currentPlayer=Player.players[0];
                           
                         //Player 2
                         if(xpos>100)
                         if(xpos<325)
                        if(ypos>505&&ypos<601)
-                         reset();
+                       Player.currentPlayer=Player.players[1];
                       
                           //Player 3
                         if(xpos>260)
                         if(xpos<475)
                       if(ypos>877&&ypos<975)
-                         reset();
+                       Player.currentPlayer=Player.players[2];
                  
                           //Player 4
                         if(xpos>805)
                         if(xpos<475+550)
                        if(ypos>877&&ypos<975)
-                         reset();
+                       Player.currentPlayer=Player.players[3];
                     
                           //Player 5
                         if(xpos>1355)
                         if(xpos<475+550+550)
                         if(ypos>877&&ypos<975)
-                         reset();
+                        Player.currentPlayer=Player.players[4];
                         
                           //Player 6
                         if(xpos>1605)
                         if(xpos<1826)
                        if(ypos>505&&ypos<601)
-                         reset();
+                        Player.currentPlayer=Player.players[5];
                        
                           //Player 7
                         if(xpos>1605)
                         if(xpos<1826)
                      if(ypos>200&&ypos<270)
-                         reset();
+                         Player.currentPlayer=Player.players[6];
                         
                        
                        
@@ -243,7 +243,7 @@ import javax.sound.sampled.*;
         
           
                    //Player 2
-                g.setColor(Color.GRAY);
+        g.setColor(Color.GRAY);
                g.fillRect(Window.getX(100),Window.getY(480),Window.getX(210),Window.getY(60));      
      //Player 7      
               g.setColor(Color.GRAY);
@@ -265,6 +265,7 @@ import javax.sound.sampled.*;
              g.fillRect(Window.getX(100),Window.getY(150),Window.getX(210),Window.getY(60));
             
               
+
                g.setColor(Color.white);
               g.setFont(new Font("Arial",Font.PLAIN,60));
               g.drawString("Player 2", 110, 575); 
@@ -280,7 +281,7 @@ import javax.sound.sampled.*;
               g.drawString("Player 3", 260, 950);   
               g.setFont(new Font("Arial",Font.PLAIN,60));
               g.drawString("Player 5", 1360, 950);  
-              
+             
               
                  if(Player.currentPlayer==Player.players[0])
                         {
@@ -293,54 +294,61 @@ import javax.sound.sampled.*;
                else if(Player.currentPlayer==Player.players[1])
                         {
                            g.setColor(Color.YELLOW);
-                           g.fillRect(Window.getX(100),Window.getY(150),Window.getX(210),Window.getY(60));
+                            g.fillRect(Window.getX(100),Window.getY(480),Window.getX(210),Window.getY(60)); 
                              g.setColor(Color.BLACK);
                            g.setFont(new Font("Arial",Font.PLAIN,60));
-                              g.drawString("Player 2", 110, 250);   
+                               g.drawString("Player 2", 110, 575); 
                            }
               else if(Player.currentPlayer==Player.players[2])
                         {
                           g.setColor(Color.YELLOW);
-                           g.fillRect(Window.getX(100),Window.getY(150),Window.getX(210),Window.getY(60));
+                          g.fillRect(Window.getX(250),Window.getY(850),Window.getX(210),Window.getY(60));
                              g.setColor(Color.BLACK);
                            g.setFont(new Font("Arial",Font.PLAIN,60));
-                              g.drawString("Player 3", 110, 250);   
+                             g.drawString("Player 3", 260, 950);    
                            }
                 else  if(Player.currentPlayer==Player.players[3])
                         {
                            g.setColor(Color.YELLOW);
-                           g.fillRect(Window.getX(100),Window.getY(150),Window.getX(210),Window.getY(60));
+                             g.fillRect(Window.getX(800),Window.getY(850),Window.getX(210),Window.getY(60));
                              g.setColor(Color.BLACK);
                            g.setFont(new Font("Arial",Font.PLAIN,60));
-                              g.drawString("Player 4", 110, 250);   
+                              g.drawString("Player 4", 810, 950);   
                            }
                  else  if(Player.currentPlayer==Player.players[4])
                         {
                            g.setColor(Color.YELLOW);
-                           g.fillRect(Window.getX(100),Window.getY(150),Window.getX(210),Window.getY(60));
+                            g.fillRect(Window.getX(1350),Window.getY(850),Window.getX(210),Window.getY(60));
                              g.setColor(Color.BLACK);
                            g.setFont(new Font("Arial",Font.PLAIN,60));
-                              g.drawString("Player 5", 110, 250);   
+                              g.drawString("Player 5", 1360, 950);     
                            }
                  else  if(Player.currentPlayer==Player.players[5])
                         {
                            g.setColor(Color.YELLOW);
-                           g.fillRect(Window.getX(100),Window.getY(150),Window.getX(210),Window.getY(60));
+                           g.fillRect(Window.getX(1600),Window.getY(480),Window.getX(210),Window.getY(60));
                              g.setColor(Color.BLACK);
                            g.setFont(new Font("Arial",Font.PLAIN,60));
-                              g.drawString("Player 6", 110, 250);   
+                             g.drawString("Player 6", 1610, 575);        
                            }
                    else if(Player.currentPlayer==Player.players[6])
                         {
                           g.setColor(Color.YELLOW);
-                           g.fillRect(Window.getX(100),Window.getY(150),Window.getX(210),Window.getY(60));
+                            g.fillRect(Window.getX(1600),Window.getY(150),Window.getX(210),Window.getY(60));
                              g.setColor(Color.BLACK);
                            g.setFont(new Font("Arial",Font.PLAIN,60));
-                              g.drawString("Player 7", 110, 250);   
+                               g.drawString("Player 7", 1610, 240);       
                            }
                   
+
+              
+              
+      
                   
-                  if(homescreen)
+                 
+                 
+                 
+        if(homescreen)
                 
         {
 
