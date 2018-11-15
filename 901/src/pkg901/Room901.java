@@ -259,7 +259,7 @@ import javax.sound.sampled.*;
         
           
                    //Player 2
-                g.setColor(Color.GRAY);
+        g.setColor(Color.GRAY);
                g.fillRect(Window.getX(100),Window.getY(480),Window.getX(210),Window.getY(60));      
      //Player 7      
               g.setColor(Color.GRAY);
@@ -281,82 +281,85 @@ import javax.sound.sampled.*;
              g.fillRect(Window.getX(100),Window.getY(150),Window.getX(210),Window.getY(60));
             
               
-               g.setColor(Color.white);
-              g.setFont(new Font("Arial",Font.PLAIN,60));
-              g.drawString("Player 2", 110, 575); 
-              g.setFont(new Font("Arial",Font.PLAIN,60));
-              g.drawString("Player 1", 110, 250);   
-              g.setFont(new Font("Arial",Font.PLAIN,60));
-              g.drawString("Player 4", 810, 950); 
-              g.setFont(new Font("Arial",Font.PLAIN,60));
-              g.drawString("Player 7", 1610, 240);    
-              g.setFont(new Font("Arial",Font.PLAIN,60));
-              g.drawString("Player 6", 1610, 575);     
-              g.setFont(new Font("Arial",Font.PLAIN,60));
-              g.drawString("Player 3", 260, 950);   
-              g.setFont(new Font("Arial",Font.PLAIN,60));
-              g.drawString("Player 5", 1360, 950);  
+            g.setColor(Color.white);
+            g.setFont(new Font("Arial",Font.PLAIN,60));
+            g.drawString("Player 2", 110, 575); 
+            g.setFont(new Font("Arial",Font.PLAIN,60));
+            g.drawString("Player 1", 110, 250);   
+            g.setFont(new Font("Arial",Font.PLAIN,60));
+            g.drawString("Player 4", 810, 950); 
+            g.setFont(new Font("Arial",Font.PLAIN,60));
+            g.drawString("Player 7", 1610, 240);    
+            g.setFont(new Font("Arial",Font.PLAIN,60));
+            g.drawString("Player 6", 1610, 575);     
+            g.setFont(new Font("Arial",Font.PLAIN,60));
+            g.drawString("Player 3", 260, 950);   
+            g.setFont(new Font("Arial",Font.PLAIN,60));
+            g.drawString("Player 5", 1360, 950);  
               
               
-                 if(Player.currentPlayer==Player.players[0])
-                        {
-                           g.setColor(Color.YELLOW);
-                           g.fillRect(Window.getX(100),Window.getY(150),Window.getX(210),Window.getY(60));
-                             g.setColor(Color.BLACK);
-                           g.setFont(new Font("Arial",Font.PLAIN,60));
-                              g.drawString("Player 1", 110, 250);   
-                           }
-               else if(Player.currentPlayer==Player.players[1])
-                        {
-                           g.setColor(Color.YELLOW);
-                           g.fillRect(Window.getX(100),Window.getY(150),Window.getX(210),Window.getY(60));
-                             g.setColor(Color.BLACK);
-                           g.setFont(new Font("Arial",Font.PLAIN,60));
-                              g.drawString("Player 2", 110, 250);   
-                           }
-              else if(Player.currentPlayer==Player.players[2])
-                        {
-                          g.setColor(Color.YELLOW);
-                           g.fillRect(Window.getX(100),Window.getY(150),Window.getX(210),Window.getY(60));
-                             g.setColor(Color.BLACK);
-                           g.setFont(new Font("Arial",Font.PLAIN,60));
-                              g.drawString("Player 3", 110, 250);   
-                           }
-                else  if(Player.currentPlayer==Player.players[3])
-                        {
-                           g.setColor(Color.YELLOW);
-                           g.fillRect(Window.getX(100),Window.getY(150),Window.getX(210),Window.getY(60));
-                             g.setColor(Color.BLACK);
-                           g.setFont(new Font("Arial",Font.PLAIN,60));
-                              g.drawString("Player 4", 110, 250);   
-                           }
-                 else  if(Player.currentPlayer==Player.players[4])
-                        {
-                           g.setColor(Color.YELLOW);
-                           g.fillRect(Window.getX(100),Window.getY(150),Window.getX(210),Window.getY(60));
-                             g.setColor(Color.BLACK);
-                           g.setFont(new Font("Arial",Font.PLAIN,60));
-                              g.drawString("Player 5", 110, 250);   
-                           }
-                 else  if(Player.currentPlayer==Player.players[5])
-                        {
-                           g.setColor(Color.YELLOW);
-                           g.fillRect(Window.getX(100),Window.getY(150),Window.getX(210),Window.getY(60));
-                             g.setColor(Color.BLACK);
-                           g.setFont(new Font("Arial",Font.PLAIN,60));
-                              g.drawString("Player 6", 110, 250);   
-                           }
-                   else if(Player.currentPlayer==Player.players[6])
-                        {
-                          g.setColor(Color.YELLOW);
-                           g.fillRect(Window.getX(100),Window.getY(150),Window.getX(210),Window.getY(60));
-                             g.setColor(Color.BLACK);
-                           g.setFont(new Font("Arial",Font.PLAIN,60));
-                              g.drawString("Player 7", 110, 250);   
-                           }
+              
+            if(Player.currentPlayer==Player.players[0])
+            {
+                g.setColor(Color.YELLOW);
+                g.fillRect(Window.getX(100),Window.getY(150),Window.getX(210),Window.getY(60));
+                g.setColor(Color.BLACK);
+                g.setFont(new Font("Arial",Font.PLAIN,60));
+                g.drawString("Player 1", 110, 250);   
+            }
+            else if(Player.currentPlayer==Player.players[1])
+            {
+                g.setColor(Color.YELLOW);
+                g.fillRect(Window.getX(100),Window.getY(150),Window.getX(210),Window.getY(60));
+                g.setColor(Color.BLACK);
+                g.setFont(new Font("Arial",Font.PLAIN,60));
+                g.drawString("Player 2", 110, 250);   
+            }
+            else if(Player.currentPlayer==Player.players[2])
+            {
+                g.setColor(Color.YELLOW);
+                g.fillRect(Window.getX(100),Window.getY(150),Window.getX(210),Window.getY(60));
+                g.setColor(Color.BLACK);
+                g.setFont(new Font("Arial",Font.PLAIN,60));
+                g.drawString("Player 3", 110, 250);   
+            }
+            else  if(Player.currentPlayer==Player.players[3])
+            {
+                g.setColor(Color.YELLOW);
+                g.fillRect(Window.getX(100),Window.getY(150),Window.getX(210),Window.getY(60));
+                g.setColor(Color.BLACK);
+                g.setFont(new Font("Arial",Font.PLAIN,60));
+                g.drawString("Player 4", 110, 250);   
+            }
+             else  if(Player.currentPlayer==Player.players[4])
+            {
+                g.setColor(Color.YELLOW);
+                g.fillRect(Window.getX(100),Window.getY(150),Window.getX(210),Window.getY(60));
+                g.setColor(Color.BLACK);
+                g.setFont(new Font("Arial",Font.PLAIN,60));
+                g.drawString("Player 5", 110, 250);   
+            }
+            else  if(Player.currentPlayer==Player.players[5])
+            {
+                g.setColor(Color.YELLOW);
+                g.fillRect(Window.getX(100),Window.getY(150),Window.getX(210),Window.getY(60));
+                g.setColor(Color.BLACK);
+                g.setFont(new Font("Arial",Font.PLAIN,60));
+                g.drawString("Player 6", 110, 250);   
+            }
+            else if(Player.currentPlayer==Player.players[6])
+            {
+                g.setColor(Color.YELLOW);
+                g.fillRect(Window.getX(100),Window.getY(150),Window.getX(210),Window.getY(60));
+                g.setColor(Color.BLACK);
+                g.setFont(new Font("Arial",Font.PLAIN,60));
+                g.drawString("Player 7", 110, 250);   
+            }
                   
-                  
-                  if(homescreen)
+                 
+                 
+                 
+        if(homescreen)
                 
         {
 
