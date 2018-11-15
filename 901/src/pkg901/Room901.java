@@ -86,33 +86,33 @@ import javax.sound.sampled.*;
                          reset();
                       
                           //Player 3
-                        if(xpos>100)
-                        if(xpos<227)
-                       if(ypos>200&&ypos<270)
+                        if(xpos>260)
+                        if(xpos<475)
+                      if(ypos>877&&ypos<975)
                          reset();
                  
                           //Player 4
-                        if(xpos>100)
-                        if(xpos<227)
-                       if(ypos>200&&ypos<270)
+                        if(xpos>805)
+                        if(xpos<475+550)
+                       if(ypos>877&&ypos<975)
                          reset();
                     
                           //Player 5
-                        if(xpos>100)
-                        if(xpos<227)
-                       if(ypos>200&&ypos<270)
+                        if(xpos>1355)
+                        if(xpos<475+550+550)
+                        if(ypos>877&&ypos<975)
                          reset();
                         
                           //Player 6
-                        if(xpos>100)
-                        if(xpos<227)
-                       if(ypos>200&&ypos<270)
+                        if(xpos>1605)
+                        if(xpos<1826)
+                       if(ypos>505&&ypos<601)
                          reset();
                        
                           //Player 7
-                        if(xpos>100)
-                        if(xpos<227)
-                       if(ypos>200&&ypos<270)
+                        if(xpos>1605)
+                        if(xpos<1826)
+                     if(ypos>200&&ypos<270)
                          reset();
                         
                         
