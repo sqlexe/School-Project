@@ -21,22 +21,22 @@ public class Characters {
         Tamperer, Alex, Yee, Student
     }
     
-    public void Draw()
+    public void Draw(Room901 instance)
     {
        g.drawImage(MrYee,Window.getX(440),Window.getY(50),
-                Window.getX(220),Window.getY(260),this);
+                Window.getX(220),Window.getY(260),instance);
        
         g.drawImage(Alex,Window.getX(840),Window.getY(50),
-                Window.getX(220),Window.getY(260),this);
+                Window.getX(220),Window.getY(260),instance);
         
         g.drawImage(Tamperer,Window.getX(1240),Window.getY(50),
-                Window.getX(220),Window.getY(260),this);
+                Window.getX(220),Window.getY(260),instance);
         
         g.drawImage(Back,Window.getX(1240),Window.getY(400),
-                   Window.getX(220),Window.getY(260),this);
+                   Window.getX(220),Window.getY(260),instance);
         
         g.drawImage(Student,Window.getX(440),Window.getY(400),
-                Window.getX(220),Window.getY(260),this);
+                Window.getX(220),Window.getY(260),instance);
 
     }
     public void Assign(){
