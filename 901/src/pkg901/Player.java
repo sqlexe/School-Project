@@ -15,6 +15,7 @@ public class Player {
     private boolean alive;
     private boolean human;
     
+    
     public static void Create(int numPlayers)
     {
         for(int i=0; i<numPlayers;i++)
@@ -25,7 +26,7 @@ public class Player {
         {
             players[i]=new Player(false);
         }
-        currentPlayer=players[1];
+        currentPlayer=players[0];
     }
     
     Player(boolean _human)
