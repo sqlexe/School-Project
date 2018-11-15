@@ -28,7 +28,7 @@ public class Player {
         currentPlayer=players[1];
     }
     
-    Player(boolean _alive)
+    Player(boolean _human)
     {
         alive=true;
     }
