@@ -225,10 +225,11 @@ import javax.sound.sampled.*;
             return;
         }
         //KEEP THESE THEYRE ARE RIGHT 
+        if (bgSound.donePlaying)
+                bgSound = new sound ("bgsound.wav");
         if(!homescreen)
         {
-            bgSound.getPlay(true);
-            NightMusic = new sound("NightMusic.wav");
+
         g.drawImage(FeltBG,Window.getX(0),Window.getY(0),
                 Window.getWidth2(),Window.getHeight2(),this);
         
@@ -427,7 +428,7 @@ import javax.sound.sampled.*;
             animate();
             repaint();
 //            double seconds = .04;    //time that 1 frame takes.
-            double seconds = 1/5;    //time that 1 frame takes.
+            double seconds = 1/60;    //time that 1 frame takes.
             int miliseconds = (int) (1000.0 * seconds);
             try {
                 Thread.sleep(miliseconds);
@@ -439,8 +440,8 @@ import javax.sound.sampled.*;
     public void reset() {
             homescreen = true;
             numPlayers =1;
-            NightMusic = new sound ("NightMusic.wav");
-            NightMusic.getPlay(true);
+            if(bgSound != null)
+                bgSound.getPlay(true);
             bgSound = new sound ("bgsound.wav");
     }
 /////////////////////////////////////////////////////////////////////////
