@@ -168,7 +168,11 @@ import javax.sound.sampled.*;
                    
                 }
                 else if (e.VK_ENTER == e.getKeyCode()) {
-                   homescreen = false;
+                   if(homescreen=true)
+                   {
+                       Player.Create(numPlayers);
+                   }
+                    homescreen = false;
                 }
 
                 repaint();
