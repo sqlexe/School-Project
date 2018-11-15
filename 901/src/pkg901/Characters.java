@@ -9,10 +9,13 @@ import java.io.File;
 import java.util.ArrayList;
 
 public class Characters {
-    private Image tamperer;
-    private Image alex;
-    private Image yee;
-    private Image student;
+    private Image MrYee;
+    private Image Alex;
+    private Image Student;
+    private Image Tamperer;
+    private Image Back;
+    private Graphics2D g;
+    
     
     public static enum Character {
         Tamperer, Alex, Yee, Student
@@ -20,7 +23,21 @@ public class Characters {
     
     public void Draw()
     {
+       g.drawImage(MrYee,Window.getX(440),Window.getY(50),
+                Window.getX(220),Window.getY(260),this);
        
+        g.drawImage(Alex,Window.getX(840),Window.getY(50),
+                Window.getX(220),Window.getY(260),this);
+        
+        g.drawImage(Tamperer,Window.getX(1240),Window.getY(50),
+                Window.getX(220),Window.getY(260),this);
+        
+        g.drawImage(Back,Window.getX(1240),Window.getY(400),
+                   Window.getX(220),Window.getY(260),this);
+        
+        g.drawImage(Student,Window.getX(440),Window.getY(400),
+                Window.getX(220),Window.getY(260),this);
+
     }
     public void Assign(){
         int role = (int)(Math.random()*4);
