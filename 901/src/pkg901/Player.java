@@ -9,10 +9,11 @@ import java.io.File;
 import java.util.ArrayList;
 
 public class Player {
-    static Player players[]=new Player[6];
+    static Player players[]=new Player[7];
     static Player currentPlayer;
     Characters.Character character;
     private boolean alive;
+    
     
     public static void Create(int numPlayers)
     {
@@ -20,7 +21,7 @@ public class Player {
         {
             players[i]=new Player();
         }
-        currentPlayer=players[1];
+        currentPlayer=players[0];
     }
     
     Player()
