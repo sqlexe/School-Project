@@ -208,7 +208,9 @@ import javax.sound.sampled.*;
             Window.xsize = getSize().width;
             Window.ysize = getSize().height;
             image = createImage(Window.xsize, Window.ysize);
-            g = (Graphics2D) image.getGraphics();         
+            g = (Graphics2D) image.getGraphics();
+            
+//        System.out.println("paint " + g);            
             Draw.setDrawingInfo(g,this);
             g.setRenderingHint(RenderingHints.KEY_ANTIALIASING,
                     RenderingHints.VALUE_ANTIALIAS_ON);
@@ -282,7 +284,7 @@ import javax.sound.sampled.*;
         
 
 
-        g.drawImage(Middle,Window.getX(Window.WINDOW_WIDTH/2-150),Window.getY(Window.WINDOW_HEIGHT/2-150),
+        g.drawImage(Middle,Window.getX(Window.WINDOW_WIDTH/2-150),Window.getY(Window.WINDOW_HEIGHT/2-300),
                 Window.getX(300),Window.getY(300),this);
         }
         g.setColor(Color.RED);
@@ -392,7 +394,7 @@ import javax.sound.sampled.*;
               
               
       
-                 Characters.Draw(this);
+                 Characters.Draw(this,gamescreen,homescreen,nightime);
                   
                  
                  

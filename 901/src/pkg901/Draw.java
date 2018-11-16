@@ -12,6 +12,7 @@ class Draw {
     private static Room901 mainClassInst;
 
     public static void setDrawingInfo(Graphics2D _g,Room901 _mainClassInst) {
+//        System.out.println("setDrawingInfo " + g);
         g = _g;
         mainClassInst = _mainClassInst;
     }
@@ -34,7 +35,7 @@ class Draw {
             double yscale) {
         int width = image.getWidth(mainClassInst);
         int height = image.getHeight(mainClassInst);
-        System.out.println(g);
+//        System.out.println(g);
         g.translate(xpos,ypos);
         g.rotate(rot  * Math.PI/180.0);
         g.scale( xscale , yscale );
