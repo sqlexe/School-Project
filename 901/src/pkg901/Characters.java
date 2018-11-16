@@ -24,6 +24,7 @@ public class Characters {
     public  static void Draw(Room901 instance,boolean nightime,boolean gamescreen,boolean homeScreen )
     {
 
+<<<<<<< HEAD
         if (nightime && !gamescreen && !homeScreen)
         {
         Draw.drawImage(MrYee, 440, 840, 0, 1, 1);
@@ -32,6 +33,7 @@ public class Characters {
         Draw.drawImage(Back, 1240, 840, 0, 1.1, 1.1);
         Draw.drawImage(StudentI, 440, 250, 0, 1, 1);
         }
+=======
         Draw.drawImage(MrYee, 440, 840, 0, .8, .8);
         Draw.drawImage(AlexI, 840, 840, 0, .8, .8);
         Draw.drawImage(TampererI, 1240, 250, 0, .8, .8);
