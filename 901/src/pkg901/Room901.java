@@ -208,9 +208,7 @@ import javax.sound.sampled.*;
             Window.xsize = getSize().width;
             Window.ysize = getSize().height;
             image = createImage(Window.xsize, Window.ysize);
-            g = (Graphics2D) image.getGraphics();
-            
-        System.out.println("paint " + g);            
+            g = (Graphics2D) image.getGraphics();         
             Draw.setDrawingInfo(g,this);
             g.setRenderingHint(RenderingHints.KEY_ANTIALIASING,
                     RenderingHints.VALUE_ANTIALIAS_ON);
