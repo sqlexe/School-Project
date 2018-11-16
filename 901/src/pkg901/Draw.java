@@ -12,7 +12,6 @@ class Draw {
     private static Room901 mainClassInst;
 
     public static void setDrawingInfo(Graphics2D _g,Room901 _mainClassInst) {
-        System.out.println("setDrawingInfo " + g);
         g = _g;
         mainClassInst = _mainClassInst;
     }
