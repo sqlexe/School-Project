@@ -27,6 +27,7 @@ public class Player {
             players[i]=new Player(false);
         }
         currentPlayer=players[0];
+        Characters.Assign(players);
     }
     
     Player(boolean _human)
@@ -34,6 +35,9 @@ public class Player {
         alive=true;
     }
     
-
+    public void setRole(Characters.Character role)
+    {
+        character=role;
+    }
 }
 
