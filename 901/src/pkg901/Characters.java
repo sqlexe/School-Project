@@ -24,20 +24,21 @@ public class Characters {
     public  static void Draw(Room901 instance)
     {
 
-        g.drawImage(MrYee,Window.getX(440),Window.getY(50),
-                Window.getX(220),Window.getY(260),instance);
-       
-        g.drawImage(AlexI,Window.getX(840),Window.getY(50),
-                Window.getX(220),Window.getY(260),instance);
-        
-        g.drawImage(TampererI,Window.getX(1240),Window.getY(50),
-                Window.getX(220),Window.getY(260),instance);
-        
-        g.drawImage(Back,Window.getX(1240),Window.getY(400),
-                   Window.getX(220),Window.getY(260),instance);
-        
-        g.drawImage(StudentI,Window.getX(440),Window.getY(400),
-                Window.getX(220),Window.getY(260),instance);
+        Draw.drawImage(MrYee, 440, 440, 0, 1, 1);
+//        g.drawImage(MrYee,Window.getX(440),Window.getY(50),
+//                Window.getX(220),Window.getY(260),instance);
+//       
+//        g.drawImage(AlexI,Window.getX(840),Window.getY(50),
+//                Window.getX(220),Window.getY(260),instance);
+//        
+//        g.drawImage(TampererI,Window.getX(1240),Window.getY(50),
+//                Window.getX(220),Window.getY(260),instance);
+//        
+//        g.drawImage(Back,Window.getX(1240),Window.getY(400),
+//                   Window.getX(220),Window.getY(260),instance);
+//        
+//        g.drawImage(StudentI,Window.getX(440),Window.getY(400),
+//                Window.getX(220),Window.getY(260),instance);
 
     }
     public Characters.Character Assign(){
