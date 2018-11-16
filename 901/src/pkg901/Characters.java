@@ -10,9 +10,9 @@ import java.util.ArrayList;
 
 public class Characters {
     private static Image MrYee = Toolkit.getDefaultToolkit().getImage("./Mr.Yee.jpg");
-    private static Image Alex = Toolkit.getDefaultToolkit().getImage("./Alex.jpg");
-    private static Image Student = Toolkit.getDefaultToolkit().getImage("./Student.jpg");
-    private static Image Tamperer = Toolkit.getDefaultToolkit().getImage("./Tamperer.jpg");;
+    private static Image AlexI = Toolkit.getDefaultToolkit().getImage("./Alex.jpg");
+    private static Image StudentI = Toolkit.getDefaultToolkit().getImage("./Student.jpg");
+    private static Image TampererI = Toolkit.getDefaultToolkit().getImage("./Tamperer.jpg");;
     private static Image Back = Toolkit.getDefaultToolkit().getImage("./Blank.jpg");
     private static Graphics2D g;
     
@@ -23,19 +23,20 @@ public class Characters {
     
     public  static void Draw(Room901 instance)
     {
+
         g.drawImage(MrYee,Window.getX(440),Window.getY(50),
                 Window.getX(220),Window.getY(260),instance);
        
-        g.drawImage(Alex,Window.getX(840),Window.getY(50),
+        g.drawImage(AlexI,Window.getX(840),Window.getY(50),
                 Window.getX(220),Window.getY(260),instance);
         
-        g.drawImage(Tamperer,Window.getX(1240),Window.getY(50),
+        g.drawImage(TampererI,Window.getX(1240),Window.getY(50),
                 Window.getX(220),Window.getY(260),instance);
         
         g.drawImage(Back,Window.getX(1240),Window.getY(400),
                    Window.getX(220),Window.getY(260),instance);
         
-        g.drawImage(Student,Window.getX(440),Window.getY(400),
+        g.drawImage(StudentI,Window.getX(440),Window.getY(400),
                 Window.getX(220),Window.getY(260),instance);
 
     }
