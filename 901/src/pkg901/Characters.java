@@ -41,21 +41,31 @@ public class Characters {
 //                Window.getX(220),Window.getY(260),instance);
 
     }
-    public Characters.Character Assign(){
-        int role = (int)(Math.random()*4);
-            if (role == 0){
-               // tamperer
-            }
-            else if (role == 1){
-                //Alex
-            }
-            else if (role == 2){
-                return Character.Yee;
-            }
-            else if (role == 3){
-                return Character.Student;
-            }
-            return null;
+    public static void Assign(Player players[]){
+        
+        //alex
+        int pick = (int)(Math.random()*(players.length-1));
+        if(players[pick].character!=null)
+            players[pick].setRole(Character.Alex);
+        
+        //Yee
+        pick = (int)(Math.random()*(players.length-1));
+        if(players[pick].character!=null)
+            players[pick].setRole(Character.Alex);
+        
+        //Tamperer
+        pick = (int)(Math.random()*(players.length-1));
+        if(players[pick].character!=null)
+            players[pick].setRole(Character.Alex);
+        
+        for(int i=0; i<players.length;i++)
+        {
+            if(players[pick].character==null)
+                players[pick].setRole(Character.Student);
+        }
+        
+    
+            
     }
     
     
