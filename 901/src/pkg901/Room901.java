@@ -284,7 +284,7 @@ import javax.sound.sampled.*;
         
 
 
-        g.drawImage(Middle,Window.getX(Window.WINDOW_WIDTH/2-150),Window.getY(Window.WINDOW_HEIGHT/2-150),
+        g.drawImage(Middle,Window.getX(Window.WINDOW_WIDTH/2-150),Window.getY(Window.WINDOW_HEIGHT/2-300),
                 Window.getX(300),Window.getY(300),this);
         }
         g.setColor(Color.RED);
