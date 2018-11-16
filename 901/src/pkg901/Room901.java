@@ -394,7 +394,7 @@ import javax.sound.sampled.*;
               
               
       
-                 Characters.Draw(this);
+                 Characters.Draw(this,gamescreen,homescreen,nightime);
                   
                  
                  
