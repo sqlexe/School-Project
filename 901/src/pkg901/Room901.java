@@ -168,6 +168,8 @@ import javax.sound.sampled.*;
                     
                 } 
                 else if (e.VK_RIGHT == e.getKeyCode()) {
+                    nightime=false;
+                    gamescreen=true;
                   
                 } 
                 else if (e.VK_SPACE == e.getKeyCode()) {
@@ -180,7 +182,7 @@ import javax.sound.sampled.*;
                    }
                    homescreen=false;
                    nightime=true;
-               
+                   
                 }
 
                 repaint();
