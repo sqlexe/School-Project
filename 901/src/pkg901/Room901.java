@@ -210,7 +210,7 @@ import javax.sound.sampled.*;
             image = createImage(Window.xsize, Window.ysize);
             g = (Graphics2D) image.getGraphics();
             
-        System.out.println("paint " + g);            
+//        System.out.println("paint " + g);            
             Draw.setDrawingInfo(g,this);
             g.setRenderingHint(RenderingHints.KEY_ANTIALIASING,
                     RenderingHints.VALUE_ANTIALIAS_ON);
