@@ -209,7 +209,9 @@ import javax.sound.sampled.*;
             Window.ysize = getSize().height;
             image = createImage(Window.xsize, Window.ysize);
             g = (Graphics2D) image.getGraphics();
-            Drawing.setDrawingInfo(g,this);
+            
+        System.out.println("paint " + g);            
+            Draw.setDrawingInfo(g,this);
             g.setRenderingHint(RenderingHints.KEY_ANTIALIASING,
                     RenderingHints.VALUE_ANTIALIAS_ON);
         }
@@ -359,7 +361,7 @@ import javax.sound.sampled.*;
               
               
       
-//                 Characters.Draw(this);
+                 Characters.Draw(this);
                   
                  
                  
@@ -440,6 +442,7 @@ import javax.sound.sampled.*;
             homescreen = true;
             nightime=false;
             numPlayers =1;
+            
             if(bgSound != null)
                 bgSound.getPlay(true);
             bgSound = new sound ("bgsound.wav");
@@ -535,33 +538,5 @@ class Window {
 
 
 
-class Drawing {
-    private static Graphics2D g;
-    private static Room901 mainClassInst;
 
-    public static void setDrawingInfo(Graphics2D _g,Room901 _mainClassInst) {
-        g = _g;
-        mainClassInst = _mainClassInst;
-    }
-////////////////////////////////////////////////////////////////////////////
-  
-////////////////////////////////////////////////////////////////////////////
-    public static void drawImage(Image image,int xpos,int ypos,double rot,double xscale,
-            double yscale) {
-        int width = image.getWidth(mainClassInst);
-        int height = image.getHeight(mainClassInst);
-        g.translate(xpos,ypos);
-        g.rotate(rot  * Math.PI/180.0);
-        g.scale( xscale , yscale );
-
-        g.drawImage(image,-width/2,-height/2,
-        width,height,mainClassInst);
-
-        g.scale( 1.0/xscale,1.0/yscale );
-        g.rotate(-rot  * Math.PI/180.0);
-        g.translate(-xpos,-ypos);
-    }
-   
-
-}
 
