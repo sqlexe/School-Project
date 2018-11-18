@@ -19,16 +19,19 @@ import javax.sound.sampled.*;
     boolean animateFirstTime = true;
     Image image;
     Graphics2D g;
-    
+    Image nightSky;
     Image FeltBG;
     Image Middle;
-    Image MrYee;
-    Image Alex;
-    Image Student;
-    Image Tamperer;
-    Image Back;
+//    Image MrYee;
+//    Image Alex;
+//    Image Student;
+//    Image Tamperer;
+//    Image Back;
+    boolean gamescreen=false;
+    boolean nightime = false;
     boolean homescreen = true;
     sound bgSound = null;
+    sound NightMusic = null;
     int numPlayers=1;
     int xLeft1=930;
    int xLeft2=1035;
@@ -36,6 +39,7 @@ import javax.sound.sampled.*;
    int yTop2=540;
    
    
+            
    static Room901 frame;
     public static void main(String[] args) {
         frame = new Room901();
@@ -55,18 +59,72 @@ import javax.sound.sampled.*;
                     
                     Board.click(e.getX() - Window.getX(0),
                         e.getY() - Window.getY(0));  
-                    
-                    if(xpos>xLeft1 && xpos <xLeft2 && ypos>365 && ypos<470)
+                 if(homescreen)    
+                 {
+     //+ code  
+                     if(xpos>xLeft1 && xpos <xLeft2 && ypos>365 && ypos<470)
                         if(numPlayers <7)
                         numPlayers++;
-
-
+                     
+// - code
                       if(xpos>950)
                         if(xpos<1020)
                         if(ypos>650&&ypos<750)
                         if(numPlayers>1)
                             numPlayers--;
-                    if(!homescreen)
+
+ // 
+                 }
+                    //Player 1
+                        if(xpos>100)
+                        if(xpos<325)
+                       if(ypos>200&&ypos<270)
+                       Player.currentPlayer=Player.players[0];
+                          
+                        //Player 2
+                        if(xpos>100)
+                        if(xpos<325)
+                       if(ypos>505&&ypos<601)
+                       Player.currentPlayer=Player.players[1];
+                      
+                          //Player 3
+                        if(xpos>260)
+                        if(xpos<475)
+                      if(ypos>877&&ypos<975)
+                       Player.currentPlayer=Player.players[2];
+                 
+                          //Player 4
+                        if(xpos>805)
+                        if(xpos<475+550)
+                       if(ypos>877&&ypos<975)
+                       Player.currentPlayer=Player.players[3];
+                    
+                          //Player 5
+                        if(xpos>1355)
+                        if(xpos<475+550+550)
+                        if(ypos>877&&ypos<975)
+                        Player.currentPlayer=Player.players[4];
+                        
+                          //Player 6
+                        if(xpos>1605)
+                        if(xpos<1826)
+                       if(ypos>505&&ypos<601)
+                        Player.currentPlayer=Player.players[5];
+                       
+                          //Player 7
+                        if(xpos>1605)
+                        if(xpos<1826)
+                     if(ypos>200&&ypos<270)
+                         Player.currentPlayer=Player.players[6];
+                        
+                       
+                       
+                        
+                        
+                        
+                        
+                        if(!homescreen)
+
                     Board.click(e.getX(),
                         e.getY());  
 
@@ -74,6 +132,7 @@ import javax.sound.sampled.*;
                 }
                 if (e.BUTTON3 == e.getButton()) {
                     //right button
+                   if(!homescreen)
                     reset();
                 }
                 repaint();
@@ -103,19 +162,27 @@ import javax.sound.sampled.*;
                 } 
                 else if (e.VK_DOWN == e.getKeyCode()) 
                {     
-                    
+                    nightime=true;
                } 
                 else if (e.VK_LEFT == e.getKeyCode()) {
                     
                 } 
                 else if (e.VK_RIGHT == e.getKeyCode()) {
+                    nightime=false;
+                    gamescreen=true;
                   
                 } 
                 else if (e.VK_SPACE == e.getKeyCode()) {
                    
                 }
                 else if (e.VK_ENTER == e.getKeyCode()) {
-                   homescreen = false;
+                   if(homescreen=true)
+                   {
+                       Player.Create(numPlayers);
+                   }
+                   homescreen=false;
+                   nightime=true;
+                   
                 }
 
                 repaint();
@@ -142,7 +209,9 @@ import javax.sound.sampled.*;
             Window.ysize = getSize().height;
             image = createImage(Window.xsize, Window.ysize);
             g = (Graphics2D) image.getGraphics();
-            Drawing.setDrawingInfo(g,this);
+            
+//        System.out.println("paint " + g);            
+            Draw.setDrawingInfo(g,this);
             g.setRenderingHint(RenderingHints.KEY_ANTIALIASING,
                     RenderingHints.VALUE_ANTIALIAS_ON);
         }
@@ -164,38 +233,177 @@ import javax.sound.sampled.*;
             return;
         }
         //KEEP THESE THEYRE ARE RIGHT 
-
+        if (bgSound.donePlaying)
+                bgSound = new sound ("bgsound.wav");
+          if(nightime)     
+             {
+                 g.drawImage(nightSky,Window.getX(0),Window.getY(0),
+                Window.getWidth2(),Window.getHeight2(),this);
+             }
+        
+      //first night cycle displaying their turns 
+          
+          if(nightime && !homescreen && !gamescreen)
+         {
+                if(Player.currentPlayer==Player.players[0])
+                        {
+                            Player.currentPlayer=Player.players[1];
+                           }
+               else if(Player.currentPlayer==Player.players[1])
+                        {
+                          Player.currentPlayer=Player.players[2];
+                           }
+              else if(Player.currentPlayer==Player.players[2])
+                        {
+                         Player.currentPlayer=Player.players[3];
+                        }
+                else  if(Player.currentPlayer==Player.players[3])
+                        {
+                            Player.currentPlayer=Player.players[4];
+                           }
+                 else  if(Player.currentPlayer==Player.players[4])
+                        {
+                           Player.currentPlayer=Player.players[5];
+                           }
+                 else  if(Player.currentPlayer==Player.players[5])
+                        {
+                            Player.currentPlayer=Player.players[6];
+                           }
+                   else if(Player.currentPlayer==Player.players[6])
+                        {
+                           Player.currentPlayer=Player.players[0];
+                           }
+            
+            
+        }
+        if(!homescreen && !nightime)
+        {
+            if(gamescreen){
         g.drawImage(FeltBG,Window.getX(0),Window.getY(0),
                 Window.getWidth2(),Window.getHeight2(),this);
         
 
-        
-        g.drawImage(MrYee,Window.getX(440),Window.getY(50),
-                Window.getX(220),Window.getY(260),this);
 
-       
-        g.drawImage(Alex,Window.getX(840),Window.getY(50),
-                Window.getX(220),Window.getY(260),this);
-        
-        g.drawImage(Tamperer,Window.getX(1240),Window.getY(50),
-                Window.getX(220),Window.getY(260),this);
-
-        g.drawImage(Back,Window.getX(1240),Window.getY(400),
-                   Window.getX(220),Window.getY(260),this);
-        
-        g.drawImage(Student,Window.getX(440),Window.getY(400),
-                Window.getX(220),Window.getY(260),this);
-
-        g.drawImage(Middle,Window.getX(Window.WINDOW_WIDTH/2-150),Window.getY(Window.WINDOW_HEIGHT/2-150),
+        g.drawImage(Middle,Window.getX(Window.WINDOW_WIDTH/2-150),Window.getY(Window.WINDOW_HEIGHT/2-300),
                 Window.getX(300),Window.getY(300),this);
-
+        }
         g.setColor(Color.RED);
         g.drawRect(Window.getX(440),Window.getY(400),Window.getX(220),Window.getY(260));
+      
         
+          
+                   //Player 2
+        g.setColor(Color.GRAY);
+               g.fillRect(Window.getX(100),Window.getY(480),Window.getX(210),Window.getY(60));      
+     //Player 7      
+              g.setColor(Color.GRAY);
+              g.fillRect(Window.getX(1600),Window.getY(150),Window.getX(210),Window.getY(60));
+     //Player 3   
+              g.setColor(Color.GRAY);
+              g.fillRect(Window.getX(250),Window.getY(850),Window.getX(210),Window.getY(60));
+    // Player 4       
+              g.setColor(Color.GRAY);
+              g.fillRect(Window.getX(800),Window.getY(850),Window.getX(210),Window.getY(60));
+    // Player 5        
+              g.setColor(Color.GRAY);
+              g.fillRect(Window.getX(1350),Window.getY(850),Window.getX(210),Window.getY(60));
+       // Player 6       
+              g.setColor(Color.GRAY);
+              g.fillRect(Window.getX(1600),Window.getY(480),Window.getX(210),Window.getY(60));
+            // Player 1   
+             g.setColor(Color.GRAY);
+             g.fillRect(Window.getX(100),Window.getY(150),Window.getX(210),Window.getY(60));
+            
+              
 
-        
+               g.setColor(Color.white);
+              g.setFont(new Font("Arial",Font.PLAIN,60));
+              g.drawString("Player 2", 110, 575); 
+              g.setFont(new Font("Arial",Font.PLAIN,60));
+              g.drawString("Player 1", 110, 250);   
+              g.setFont(new Font("Arial",Font.PLAIN,60));
+              g.drawString("Player 4", 810, 950); 
+              g.setFont(new Font("Arial",Font.PLAIN,60));
+              g.drawString("Player 7", 1610, 240);    
+              g.setFont(new Font("Arial",Font.PLAIN,60));
+              g.drawString("Player 6", 1610, 575);     
+              g.setFont(new Font("Arial",Font.PLAIN,60));
+              g.drawString("Player 3", 260, 950);   
+              g.setFont(new Font("Arial",Font.PLAIN,60));
+              g.drawString("Player 5", 1360, 950);  
+             
+              
+                 if(Player.currentPlayer==Player.players[0])
+                        {
+                           g.setColor(Color.YELLOW);
+                           g.fillRect(Window.getX(100),Window.getY(150),Window.getX(210),Window.getY(60));
+                             g.setColor(Color.BLACK);
+                           g.setFont(new Font("Arial",Font.PLAIN,60));
+                              g.drawString("Player 1", 110, 250);   
+                           }
+               else if(Player.currentPlayer==Player.players[1])
+                        {
+                           g.setColor(Color.YELLOW);
+                            g.fillRect(Window.getX(100),Window.getY(480),Window.getX(210),Window.getY(60)); 
+                             g.setColor(Color.BLACK);
+                           g.setFont(new Font("Arial",Font.PLAIN,60));
+                               g.drawString("Player 2", 110, 575); 
+                           }
+              else if(Player.currentPlayer==Player.players[2])
+                        {
+                          g.setColor(Color.YELLOW);
+                          g.fillRect(Window.getX(250),Window.getY(850),Window.getX(210),Window.getY(60));
+                             g.setColor(Color.BLACK);
+                           g.setFont(new Font("Arial",Font.PLAIN,60));
+                             g.drawString("Player 3", 260, 950);    
+                           }
+                else  if(Player.currentPlayer==Player.players[3])
+                        {
+                           g.setColor(Color.YELLOW);
+                             g.fillRect(Window.getX(800),Window.getY(850),Window.getX(210),Window.getY(60));
+                             g.setColor(Color.BLACK);
+                           g.setFont(new Font("Arial",Font.PLAIN,60));
+                              g.drawString("Player 4", 810, 950);   
+                           }
+                 else  if(Player.currentPlayer==Player.players[4])
+                        {
+                           g.setColor(Color.YELLOW);
+                            g.fillRect(Window.getX(1350),Window.getY(850),Window.getX(210),Window.getY(60));
+                             g.setColor(Color.BLACK);
+                           g.setFont(new Font("Arial",Font.PLAIN,60));
+                              g.drawString("Player 5", 1360, 950);     
+                           }
+                 else  if(Player.currentPlayer==Player.players[5])
+                        {
+                           g.setColor(Color.YELLOW);
+                           g.fillRect(Window.getX(1600),Window.getY(480),Window.getX(210),Window.getY(60));
+                             g.setColor(Color.BLACK);
+                           g.setFont(new Font("Arial",Font.PLAIN,60));
+                             g.drawString("Player 6", 1610, 575);        
+                           }
+                   else if(Player.currentPlayer==Player.players[6])
+                        {
+                          g.setColor(Color.YELLOW);
+                            g.fillRect(Window.getX(1600),Window.getY(150),Window.getX(210),Window.getY(60));
+                             g.setColor(Color.BLACK);
+                           g.setFont(new Font("Arial",Font.PLAIN,60));
+                               g.drawString("Player 7", 1610, 240);       
+                           }
+        }
+               
+              
+              
+      
+                 Characters.Draw(this,gamescreen,homescreen,nightime);
+                  
+                 
+                 
+                 
         if(homescreen)
+                
         {
+
+            
             g.setColor(Color.BLACK);
             g.fillRect(Window.getX(0),Window.getY(0), Window.getWidth2(),Window.getHeight2());
            
@@ -225,11 +433,11 @@ import javax.sound.sampled.*;
             g.setColor(Color.white);   
             g.setFont(new Font("Arial",Font.PLAIN,50));    
             g.drawString("Press ENTER when ready",1400/2,890); 
-            
- 
-        }
+          
 
-        gOld.drawImage(image, 0, 0, null);
+           
+        }
+           gOld.drawImage(image, 0, 0, null);
     }
 /////////////////////////////////////////////////////////////////////////////      
      public void HomeScreen(int xpos,int ypos,double rot,double xscale,double yscale)
@@ -254,7 +462,7 @@ import javax.sound.sampled.*;
             animate();
             repaint();
 //            double seconds = .04;    //time that 1 frame takes.
-            double seconds = 1/5;    //time that 1 frame takes.
+            double seconds = 1/60;    //time that 1 frame takes.
             int miliseconds = (int) (1000.0 * seconds);
             try {
                 Thread.sleep(miliseconds);
@@ -264,9 +472,13 @@ import javax.sound.sampled.*;
     }
 /////////////////////////////////////////////////////////////////////////
     public void reset() {
-        
+            homescreen = true;
+            nightime=false;
             numPlayers =1;
-           
+            
+            if(bgSound != null)
+                bgSound.getPlay(true);
+            bgSound = new sound ("bgsound.wav");
     }
 /////////////////////////////////////////////////////////////////////////
     public void animate() {
@@ -276,14 +488,15 @@ import javax.sound.sampled.*;
                 Window.xsize = getSize().width;
                 Window.ysize = getSize().height;
             }
-                FeltBG = Toolkit.getDefaultToolkit().getImage("./FeltBG.jpg");
+               nightSky = Toolkit.getDefaultToolkit().getImage("./nightSky.jpg");
+            FeltBG = Toolkit.getDefaultToolkit().getImage("./FeltBG.jpg");
                 Middle = Toolkit.getDefaultToolkit().getImage("./blackHole.gif");
-                Tamperer = Toolkit.getDefaultToolkit().getImage("./Tamperer.jpg");
-                MrYee = Toolkit.getDefaultToolkit().getImage("./Mr.Yee.jpg");
-                Alex = Toolkit.getDefaultToolkit().getImage("./Alex.jpg");
-                Student = Toolkit.getDefaultToolkit().getImage("./Student.jpg");
-                Back = Toolkit.getDefaultToolkit().getImage("./Blank.jpg");
-                bgSound = new sound("bgsound.wav");
+//                Tamperer = Toolkit.getDefaultToolkit().getImage("./Tamperer.jpg");
+//                MrYee = Toolkit.getDefaultToolkit().getImage("./Mr.Yee.jpg");
+//                Alex = Toolkit.getDefaultToolkit().getImage("./Alex.jpg");
+//                Student = Toolkit.getDefaultToolkit().getImage("./Student.jpg");
+//                Back = Toolkit.getDefaultToolkit().getImage("./Blank.jpg");
+//                
                 reset();
             
             }
@@ -358,72 +571,5 @@ class Window {
 
 
 
-class Drawing {
-    private static Graphics2D g;
-    private static Room901 mainClassInst;
 
-    public static void setDrawingInfo(Graphics2D _g,Room901 _mainClassInst) {
-        g = _g;
-        mainClassInst = _mainClassInst;
-    }
-////////////////////////////////////////////////////////////////////////////
-  
-////////////////////////////////////////////////////////////////////////////
-    public static void drawImage(Image image,int xpos,int ypos,double rot,double xscale,
-            double yscale) {
-        int width = image.getWidth(mainClassInst);
-        int height = image.getHeight(mainClassInst);
-        g.translate(xpos,ypos);
-        g.rotate(rot  * Math.PI/180.0);
-        g.scale( xscale , yscale );
 
-        g.drawImage(image,-width/2,-height/2,
-        width,height,mainClassInst);
-
-        g.scale( 1.0/xscale,1.0/yscale );
-        g.rotate(-rot  * Math.PI/180.0);
-        g.translate(-xpos,-ypos);
-    }
-   
-
-}
-class sound implements Runnable {
-    Thread myThread;
-    File soundFile;
-    public boolean donePlaying = false;
-    sound(String _name)
-    {
-        soundFile = new File(_name);
-        myThread = new Thread(this);
-        myThread.start();
-    }
-    public void run()
-    {
-        try {
-        AudioInputStream ais = AudioSystem.getAudioInputStream(soundFile);
-        AudioFormat format = ais.getFormat();
-    //    System.out.println("Format: " + format);
-        DataLine.Info info = new DataLine.Info(SourceDataLine.class, format);
-        SourceDataLine source = (SourceDataLine) AudioSystem.getLine(info);
-        source.open(format);
-        source.start();
-        int read = 0;
-        byte[] audioData = new byte[16384];
-        while (read > -1){
-            read = ais.read(audioData,0,audioData.length);
-            if (read >= 0) {
-                source.write(audioData,0,read);
-            }
-        }
-        donePlaying = true;
-
-        source.drain();
-        source.close();
-        }
-        catch (Exception exc) {
-            System.out.println("error: " + exc.getMessage());
-            exc.printStackTrace();
-        }
-    }
-
-}
