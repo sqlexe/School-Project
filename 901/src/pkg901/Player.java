@@ -26,6 +26,8 @@ public class Player {
         {
             players[i]=new Player(false);
         }
+        
+        
         currentPlayer=players[0];
         Characters.Assign(players);
     }
@@ -43,5 +45,11 @@ public class Player {
     {
         return currentPlayer;
     }
+//    static public  getRole()
+//    {
+//        return currentPlayer.character;
+//    }
+
+
 }
 
