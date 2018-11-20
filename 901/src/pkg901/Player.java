@@ -39,5 +39,9 @@ public class Player {
     {
         character=role;
     }
+    static public Player getCurrentPlayer()
+    {
+        return currentPlayer;
+    }
 }
 
