@@ -79,8 +79,13 @@ import javax.sound.sampled.*;
                         if(xpos>100)
                         if(xpos<325)
                        if(ypos>200&&ypos<270)
-                       Player.currentPlayer=Player.players[0];
+                           if(Player.currentPlayer.character==Player.currentPlayer.character.Tamperer)
+                                   
+                           
                           
+                          
+                        
+                        
                         //Player 2
                         if(xpos>100)
                         if(xpos<325)
@@ -440,21 +445,7 @@ import javax.sound.sampled.*;
            gOld.drawImage(image, 0, 0, null);
     }
 /////////////////////////////////////////////////////////////////////////////      
-     public void HomeScreen(int xpos,int ypos,double rot,double xscale,double yscale)
-    {
-        g.translate(xpos,ypos);
-        g.rotate(rot  * Math.PI/180.0);
-        g.scale( xscale , yscale );
-
-        g.setColor(Color.BLACK);
-        g.fillRect(Window.getX(0),Window.getY(0), Window.getWidth2(),Window.getHeight2());
-        
-        
-        g.scale( 1.0/xscale,1.0/yscale );
-        g.rotate(-rot  * Math.PI/180.0);
-        g.translate(-xpos,-ypos);
-
-    }
+    
 ////////////////////////////////////////////////////////////////////////////
 // needed for     implement runnable
     public void run() {
