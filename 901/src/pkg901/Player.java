@@ -45,10 +45,10 @@ public class Player {
     {
         return currentPlayer;
     }
-//    static public  getRole()
-//    {
-//        return currentPlayer.character;
-//    }
+    public Characters.Character getRole()
+    {
+        return currentPlayer.character;
+    }
 
 
 }
