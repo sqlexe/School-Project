@@ -37,7 +37,7 @@ import javax.sound.sampled.*;
    int xLeft2=1035;
     int yTop1=490;
    int yTop2=540;
-   
+   boolean showcard=true;
    
             
    static Room901 frame;
@@ -76,51 +76,155 @@ import javax.sound.sampled.*;
  // 
                  }
                     //Player 1
-                        if(xpos>100)
-                        if(xpos<325)
-                       if(ypos>200&&ypos<270)
-                           if(Player.currentPlayer.character==Player.currentPlayer.character.Tamperer)
-                                   
+                      if(xpos>100)
+                      if(xpos<325)
+                      if(ypos>200&&ypos<270)
+                         if(Player.currentPlayer==Player.players[0]){
+                              if( Player.players[0].getRole()==Characters.Character.Student)
+                                                Characters.DrawStudentI(frame, nightime, gamescreen, homescreen);
+                                               else  if( Player.players[0].getRole()==Characters.Character.Yee)
+                                                Characters.DrawYee(frame, nightime, gamescreen, homescreen);
+                          else  if( Player.players[0].getRole()==Characters.Character.Alex)
+                                                Characters.DrawAlex(frame, nightime, gamescreen, homescreen);}
+                           
+                         else  if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Alex){
+                                     if(showcard){
+                                        if( Player.players[0].getRole()==Characters.Character.Student)
+                                                Characters.DrawStudentI(frame, nightime, gamescreen, homescreen);
+                                               else  if( Player.players[0].getRole()==Characters.Character.Yee)
+                                                Characters.DrawYee(frame, nightime, gamescreen, homescreen);
+                          else  if( Player.players[0].getRole()==Characters.Character.Alex)
+                                                Characters.DrawAlex(frame, nightime, gamescreen, homescreen);}}
+                                                                                                                    
                            
                           
-                          
-                        
+                       
                         
                         //Player 2
                         if(xpos>100)
                         if(xpos<325)
                        if(ypos>505&&ypos<601)
-                       Player.currentPlayer=Player.players[1];
+                      if(Player.currentPlayer==Player.players[1]){
+                              if( Player.players[1].getRole()==Characters.Character.Student)
+                                                Characters.DrawStudentI(frame, nightime, gamescreen, homescreen);
+                                               else  if( Player.players[1].getRole()==Characters.Character.Yee)
+                                                Characters.DrawYee(frame, nightime, gamescreen, homescreen);
+                          else  if( Player.players[1].getRole()==Characters.Character.Alex)
+                                                Characters.DrawAlex(frame, nightime, gamescreen, homescreen);}
+                           
+                         else  if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Alex){
+                                     if(showcard){
+                                        if( Player.players[1].getRole()==Characters.Character.Student)
+                                                Characters.DrawStudentI(frame, nightime, gamescreen, homescreen);
+                                               else  if( Player.players[1].getRole()==Characters.Character.Yee)
+                                                Characters.DrawYee(frame, nightime, gamescreen, homescreen);
+                          else  if( Player.players[1].getRole()==Characters.Character.Alex)
+                                                Characters.DrawAlex(frame, nightime, gamescreen, homescreen);}}
                       
                           //Player 3
                         if(xpos>260)
                         if(xpos<475)
                       if(ypos>877&&ypos<975)
-                       Player.currentPlayer=Player.players[2];
+                      if(Player.currentPlayer==Player.players[2]){
+                              if( Player.players[2].getRole()==Characters.Character.Student)
+                                                Characters.DrawStudentI(frame, nightime, gamescreen, homescreen);
+                                               else  if( Player.players[2].getRole()==Characters.Character.Yee)
+                                                Characters.DrawYee(frame, nightime, gamescreen, homescreen);
+                          else  if( Player.players[2].getRole()==Characters.Character.Alex)
+                                                Characters.DrawAlex(frame, nightime, gamescreen, homescreen);}
+                           
+                         else  if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Alex){
+                                     if(showcard){
+                                        if( Player.players[2].getRole()==Characters.Character.Student)
+                                                Characters.DrawStudentI(frame, nightime, gamescreen, homescreen);
+                                               else  if( Player.players[2].getRole()==Characters.Character.Yee)
+                                                Characters.DrawYee(frame, nightime, gamescreen, homescreen);
+                          else  if( Player.players[2].getRole()==Characters.Character.Alex)
+                                                Characters.DrawAlex(frame, nightime, gamescreen, homescreen);}}
                  
                           //Player 4
                         if(xpos>805)
                         if(xpos<475+550)
                        if(ypos>877&&ypos<975)
-                       Player.currentPlayer=Player.players[3];
+                    if(Player.currentPlayer==Player.players[3]){
+                              if( Player.players[3].getRole()==Characters.Character.Student)
+                                                Characters.DrawStudentI(frame, nightime, gamescreen, homescreen);
+                                               else  if( Player.players[3].getRole()==Characters.Character.Yee)
+                                                Characters.DrawYee(frame, nightime, gamescreen, homescreen);
+                          else  if( Player.players[3].getRole()==Characters.Character.Alex)
+                                                Characters.DrawAlex(frame, nightime, gamescreen, homescreen);}
+                           
+                         else  if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Alex){
+                                     if(showcard){
+                                        if( Player.players[3].getRole()==Characters.Character.Student)
+                                                Characters.DrawStudentI(frame, nightime, gamescreen, homescreen);
+                                               else  if( Player.players[3].getRole()==Characters.Character.Yee)
+                                                Characters.DrawYee(frame, nightime, gamescreen, homescreen);
+                          else  if( Player.players[3].getRole()==Characters.Character.Alex)
+                                                Characters.DrawAlex(frame, nightime, gamescreen, homescreen);}}
                     
                           //Player 5
                         if(xpos>1355)
                         if(xpos<475+550+550)
                         if(ypos>877&&ypos<975)
-                        Player.currentPlayer=Player.players[4];
+                       if(Player.currentPlayer==Player.players[4]){
+                              if( Player.players[4].getRole()==Characters.Character.Student)
+                                                Characters.DrawStudentI(frame, nightime, gamescreen, homescreen);
+                                               else  if( Player.players[4].getRole()==Characters.Character.Yee)
+                                                Characters.DrawYee(frame, nightime, gamescreen, homescreen);
+                          else  if( Player.players[4].getRole()==Characters.Character.Alex)
+                                                Characters.DrawAlex(frame, nightime, gamescreen, homescreen);}
+                           
+                         else  if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Alex){
+                                     if(showcard){
+                                        if( Player.players[4].getRole()==Characters.Character.Student)
+                                                Characters.DrawStudentI(frame, nightime, gamescreen, homescreen);
+                                               else  if( Player.players[4].getRole()==Characters.Character.Yee)
+                                                Characters.DrawYee(frame, nightime, gamescreen, homescreen);
+                          else  if( Player.players[4].getRole()==Characters.Character.Alex)
+                                                Characters.DrawAlex(frame, nightime, gamescreen, homescreen);}}
                         
                           //Player 6
                         if(xpos>1605)
                         if(xpos<1826)
                        if(ypos>505&&ypos<601)
-                        Player.currentPlayer=Player.players[5];
+                       if(Player.currentPlayer==Player.players[5]){
+                              if( Player.players[5].getRole()==Characters.Character.Student)
+                                                Characters.DrawStudentI(frame, nightime, gamescreen, homescreen);
+                                               else  if( Player.players[5].getRole()==Characters.Character.Yee)
+                                                Characters.DrawYee(frame, nightime, gamescreen, homescreen);
+                          else  if( Player.players[5].getRole()==Characters.Character.Alex)
+                                                Characters.DrawAlex(frame, nightime, gamescreen, homescreen);}
+                           
+                         else  if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Alex){
+                                     if(showcard){
+                                        if( Player.players[5].getRole()==Characters.Character.Student)
+                                                Characters.DrawStudentI(frame, nightime, gamescreen, homescreen);
+                                               else  if( Player.players[5].getRole()==Characters.Character.Yee)
+                                                Characters.DrawYee(frame, nightime, gamescreen, homescreen);
+                          else  if( Player.players[5].getRole()==Characters.Character.Alex)
+                                                Characters.DrawAlex(frame, nightime, gamescreen, homescreen);}}
                        
                           //Player 7
                         if(xpos>1605)
                         if(xpos<1826)
                      if(ypos>200&&ypos<270)
-                         Player.currentPlayer=Player.players[6];
+                       if(Player.currentPlayer==Player.players[6]){
+                              if( Player.players[0].getRole()==Characters.Character.Student)
+                                                Characters.DrawStudentI(frame, nightime, gamescreen, homescreen);
+                                               else  if( Player.players[6].getRole()==Characters.Character.Yee)
+                                                Characters.DrawYee(frame, nightime, gamescreen, homescreen);
+                          else  if( Player.players[6].getRole()==Characters.Character.Alex)
+                                                Characters.DrawAlex(frame, nightime, gamescreen, homescreen);}
+                           
+                         else  if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Alex){
+                                     if(showcard){
+                                        if( Player.players[6].getRole()==Characters.Character.Student)
+                                                Characters.DrawStudentI(frame, nightime, gamescreen, homescreen);
+                                               else  if( Player.players[6].getRole()==Characters.Character.Yee)
+                                                Characters.DrawYee(frame, nightime, gamescreen, homescreen);
+                          else  if( Player.players[6].getRole()==Characters.Character.Alex)
+                                                Characters.DrawAlex(frame, nightime, gamescreen, homescreen);}}
                         
                        
                        
@@ -181,7 +285,10 @@ import javax.sound.sampled.*;
                    
                 }
                 else if (e.VK_ENTER == e.getKeyCode()) {
-                   if(homescreen=true)
+                
+                    
+                    
+                    if(homescreen=true)
                    {
                        Player.Create(numPlayers);
                    }
