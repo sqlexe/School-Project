@@ -25,14 +25,14 @@ public class Characters {
     {
 
 
-        if (nightime && !gamescreen && !homeScreen)
-        {
-        Draw.drawImage(MrYee, 440, 840, 0, 1, 1);
-        Draw.drawImage(AlexI, 840, 840, 0, 1, 1);
-        Draw.drawImage(TampererI, 1240, 250, 0, 1, 1);
-        Draw.drawImage(Back, 1240, 840, 0, 1.1, 1.1);
-        Draw.drawImage(StudentI, 440, 250, 0, 1, 1);
-        }
+//        if (nightime && !gamescreen && !homeScreen)
+//        {
+//        Draw.drawImage(MrYee, 440, 840, 0, 1, 1);
+//        Draw.drawImage(AlexI, 840, 840, 0, 1, 1);
+//        Draw.drawImage(TampererI, 1240, 250, 0, 1, 1);
+//        Draw.drawImage(Back, 1240, 840, 0, 1.1, 1.1);
+//        Draw.drawImage(StudentI, 440, 250, 0, 1, 1);
+//        }
 
         Draw.drawImage(MrYee, 440, 840, 0, .8, .8);
         Draw.drawImage(AlexI, 840, 840, 0, .8, .8);
@@ -83,4 +83,18 @@ public class Characters {
     }
     
     
+ public  static void DrawYee(Room901 instance,boolean nightime,boolean gamescreen,boolean homeScreen ){
+         Draw.drawImage(MrYee, 440, 840, 0, 1, 1);}
+       public  static void DrawAlex(Room901 instance,boolean nightime,boolean gamescreen,boolean homeScreen ){
+    Draw.drawImage(AlexI, 840, 840, 0, 1, 1);}
+        public  static void DrawTampererI(Room901 instance,boolean nightime,boolean gamescreen,boolean homeScreen ){
+       Draw.drawImage(TampererI, 1240, 250, 0, 1, 1);}
+       public  static void DrawBack(Room901 instance,boolean nightime,boolean gamescreen,boolean homeScreen ){
+        Draw.drawImage(Back, 1240, 840, 0, 1.1, 1.1);}
+        public  static void DrawStudentI(Room901 instance,boolean nightime,boolean gamescreen,boolean homeScreen ){
+       Draw.drawImage(StudentI, 440, 250, 0, 1, 1);}
+
+
+
+
 }
