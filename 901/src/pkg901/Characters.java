@@ -34,11 +34,11 @@ public class Characters {
 //        Draw.drawImage(StudentI, 440, 250, 0, 1, 1);
 //        }
 
-        Draw.drawImage(MrYee, 440, 840, 0, .8, .8);
-        Draw.drawImage(AlexI, 840, 840, 0, .8, .8);
-        Draw.drawImage(TampererI, 1240, 250, 0, .8, .8);
-        Draw.drawImage(Back, 1240, 840, 0, .9, .9);
-        Draw.drawImage(StudentI, 440, 250, 0, .8, .8);
+//        Draw.drawImage(MrYee, 440, 840, 0, .8, .8);
+//        Draw.drawImage(AlexI, 840, 840, 0, .8, .8);
+//        Draw.drawImage(TampererI, 1240, 250, 0, .8, .8);
+//        Draw.drawImage(Back, 1240, 840, 0, .9, .9);
+//        Draw.drawImage(StudentI, 440, 250, 0, .8, .8);
 
 //        g.drawImage(MrYee,Window.getX(440),Window.getY(50),
 //                Window.getX(220),Window.getY(260),instance);
