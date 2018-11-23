@@ -80,7 +80,8 @@ import javax.sound.sampled.*;
                       if(xpos<325)
                       if(ypos>200&&ypos<270)
                          if(Player.currentPlayer==Player.players[0]){
-                              if( Player.players[0].getRole()==Characters.Character.Student)
+                               System.out.println("memes");
+                             if( Player.players[0].getRole()==Characters.Character.Student)
                                                 Characters.DrawStudentI(frame, nightime, gamescreen, homescreen);
                                                else  if( Player.players[0].getRole()==Characters.Character.Yee)
                                                 Characters.DrawYee(frame, nightime, gamescreen, homescreen);
@@ -88,13 +89,15 @@ import javax.sound.sampled.*;
                                                 Characters.DrawAlex(frame, nightime, gamescreen, homescreen);}
                            
                          else  if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Alex){
-                                     if(showcard){
-                                        if( Player.players[0].getRole()==Characters.Character.Student)
+                                      System.out.println("memes2");
+                             if(showcard){
+                                      
+                                         if( Player.players[0].getRole()==Characters.Character.Student)
                                                 Characters.DrawStudentI(frame, nightime, gamescreen, homescreen);
                                                else  if( Player.players[0].getRole()==Characters.Character.Yee)
                                                 Characters.DrawYee(frame, nightime, gamescreen, homescreen);
                           else  if( Player.players[0].getRole()==Characters.Character.Alex)
-                                                Characters.DrawAlex(frame, nightime, gamescreen, homescreen);}}
+                                                Characters.DrawAlex(frame, nightime, gamescreen, homescreen);}   }
                                                                                                                     
                            
                           
@@ -105,12 +108,14 @@ import javax.sound.sampled.*;
                         if(xpos<325)
                        if(ypos>505&&ypos<601)
                       if(Player.currentPlayer==Player.players[1]){
-                              if( Player.players[1].getRole()==Characters.Character.Student)
+                           if( Player.players[1].getRole()==Characters.Character.Student)
                                                 Characters.DrawStudentI(frame, nightime, gamescreen, homescreen);
                                                else  if( Player.players[1].getRole()==Characters.Character.Yee)
                                                 Characters.DrawYee(frame, nightime, gamescreen, homescreen);
                           else  if( Player.players[1].getRole()==Characters.Character.Alex)
-                                                Characters.DrawAlex(frame, nightime, gamescreen, homescreen);}
+                                                Characters.DrawAlex(frame, nightime, gamescreen, homescreen);
+                                                System.out.println("memes");
+                      }
                            
                          else  if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Alex){
                                      if(showcard){
@@ -119,7 +124,9 @@ import javax.sound.sampled.*;
                                                else  if( Player.players[1].getRole()==Characters.Character.Yee)
                                                 Characters.DrawYee(frame, nightime, gamescreen, homescreen);
                           else  if( Player.players[1].getRole()==Characters.Character.Alex)
-                                                Characters.DrawAlex(frame, nightime, gamescreen, homescreen);}}
+                                                Characters.DrawAlex(frame, nightime, gamescreen, homescreen);}
+                       
+                            }
                       
                           //Player 3
                         if(xpos>260)
@@ -355,39 +362,39 @@ import javax.sound.sampled.*;
         
       //first night cycle displaying their turns 
           
-          if(nightime && !homescreen && !gamescreen)
-         {
-                if(Player.currentPlayer==Player.players[0])
-                        {
-                            Player.currentPlayer=Player.players[1];
-                           }
-               else if(Player.currentPlayer==Player.players[1])
-                        {
-                          Player.currentPlayer=Player.players[2];
-                           }
-              else if(Player.currentPlayer==Player.players[2])
-                        {
-                         Player.currentPlayer=Player.players[3];
-                        }
-                else  if(Player.currentPlayer==Player.players[3])
-                        {
-                            Player.currentPlayer=Player.players[4];
-                           }
-                 else  if(Player.currentPlayer==Player.players[4])
-                        {
-                           Player.currentPlayer=Player.players[5];
-                           }
-                 else  if(Player.currentPlayer==Player.players[5])
-                        {
-                            Player.currentPlayer=Player.players[6];
-                           }
-                   else if(Player.currentPlayer==Player.players[6])
-                        {
-                           Player.currentPlayer=Player.players[0];
-                           }
+//          if(nightime && !homescreen && !gamescreen)
+//         {
+//                if(Player.currentPlayer==Player.players[0])
+//                        {
+//                            Player.currentPlayer=Player.players[1];
+//                           }
+//               else if(Player.currentPlayer==Player.players[1])
+//                        {
+//                          Player.currentPlayer=Player.players[2];
+//                           }
+//              else if(Player.currentPlayer==Player.players[2])
+//                        {
+//                         Player.currentPlayer=Player.players[3];
+//                        }
+//                else  if(Player.currentPlayer==Player.players[3])
+//                        {
+//                            Player.currentPlayer=Player.players[4];
+//                           }
+//                 else  if(Player.currentPlayer==Player.players[4])
+//                        {
+//                           Player.currentPlayer=Player.players[5];
+//                           }
+//                 else  if(Player.currentPlayer==Player.players[5])
+//                        {
+//                            Player.currentPlayer=Player.players[6];
+//                           }
+//                   else if(Player.currentPlayer==Player.players[6])
+//                        {
+//                           Player.currentPlayer=Player.players[0];
+//                           }
             
             
-        }
+//        }
         if(!homescreen && !nightime)
         {
             if(gamescreen){
