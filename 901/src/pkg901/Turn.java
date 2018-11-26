@@ -2,7 +2,13 @@
 package pkg901;
 
 public class Turn {
-    public void TurnAdvance()
+    
+    public static void TurnAdvance()
+    {
+        
+    }
+    
+    public static void Donezo()
     {
         
     }
