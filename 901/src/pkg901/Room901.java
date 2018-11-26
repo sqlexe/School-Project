@@ -771,7 +771,3 @@ class Window {
     }    
 }
 
-
-
-
-
