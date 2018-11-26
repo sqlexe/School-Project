@@ -37,6 +37,14 @@ import javax.sound.sampled.*;
    int xLeft2=1035;
     int yTop1=490;
    int yTop2=540;
+   int kickp1=0;
+   int kickp2=0;
+   int kickp3=0;
+   int kickp4=0;
+   int kickp5=0;
+   int kickp6=0;
+   int kickp7=0;
+   
    boolean showcard=true;
    
             
@@ -59,8 +67,37 @@ import javax.sound.sampled.*;
                     
                     Board.click(e.getX() - Window.getX(0),
                         e.getY() - Window.getY(0));  
-               
-              if(nightime)
+               if(gamescreen)
+               {
+                    if(xpos>450 && xpos<555 && ypos>68 && ypos<97 )
+                    {
+                       kickp1++;
+                       
+                  }
+                 if(xpos>450 && xpos<555 && ypos>128 && ypos<157 )
+                 {
+                     kickp2++;
+                  }
+                        if(xpos>450 && xpos<555 && ypos>188 && ypos<217  ){
+                        kickp3++;
+                  System.out.println(kickp3+"c");}
+                    if(xpos>450 && xpos<555 && ypos>248 && ypos<277 ){
+                        kickp4++;
+                 System.out.println(kickp4+"d");}
+                   if(xpos>450 && xpos<555 && ypos>308 && ypos<337 ){
+                        kickp5++;
+                  System.out.println(kickp5+"e");}
+                     if(xpos>450 && xpos<555 && ypos>368 && ypos<397 ){
+                        kickp6++;
+                 System.out.println(kickp6+"f");}
+                   if(xpos>450 && xpos<555 && ypos>428 && ypos<457 ){
+                        kickp7++;
+                 System.out.println(kickp7+"g");}
+               }
+                    
+                    
+                    
+                    if(nightime)
               {
                   if(xpos>1490 && xpos<1485+265 && ypos>825 && ypos<920 )
                {
@@ -90,7 +127,9 @@ import javax.sound.sampled.*;
 
  // 
                  }
-                    //Player 1
+                    
+
+                        //Player 1
                       if(xpos>100)
                       if(xpos<325)
                       if(ypos>200&&ypos<270)
@@ -439,9 +478,19 @@ import javax.sound.sampled.*;
       
         
              g.setColor(Color.GRAY);
-               g.fillRect(Window.getX(350),Window.getY(10),Window.getX(400),Window.getY(400));     
-                
-     if(numPlayers>1){
+               g.fillRect(Window.getX(400),Window.getY(10),Window.getX(200),Window.getY(400));     
+                 g.setColor(Color.white);
+                g.setFont(new Font("Arial",Font.PLAIN,30));
+              g.drawString("Player 1", 450, 90);
+                g.drawString("Player 2", 450, 150 );
+                 g.drawString("Player 3", 450, 210);
+              g.drawString("Player 4", 450, 270);
+                g.drawString("Player 5", 450, 330);
+                 g.drawString("Player 6", 450, 390);
+                  g.drawString("Player 7", 450, 450);
+                 
+                 
+                 if(numPlayers>1){
        //Player 2
         g.setColor(Color.GRAY);
                g.fillRect(Window.getX(100),Window.getY(480),Window.getX(210),Window.getY(60));     
