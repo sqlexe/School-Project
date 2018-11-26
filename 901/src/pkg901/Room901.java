@@ -71,7 +71,7 @@ import javax.sound.sampled.*;
                     if(xpos>450 && xpos<555 && ypos>68 && ypos<97 )
                     {
                        kickp1++;
-                       System.out.println("5");
+                     
                   }
                  if(xpos>450 && xpos<555 && ypos>128 && ypos<157 )
                  {
