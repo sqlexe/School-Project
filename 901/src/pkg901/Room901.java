@@ -32,7 +32,7 @@ import javax.sound.sampled.*;
     boolean homescreen = true;
     sound bgSound = null;
     sound NightMusic = null;
-    int numPlayers=1;
+    int numPlayers=3;
     int xLeft1=930;
    int xLeft2=1035;
     int yTop1=490;
@@ -121,7 +121,7 @@ import javax.sound.sampled.*;
                       if(xpos>950)
                         if(xpos<1020)
                         if(ypos>650&&ypos<750)
-                        if(numPlayers>1)
+                        if(numPlayers>3)
                             numPlayers--;
 
  // 
@@ -676,7 +676,7 @@ import javax.sound.sampled.*;
     public void reset() {
             homescreen = true;
             nightime=false;
-            numPlayers =1;
+            numPlayers =3;
             
             if(bgSound != null)
                 bgSound.getPlay(true);
