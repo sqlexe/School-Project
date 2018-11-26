@@ -11,6 +11,7 @@ import java.util.ArrayList;
 public class Player {
     static Player players[];
     static Player currentPlayer;
+    private int playerNum;
     Characters.Character character;
     private boolean alive;
 
@@ -46,6 +47,35 @@ public class Player {
         return currentPlayer.character;
     }
 
-
+//    public void Advance1()
+//    {
+//        currentPlayer = players[1];
+//    }
+//        public void Advance2()
+//    {
+//        currentPlayer = players[2];
+//    }
+//        public void Advance3()
+//    {
+//        currentPlayer = players[3];
+//    }
+//        public void Advance4()
+//    {
+//        currentPlayer = players[4];
+//    }
+//        public void Advance5()
+//    {
+//        currentPlayer = players[5];
+//    }
+//        public void Advance6()
+//    {
+//        currentPlayer = players[6];
+//    }
+//        public void Advance0()
+//    {
+//        currentPlayer = players[0];
+//    }
+//        
+    
 }
 

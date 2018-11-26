@@ -779,7 +779,3 @@ class Window {
     }    
 }
 
-
-
-
-
