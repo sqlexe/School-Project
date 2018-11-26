@@ -37,7 +37,15 @@ import javax.sound.sampled.*;
    int xLeft2=1035;
     int yTop1=490;
    int yTop2=540;
+   int kickp1=0;
+   int kickp2=0;
+   int kickp3=0;
+   int kickp4=0;
+   int kickp5=0;
+   int kickp6=0;
+   int kickp7=0;
    
+   boolean showcard=true;
    
             
    static Room901 frame;
@@ -59,7 +67,50 @@ import javax.sound.sampled.*;
                     
                     Board.click(e.getX() - Window.getX(0),
                         e.getY() - Window.getY(0));  
-                 if(homescreen)    
+               if(gamescreen && Player.currentPlayer.getRole()== Characters.Character.Student)         {
+                    if(xpos>450 && xpos<555 && ypos>68 && ypos<97 )
+                    {
+                       kickp1++;
+                       System.out.println("5");
+                  }
+                 if(xpos>450 && xpos<555 && ypos>128 && ypos<157 )
+                 {
+                     kickp2++;
+                  }
+                        if(xpos>450 && xpos<555 && ypos>188 && ypos<217  ){
+                        kickp3++;
+                  System.out.println(kickp3+"c");}
+                    if(xpos>450 && xpos<555 && ypos>248 && ypos<277 ){
+                        kickp4++;
+                 System.out.println(kickp4+"d");}
+                   if(xpos>450 && xpos<555 && ypos>308 && ypos<337 ){
+                        kickp5++;
+                  System.out.println(kickp5+"e");}
+                     if(xpos>450 && xpos<555 && ypos>368 && ypos<397 ){
+                        kickp6++;
+                 System.out.println(kickp6+"f");}
+                   if(xpos>450 && xpos<555 && ypos>428 && ypos<457 ){
+                        kickp7++;
+                 System.out.println(kickp7+"g");}
+               }
+                    
+                    
+                    
+                    if(nightime)
+              {
+                  if(xpos>1490 && xpos<1485+265 && ypos>825 && ypos<920 )
+               {
+                   nightime=false;
+                   gamescreen=true;
+               }
+              }            
+                         
+                    
+                    
+                    
+                    
+                    
+                    if(homescreen)    
                  {
      //+ code  
                      if(xpos>xLeft1 && xpos <xLeft2 && ypos>365 && ypos<470)
@@ -75,47 +126,165 @@ import javax.sound.sampled.*;
 
  // 
                  }
-                    //Player 1
-                        if(xpos>100)
-                        if(xpos<325)
-                       if(ypos>200&&ypos<270)
-                       Player.currentPlayer=Player.players[0];
+                    
+
+                        //Player 1
+                      if(xpos>100)
+                      if(xpos<325)
+                      if(ypos>200&&ypos<270)
+                         if(Player.currentPlayer==Player.players[0]){
+                               System.out.println("memes");
+                             if( Player.players[0].getRole()==Characters.Character.Student)
+                                                Characters.DrawStudentI(frame, nightime, gamescreen, homescreen);
+                                               else  if( Player.players[0].getRole()==Characters.Character.Yee)
+                                                Characters.DrawYee(frame, nightime, gamescreen, homescreen);
+                          else  if( Player.players[0].getRole()==Characters.Character.Alex)
+                                                Characters.DrawAlex(frame, nightime, gamescreen, homescreen);}
+                           
+                         else  if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Alex){
+                                      System.out.println("memes2");
+                             if(showcard){
+                                      
+                                         if( Player.players[0].getRole()==Characters.Character.Student)
+                                                Characters.DrawStudentI(frame, nightime, gamescreen, homescreen);
+                                               else  if( Player.players[0].getRole()==Characters.Character.Yee)
+                                                Characters.DrawYee(frame, nightime, gamescreen, homescreen);
+                          else  if( Player.players[0].getRole()==Characters.Character.Alex)
+                                                Characters.DrawAlex(frame, nightime, gamescreen, homescreen);}   }
+                                                                                                                    
+                           
                           
+                       
+                        
                         //Player 2
                         if(xpos>100)
                         if(xpos<325)
                        if(ypos>505&&ypos<601)
-                       Player.currentPlayer=Player.players[1];
+                      if(Player.currentPlayer==Player.players[1]){
+                           if( Player.players[1].getRole()==Characters.Character.Student)
+                                                Characters.DrawStudentI(frame, nightime, gamescreen, homescreen);
+                                               else  if( Player.players[1].getRole()==Characters.Character.Yee)
+                                                Characters.DrawYee(frame, nightime, gamescreen, homescreen);
+                          else  if( Player.players[1].getRole()==Characters.Character.Alex)
+                                                Characters.DrawAlex(frame, nightime, gamescreen, homescreen);
+                                                System.out.println("memes");
+                      }
+                           
+                         else  if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Alex){
+                                     if(showcard){
+                                        if( Player.players[1].getRole()==Characters.Character.Student)
+                                                Characters.DrawStudentI(frame, nightime, gamescreen, homescreen);
+                                               else  if( Player.players[1].getRole()==Characters.Character.Yee)
+                                                Characters.DrawYee(frame, nightime, gamescreen, homescreen);
+                          else  if( Player.players[1].getRole()==Characters.Character.Alex)
+                                                Characters.DrawAlex(frame, nightime, gamescreen, homescreen);}
+                       
+                            }
                       
                           //Player 3
                         if(xpos>260)
                         if(xpos<475)
                       if(ypos>877&&ypos<975)
-                       Player.currentPlayer=Player.players[2];
+                      if(Player.currentPlayer==Player.players[2]){
+                              if( Player.players[2].getRole()==Characters.Character.Student)
+                                                Characters.DrawStudentI(frame, nightime, gamescreen, homescreen);
+                                               else  if( Player.players[2].getRole()==Characters.Character.Yee)
+                                                Characters.DrawYee(frame, nightime, gamescreen, homescreen);
+                          else  if( Player.players[2].getRole()==Characters.Character.Alex)
+                                                Characters.DrawAlex(frame, nightime, gamescreen, homescreen);}
+                           
+                         else  if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Alex){
+                                     if(showcard){
+                                        if( Player.players[2].getRole()==Characters.Character.Student)
+                                                Characters.DrawStudentI(frame, nightime, gamescreen, homescreen);
+                                               else  if( Player.players[2].getRole()==Characters.Character.Yee)
+                                                Characters.DrawYee(frame, nightime, gamescreen, homescreen);
+                          else  if( Player.players[2].getRole()==Characters.Character.Alex)
+                                                Characters.DrawAlex(frame, nightime, gamescreen, homescreen);}}
                  
                           //Player 4
                         if(xpos>805)
                         if(xpos<475+550)
                        if(ypos>877&&ypos<975)
-                       Player.currentPlayer=Player.players[3];
+                    if(Player.currentPlayer==Player.players[3]){
+                              if( Player.players[3].getRole()==Characters.Character.Student)
+                                                Characters.DrawStudentI(frame, nightime, gamescreen, homescreen);
+                                               else  if( Player.players[3].getRole()==Characters.Character.Yee)
+                                                Characters.DrawYee(frame, nightime, gamescreen, homescreen);
+                          else  if( Player.players[3].getRole()==Characters.Character.Alex)
+                                                Characters.DrawAlex(frame, nightime, gamescreen, homescreen);}
+                           
+                         else  if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Alex){
+                                     if(showcard){
+                                        if( Player.players[3].getRole()==Characters.Character.Student)
+                                                Characters.DrawStudentI(frame, nightime, gamescreen, homescreen);
+                                               else  if( Player.players[3].getRole()==Characters.Character.Yee)
+                                                Characters.DrawYee(frame, nightime, gamescreen, homescreen);
+                          else  if( Player.players[3].getRole()==Characters.Character.Alex)
+                                                Characters.DrawAlex(frame, nightime, gamescreen, homescreen);}}
                     
                           //Player 5
                         if(xpos>1355)
                         if(xpos<475+550+550)
                         if(ypos>877&&ypos<975)
-                        Player.currentPlayer=Player.players[4];
+                       if(Player.currentPlayer==Player.players[4]){
+                              if( Player.players[4].getRole()==Characters.Character.Student)
+                                                Characters.DrawStudentI(frame, nightime, gamescreen, homescreen);
+                                               else  if( Player.players[4].getRole()==Characters.Character.Yee)
+                                                Characters.DrawYee(frame, nightime, gamescreen, homescreen);
+                          else  if( Player.players[4].getRole()==Characters.Character.Alex)
+                                                Characters.DrawAlex(frame, nightime, gamescreen, homescreen);}
+                           
+                         else  if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Alex){
+                                     if(showcard){
+                                        if( Player.players[4].getRole()==Characters.Character.Student)
+                                                Characters.DrawStudentI(frame, nightime, gamescreen, homescreen);
+                                               else  if( Player.players[4].getRole()==Characters.Character.Yee)
+                                                Characters.DrawYee(frame, nightime, gamescreen, homescreen);
+                          else  if( Player.players[4].getRole()==Characters.Character.Alex)
+                                                Characters.DrawAlex(frame, nightime, gamescreen, homescreen);}}
                         
                           //Player 6
                         if(xpos>1605)
                         if(xpos<1826)
                        if(ypos>505&&ypos<601)
-                        Player.currentPlayer=Player.players[5];
+                       if(Player.currentPlayer==Player.players[5]){
+                              if( Player.players[5].getRole()==Characters.Character.Student)
+                                                Characters.DrawStudentI(frame, nightime, gamescreen, homescreen);
+                                               else  if( Player.players[5].getRole()==Characters.Character.Yee)
+                                                Characters.DrawYee(frame, nightime, gamescreen, homescreen);
+                          else  if( Player.players[5].getRole()==Characters.Character.Alex)
+                                                Characters.DrawAlex(frame, nightime, gamescreen, homescreen);}
+                           
+                         else  if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Alex){
+                                     if(showcard){
+                                        if( Player.players[5].getRole()==Characters.Character.Student)
+                                                Characters.DrawStudentI(frame, nightime, gamescreen, homescreen);
+                                               else  if( Player.players[5].getRole()==Characters.Character.Yee)
+                                                Characters.DrawYee(frame, nightime, gamescreen, homescreen);
+                          else  if( Player.players[5].getRole()==Characters.Character.Alex)
+                                                Characters.DrawAlex(frame, nightime, gamescreen, homescreen);}}
                        
                           //Player 7
                         if(xpos>1605)
                         if(xpos<1826)
                      if(ypos>200&&ypos<270)
-                         Player.currentPlayer=Player.players[6];
+                       if(Player.currentPlayer==Player.players[6]){
+                              if( Player.players[0].getRole()==Characters.Character.Student)
+                                                Characters.DrawStudentI(frame, nightime, gamescreen, homescreen);
+                                               else  if( Player.players[6].getRole()==Characters.Character.Yee)
+                                                Characters.DrawYee(frame, nightime, gamescreen, homescreen);
+                          else  if( Player.players[6].getRole()==Characters.Character.Alex)
+                                                Characters.DrawAlex(frame, nightime, gamescreen, homescreen);}
+                           
+                         else  if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Alex){
+                                     if(showcard){
+                                        if( Player.players[6].getRole()==Characters.Character.Student)
+                                                Characters.DrawStudentI(frame, nightime, gamescreen, homescreen);
+                                               else  if( Player.players[6].getRole()==Characters.Character.Yee)
+                                                Characters.DrawYee(frame, nightime, gamescreen, homescreen);
+                          else  if( Player.players[6].getRole()==Characters.Character.Alex)
+                                                Characters.DrawAlex(frame, nightime, gamescreen, homescreen);}}
                         
                        
                        
@@ -168,15 +337,18 @@ import javax.sound.sampled.*;
                     
                 } 
                 else if (e.VK_RIGHT == e.getKeyCode()) {
-                    nightime=false;
-                    gamescreen=true;
+                   
+                    
                   
                 } 
                 else if (e.VK_SPACE == e.getKeyCode()) {
                    
                 }
                 else if (e.VK_ENTER == e.getKeyCode()) {
-                   if(homescreen=true)
+                
+                    
+                    
+                    if(homescreen=true)
                    {
                        Player.Create(numPlayers);
                    }
@@ -243,43 +415,57 @@ import javax.sound.sampled.*;
         
       //first night cycle displaying their turns 
           
-          if(nightime && !homescreen && !gamescreen)
-         {
-                if(Player.currentPlayer==Player.players[0])
-                        {
-                            Player.currentPlayer=Player.players[1];
-                           }
-               else if(Player.currentPlayer==Player.players[1])
-                        {
-                          Player.currentPlayer=Player.players[2];
-                           }
-              else if(Player.currentPlayer==Player.players[2])
-                        {
-                         Player.currentPlayer=Player.players[3];
-                        }
-                else  if(Player.currentPlayer==Player.players[3])
-                        {
-                            Player.currentPlayer=Player.players[4];
-                           }
-                 else  if(Player.currentPlayer==Player.players[4])
-                        {
-                           Player.currentPlayer=Player.players[5];
-                           }
-                 else  if(Player.currentPlayer==Player.players[5])
-                        {
-                            Player.currentPlayer=Player.players[6];
-                           }
-                   else if(Player.currentPlayer==Player.players[6])
-                        {
-                           Player.currentPlayer=Player.players[0];
-                           }
+//          if(nightime && !homescreen && !gamescreen)
+//         {
+//                if(Player.currentPlayer==Player.players[0])
+//                        {
+//                            Player.currentPlayer=Player.players[1];
+//                           }
+//               else if(Player.currentPlayer==Player.players[1])
+//                        {
+//                          Player.currentPlayer=Player.players[2];
+//                           }
+//              else if(Player.currentPlayer==Player.players[2])
+//                        {
+//                         Player.currentPlayer=Player.players[3];
+//                        }
+//                else  if(Player.currentPlayer==Player.players[3])
+//                        {
+//                            Player.currentPlayer=Player.players[4];
+//                           }
+//                 else  if(Player.currentPlayer==Player.players[4])
+//                        {
+//                           Player.currentPlayer=Player.players[5];
+//                           }
+//                 else  if(Player.currentPlayer==Player.players[5])
+//                        {
+//                            Player.currentPlayer=Player.players[6];
+//                           }
+//                   else if(Player.currentPlayer==Player.players[6])
+//                        {
+//                           Player.currentPlayer=Player.players[0];
+//                           }
             
             
-        }
-        if(!homescreen && !nightime)
+//        }
+     if(nightime)
+     {
+                 
+                g.setColor(Color.gray);
+               g.fillRect(Window.getX(1485),Window.getY(800),Window.getX(250),Window.getY(60));  
+                g.setColor(Color.white);
+              g.setFont(new Font("Arial",Font.PLAIN,60));
+              g.drawString("Continue", 1500, 900); 
+     }
+
+
+                if(!homescreen && !nightime)
         {
             if(gamescreen){
-        g.drawImage(FeltBG,Window.getX(0),Window.getY(0),
+       
+               
+                
+                g.drawImage(FeltBG,Window.getX(0),Window.getY(0),
                 Window.getWidth2(),Window.getHeight2(),this);
         
 
@@ -287,50 +473,80 @@ import javax.sound.sampled.*;
         g.drawImage(Middle,Window.getX(Window.WINDOW_WIDTH/2-150),Window.getY(Window.WINDOW_HEIGHT/2-300),
                 Window.getX(300),Window.getY(300),this);
         }
-        g.setColor(Color.RED);
-        g.drawRect(Window.getX(440),Window.getY(400),Window.getX(220),Window.getY(260));
       
-        
-          
-                   //Player 2
+      
+               if(Player.currentPlayer.getRole()== Characters.Character.Student){
+             g.setColor(Color.GRAY);
+               g.fillRect(Window.getX(400),Window.getY(10),Window.getX(200),Window.getY(400));     
+                 g.setColor(Color.white);
+                g.setFont(new Font("Arial",Font.PLAIN,30));
+              g.drawString("Player 1", 450, 90);
+                g.drawString("Player 2", 450, 150 );
+                 g.drawString("Player 3", 450, 210);
+              g.drawString("Player 4", 450, 270);
+                g.drawString("Player 5", 450, 330);
+                 g.drawString("Player 6", 450, 390);
+                  g.drawString("Player 7", 450, 450);}
+                 
+                 
+                 if(numPlayers>1){
+       //Player 2
         g.setColor(Color.GRAY);
-               g.fillRect(Window.getX(100),Window.getY(480),Window.getX(210),Window.getY(60));      
+               g.fillRect(Window.getX(100),Window.getY(480),Window.getX(210),Window.getY(60));     
+                g.setColor(Color.white);
+                 g.setFont(new Font("Arial",Font.PLAIN,60));
+              g.drawString("Player 2", 110, 575); }
+                if(numPlayers>6){
      //Player 7      
               g.setColor(Color.GRAY);
               g.fillRect(Window.getX(1600),Window.getY(150),Window.getX(210),Window.getY(60));
-     //Player 3   
+               g.setColor(Color.white);
+                 g.setFont(new Font("Arial",Font.PLAIN,60));
+              g.drawString("Player 7", 1610, 240); }   
+               if(numPlayers>2){
+              //Player 3   
               g.setColor(Color.GRAY);
               g.fillRect(Window.getX(250),Window.getY(850),Window.getX(210),Window.getY(60));
-    // Player 4       
+               g.setColor(Color.white);
+                 g.setFont(new Font("Arial",Font.PLAIN,60));
+              g.drawString("Player 3", 260, 950); }
+               if(numPlayers>3){
+              // Player 4       
               g.setColor(Color.GRAY);
               g.fillRect(Window.getX(800),Window.getY(850),Window.getX(210),Window.getY(60));
-    // Player 5        
+               g.setColor(Color.white);
+                g.setFont(new Font("Arial",Font.PLAIN,60));
+              g.drawString("Player 4", 810, 950); }
+               if(numPlayers>4){
+              // Player 5        
               g.setColor(Color.GRAY);
               g.fillRect(Window.getX(1350),Window.getY(850),Window.getX(210),Window.getY(60));
-       // Player 6       
+               g.setColor(Color.white);
+                 g.setFont(new Font("Arial",Font.PLAIN,60));
+              g.drawString("Player 5", 1360, 950); }
+               if(numPlayers>5){
+              // Player 6       
               g.setColor(Color.GRAY);
               g.fillRect(Window.getX(1600),Window.getY(480),Window.getX(210),Window.getY(60));
-            // Player 1   
+              g.setColor(Color.white);
+               g.setFont(new Font("Arial",Font.PLAIN,60));
+              g.drawString("Player 6", 1610, 575); }   
+               // Player 1   
              g.setColor(Color.GRAY);
              g.fillRect(Window.getX(100),Window.getY(150),Window.getX(210),Window.getY(60));
-            
+             g.setColor(Color.white);
+             g.setFont(new Font("Arial",Font.PLAIN,60));
+             g.drawString("Player 1", 110, 250);   
               
 
                g.setColor(Color.white);
-              g.setFont(new Font("Arial",Font.PLAIN,60));
-              g.drawString("Player 2", 110, 575); 
-              g.setFont(new Font("Arial",Font.PLAIN,60));
-              g.drawString("Player 1", 110, 250);   
-              g.setFont(new Font("Arial",Font.PLAIN,60));
-              g.drawString("Player 4", 810, 950); 
-              g.setFont(new Font("Arial",Font.PLAIN,60));
-              g.drawString("Player 7", 1610, 240);    
-              g.setFont(new Font("Arial",Font.PLAIN,60));
-              g.drawString("Player 6", 1610, 575);     
-              g.setFont(new Font("Arial",Font.PLAIN,60));
-              g.drawString("Player 3", 260, 950);   
-              g.setFont(new Font("Arial",Font.PLAIN,60));
-              g.drawString("Player 5", 1360, 950);  
+             
+            
+             
+            
+              
+              
+             
              
               
                  if(Player.currentPlayer==Player.players[0])
@@ -440,21 +656,7 @@ import javax.sound.sampled.*;
            gOld.drawImage(image, 0, 0, null);
     }
 /////////////////////////////////////////////////////////////////////////////      
-     public void HomeScreen(int xpos,int ypos,double rot,double xscale,double yscale)
-    {
-        g.translate(xpos,ypos);
-        g.rotate(rot  * Math.PI/180.0);
-        g.scale( xscale , yscale );
-
-        g.setColor(Color.BLACK);
-        g.fillRect(Window.getX(0),Window.getY(0), Window.getWidth2(),Window.getHeight2());
-        
-        
-        g.scale( 1.0/xscale,1.0/yscale );
-        g.rotate(-rot  * Math.PI/180.0);
-        g.translate(-xpos,-ypos);
-
-    }
+    
 ////////////////////////////////////////////////////////////////////////////
 // needed for     implement runnable
     public void run() {
