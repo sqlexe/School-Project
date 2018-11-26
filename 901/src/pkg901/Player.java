@@ -9,30 +9,26 @@ import java.io.File;
 import java.util.ArrayList;
 
 public class Player {
-    static Player players[]=new Player[7];
+    static Player players[];
     static Player currentPlayer;
     Characters.Character character;
     private boolean alive;
-    private boolean human;
+
     
     
     public static void Create(int numPlayers)
     {
+        players=new Player[numPlayers];
         for(int i=0; i<numPlayers;i++)
         {
-            players[i]=new Player(true);
+            players[i]=new Player();
         }
-        for(int i=numPlayers; i<7; i++)
-        {
-            players[i]=new Player(false);
-        }
-        
-        
+ 
         currentPlayer=players[0];
         Characters.Assign(players);
     }
     
-    Player(boolean _human)
+    Player()
     {
         alive=true;
     }
