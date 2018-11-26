@@ -67,12 +67,11 @@ import javax.sound.sampled.*;
                     
                     Board.click(e.getX() - Window.getX(0),
                         e.getY() - Window.getY(0));  
-               if(gamescreen)
-               {
+               if(gamescreen && Player.currentPlayer.getRole()== Characters.Character.Student)         {
                     if(xpos>450 && xpos<555 && ypos>68 && ypos<97 )
                     {
                        kickp1++;
-                       
+                       System.out.println("5");
                   }
                  if(xpos>450 && xpos<555 && ypos>128 && ypos<157 )
                  {
@@ -476,7 +475,7 @@ import javax.sound.sampled.*;
         }
       
       
-        
+               if(Player.currentPlayer.getRole()== Characters.Character.Student){
              g.setColor(Color.GRAY);
                g.fillRect(Window.getX(400),Window.getY(10),Window.getX(200),Window.getY(400));     
                  g.setColor(Color.white);
@@ -487,7 +486,7 @@ import javax.sound.sampled.*;
               g.drawString("Player 4", 450, 270);
                 g.drawString("Player 5", 450, 330);
                  g.drawString("Player 6", 450, 390);
-                  g.drawString("Player 7", 450, 450);
+                  g.drawString("Player 7", 450, 450);}
                  
                  
                  if(numPlayers>1){
