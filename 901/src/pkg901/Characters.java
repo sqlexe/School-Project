@@ -60,17 +60,17 @@ public class Characters {
         
         //alex
         int pick = (int)(Math.random()*(players.length-1));
-        if(players[pick].character!=null)
+        if(players[pick].character==null)
             players[pick].setRole(Character.Alex);
         
         //Yee
         pick = (int)(Math.random()*(players.length-1));
-        if(players[pick].character!=null)
+        if(players[pick].character==null)
             players[pick].setRole(Character.Yee);
         
         //Tamperer
         pick = (int)(Math.random()*(players.length-1));
-        if(players[pick].character!=null)
+        if(players[pick].character==null)
             players[pick].setRole(Character.Tamperer);
         
         for(int i=0; i<players.length;i++)
