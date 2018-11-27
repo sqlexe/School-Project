@@ -79,6 +79,8 @@ public class Player {
     public void advance()
     {
        playerNum++;
+       if(Room901.gamescreen)
+       {
        if(playerNum <=players.length)
        {
        currentPlayer = players[playerNum]; 
@@ -88,6 +90,8 @@ public class Player {
        {
        playerNum =0;
        currentPlayer = players[playerNum];
+       System.out.println(""+currentPlayer);
+       }
        }
        
     }
