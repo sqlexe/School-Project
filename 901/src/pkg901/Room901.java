@@ -46,6 +46,10 @@ import javax.sound.sampled.*;
    int kickp7=0;
    boolean keeplooping=true;
    boolean showcard=true;
+   boolean vote = true;
+   int amount;
+   int playerOut;
+   int high;
    
             
    static Room901 frame;
@@ -67,38 +71,48 @@ import javax.sound.sampled.*;
                     
                     Board.click(e.getX() - Window.getX(0),
                         e.getY() - Window.getY(0));  
-               if(gamescreen )         {
+               if(gamescreen && vote == true)         {
                     if(xpos>450 && xpos<555 && ypos>68 && ypos<97 )
                     {
                        kickp1++;
+                       amount++;
                        Player.currentPlayer.advance();
                      
                   }
                  if(xpos>450 && xpos<555 && ypos>128 && ypos<157 )
                  {
                      kickp2++;
+                     amount++;
                      Player.currentPlayer.advance();
                   }
                         if(xpos>450 && xpos<555 && ypos>188 && ypos<217  ){
                         kickp3++;
+                        amount++;
                         Player.currentPlayer.advance();
                   System.out.println(kickp3+"c");}
                     if(xpos>450 && xpos<555 && ypos>248 && ypos<277 ){
                         kickp4++;
+                        amount++;
                         Player.currentPlayer.advance();
                  System.out.println(kickp4+"d");}
                    if(xpos>450 && xpos<555 && ypos>308 && ypos<337 ){
                         kickp5++;
+                        amount++;
                         Player.currentPlayer.advance();
                   System.out.println(kickp5+"e");}
                      if(xpos>450 && xpos<555 && ypos>368 && ypos<397 ){
                         kickp6++;
+                        amount++;
                         Player.currentPlayer.advance();
                  System.out.println(kickp6+"f");}
                    if(xpos>450 && xpos<555 && ypos>428 && ypos<457 ){
                         kickp7++;
+                        amount++;
                         Player.currentPlayer.advance();
+  
                  System.out.println(kickp7+"g");}
+                    if (amount == numPlayers)
+                        vote = false;
                }
                     
                     
@@ -321,7 +335,7 @@ import javax.sound.sampled.*;
         }
       
       
-            
+            if (vote == true){
              g.setColor(Color.GRAY);
                g.fillRect(Window.getX(400),Window.getY(10),Window.getX(200),Window.getY(400));     
                  g.setColor(Color.white);
@@ -342,6 +356,7 @@ import javax.sound.sampled.*;
                 g.drawString(""+kickp5, 590, 330);
                  g.drawString(""+kickp6, 590, 390);
                   g.drawString(""+kickp7, 590, 450);
+            }
                  
                  if(numPlayers>1){
        //Player 2
@@ -402,8 +417,36 @@ import javax.sound.sampled.*;
 
                g.setColor(Color.white);
              
-            
-             
+               if (kickp1>high){
+                   high = kickp1;
+                   playerOut = 1;
+               }if (kickp2>high){
+                   high = kickp2;
+                   playerOut = 2;
+               }if (kickp3>high){
+                   high = kickp3;
+                   playerOut = 3;
+               }if (kickp4>high){
+                   high = kickp4;
+                   playerOut = 4;
+               }if (kickp5>high){
+                   high = kickp5;
+                   playerOut = 5;
+               }if (kickp6>high){
+                   high = kickp6;
+                   playerOut = 6;
+               }if (kickp7>high){
+                   high = kickp7;
+                   playerOut = 7;
+               }
+               
+                if (vote == false){
+                    g.setColor(Color.GRAY);
+                    g.fillRect(Window.getX(900),Window.getY(170),Window.getX(410),Window.getY(60));
+                    g.setColor(Color.white);
+                    g.setFont(new Font("Arial",Font.PLAIN,60));
+                    g.drawString("Player "+playerOut+" is out", 923, 272);   
+                }
             
               
               
@@ -551,6 +594,11 @@ import javax.sound.sampled.*;
              kickp5=0;
              kickp6=0;
              kickp7=0;
+             vote = true;
+             amount = 0;
+             high = 0;
+             playerOut = 0;
+             
     
     
     }
