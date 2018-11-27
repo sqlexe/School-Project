@@ -317,11 +317,7 @@ import javax.sound.sampled.*;
                 
                 g.drawImage(FeltBG,Window.getX(0),Window.getY(0),
                 Window.getWidth2(),Window.getHeight2(),this);
-        
-
-
-        g.drawImage(Middle,Window.getX(Window.WINDOW_WIDTH/2-150),Window.getY(Window.WINDOW_HEIGHT/2-300),
-                Window.getX(300),Window.getY(300),this);
+  
         }
       
       
@@ -395,7 +391,7 @@ import javax.sound.sampled.*;
              g.setColor(Color.white);
              g.setFont(new Font("Arial",Font.PLAIN,60));
              g.drawString("Player 1", 110, 250);   
-              
+               Characters.DrawBack(Window.getX(100),Window.getY(150),0, 1.1, 1.1);
 
                g.setColor(Color.white);
              
