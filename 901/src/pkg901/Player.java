@@ -80,12 +80,16 @@ public class Player {
     {
        playerNum++;
        if(playerNum <=players.length)
+       {
        currentPlayer = players[playerNum]; 
+       System.out.println(""+currentPlayer);
+       }
        else
        {
        playerNum =0;
        currentPlayer = players[playerNum];
        }
+       
     }
 }
 
