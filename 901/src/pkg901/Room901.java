@@ -59,7 +59,7 @@ import javax.sound.sampled.*;
         frame.setSize(Window.WINDOW_WIDTH, Window.WINDOW_HEIGHT);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
-        createWindow();
+      
     }
 
     public Room901() {
