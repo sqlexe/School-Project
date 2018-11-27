@@ -129,6 +129,7 @@ import javax.sound.sampled.*;
                     
 
                         //Player 1
+                        Player.Create(numPlayers);
                       if(xpos>100)
                       if(xpos<325)
                       if(ypos>200&&ypos<270)
@@ -201,7 +202,8 @@ import javax.sound.sampled.*;
                                                 Characters.DrawYee(frame, nightime, gamescreen, homescreen);
                           else  if( Player.players[2].getRole()==Characters.Character.Alex)
                                                 Characters.DrawAlex(frame, nightime, gamescreen, homescreen);}}
-                 
+                          if(Player.players.length <3)
+                          return;
                           //Player 4
                         if(xpos>805)
                         if(xpos<475+550)
@@ -227,6 +229,9 @@ import javax.sound.sampled.*;
                         if(xpos>1355)
                         if(xpos<475+550+550)
                         if(ypos>877&&ypos<975)
+                            
+                            
+                      if(Player.players.length <4)
                        if(Player.currentPlayer==Player.players[4]){
                               if( Player.players[4].getRole()==Characters.Character.Student)
                                                 Characters.DrawStudentI(frame, nightime, gamescreen, homescreen);
@@ -244,10 +249,13 @@ import javax.sound.sampled.*;
                           else  if( Player.players[4].getRole()==Characters.Character.Alex)
                                                 Characters.DrawAlex(frame, nightime, gamescreen, homescreen);}}
                         
+                          
                           //Player 6
                         if(xpos>1605)
                         if(xpos<1826)
                        if(ypos>505&&ypos<601)
+                           
+                       if(Player.players.length <5)
                        if(Player.currentPlayer==Player.players[5]){
                               if( Player.players[5].getRole()==Characters.Character.Student)
                                                 Characters.DrawStudentI(frame, nightime, gamescreen, homescreen);
@@ -269,6 +277,7 @@ import javax.sound.sampled.*;
                         if(xpos>1605)
                         if(xpos<1826)
                      if(ypos>200&&ypos<270)
+                       if(Player.players.length <6)
                        if(Player.currentPlayer==Player.players[6]){
                               if( Player.players[0].getRole()==Characters.Character.Student)
                                                 Characters.DrawStudentI(frame, nightime, gamescreen, homescreen);
