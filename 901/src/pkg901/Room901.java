@@ -27,7 +27,7 @@ import javax.sound.sampled.*;
 //    Image Student;
 //    Image Tamperer;
 //    Image Back;
-    boolean gamescreen=false;
+    static boolean gamescreen=false;
     boolean nightime = false;
     boolean homescreen = true;
     sound bgSound = null;
