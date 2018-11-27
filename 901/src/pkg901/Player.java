@@ -81,10 +81,10 @@ public class Player {
        playerNum++;
        if(Room901.gamescreen)
        {
-       if(playerNum <=players.length)
+       if(playerNum <players.length)
        {
        currentPlayer = players[playerNum]; 
-       System.out.println(""+currentPlayer);
+//       System.out.println(""+currentPlayer);
        }
        else
        {
