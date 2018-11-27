@@ -113,7 +113,12 @@ import javax.sound.sampled.*;
                             gamescreen=true;
                         }
                     }            
-                         
+                         if(homescreen){
+                             if(xpos>1490&& xpos<1662 && ypos>428 && ypos<520)
+                             {
+                               createWindow();
+                             }
+                         }
                     
                     
                     
@@ -474,7 +479,12 @@ import javax.sound.sampled.*;
             g.setFont(new Font("Arial",Font.PLAIN,50));    
             g.drawString("Press ENTER when ready",1400/2,890); 
           
-
+           
+                 g.setColor(Color.gray);
+               g.fillRect(Window.getX(1485),Window.getY(400),Window.getX(160),Window.getY(60));  
+                g.setColor(Color.white);
+              g.setFont(new Font("Arial",Font.PLAIN,60));
+              g.drawString("Rules", 1500, 500); 
            
         }
            gOld.drawImage(image, 0, 0, null);
