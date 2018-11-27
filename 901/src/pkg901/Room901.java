@@ -259,41 +259,7 @@ import javax.sound.sampled.*;
                 Window.getWidth2(),Window.getHeight2(),this);
              }
         
-      //first night cycle displaying their turns 
-          
-//          if(nightime && !homescreen && !gamescreen)
-//         {
-//                if(Player.currentPlayer==Player.players[0])
-//                        {
-//                            Player.currentPlayer=Player.players[1];
-//                           }
-//               else if(Player.currentPlayer==Player.players[1])
-//                        {
-//                          Player.currentPlayer=Player.players[2];
-//                           }
-//              else if(Player.currentPlayer==Player.players[2])
-//                        {
-//                         Player.currentPlayer=Player.players[3];
-//                        }
-//                else  if(Player.currentPlayer==Player.players[3])
-//                        {
-//                            Player.currentPlayer=Player.players[4];
-//                           }
-//                 else  if(Player.currentPlayer==Player.players[4])
-//                        {
-//                           Player.currentPlayer=Player.players[5];
-//                           }
-//                 else  if(Player.currentPlayer==Player.players[5])
-//                        {
-//                            Player.currentPlayer=Player.players[6];
-//                           }
-//                   else if(Player.currentPlayer==Player.players[6])
-//                        {
-//                           Player.currentPlayer=Player.players[0];
-//                           }
-            
-            
-//        }
+  
      if(nightime)
      {
                  
