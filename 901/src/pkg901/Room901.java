@@ -51,9 +51,11 @@ import javax.sound.sampled.*;
    static Room901 frame;
     public static void main(String[] args) {
         frame = new Room901();
+//        Rules.main(args);
         frame.setSize(Window.WINDOW_WIDTH, Window.WINDOW_HEIGHT);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
+        createWindow();
     }
 
     public Room901() {
@@ -590,7 +592,19 @@ import javax.sound.sampled.*;
         }
         relaxer = null;
     }
-
+   private static void createWindow() {
+      //Create and set up the window.
+      JFrame frame = new JFrame("Rules");
+//      frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+      JLabel textLabel = new JLabel("I'm a label in the window"
+              + "ggggggggg",SwingConstants.LEFT);
+      textLabel.setPreferredSize(new Dimension(1000, 1000));
+      frame.getContentPane().add(textLabel, BorderLayout.CENTER);
+      //Display the window.
+      frame.setLocationRelativeTo(null);
+      frame.pack();
+      frame.setVisible(true);
+   }
 }
 ////////////////////////////////////////////////////////////////////////////
 
