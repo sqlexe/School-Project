@@ -11,7 +11,7 @@ import java.util.ArrayList;
 public class Player {
     static Player players[];
     static Player currentPlayer;
-     private int playerNum = 0;
+     static int playerNum = 0;
     Characters.Character character;
     private boolean alive;
 
