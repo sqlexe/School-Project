@@ -73,39 +73,48 @@ import javax.sound.sampled.*;
                     
                     Board.click(e.getX() - Window.getX(0),
                         e.getY() - Window.getY(0));  
-                    if(gamescreen ){
-                        if(xpos>450 && xpos<555 && ypos>68 && ypos<97 )
-                        {
-                           kickp1++;
-                           Player.currentPlayer.advance();
-
-                        }
-                        if(xpos>450 && xpos<555 && ypos>128 && ypos<157 )
-                        {
-                            kickp2++;
-                            Player.currentPlayer.advance();
-                        }
+                    if(gamescreen && vote == true)         {
+                    if(xpos>450 && xpos<555 && ypos>68 && ypos<97 )
+                    {
+                       kickp1++;
+                       amount++;
+                       Player.currentPlayer.advance();
+                     
+                  }
+                 if(xpos>450 && xpos<555 && ypos>128 && ypos<157 )
+                 {
+                     kickp2++;
+                     amount++;
+                     Player.currentPlayer.advance();
+                  }
                         if(xpos>450 && xpos<555 && ypos>188 && ypos<217  ){
-                            kickp3++;
-                            Player.currentPlayer.advance();
-                            System.out.println(kickp3+"c");}
-                        if(xpos>450 && xpos<555 && ypos>248 && ypos<277 ){
-                            kickp4++;
-                            Player.currentPlayer.advance();
-                            System.out.println(kickp4+"d");}
-                       if(xpos>450 && xpos<555 && ypos>308 && ypos<337 ){
-                            kickp5++;
-                            Player.currentPlayer.advance();
-                            System.out.println(kickp5+"e");}
-                         if(xpos>450 && xpos<555 && ypos>368 && ypos<397 ){
-                            kickp6++;
-                            Player.currentPlayer.advance();
-                            System.out.println(kickp6+"f");}
-                       if(xpos>450 && xpos<555 && ypos>428 && ypos<457 ){
-                            kickp7++;
-                            Player.currentPlayer.advance();
-                            System.out.println(kickp7+"g");}
-                    }
+                        kickp3++;
+                        amount++;
+                        Player.currentPlayer.advance();
+                  System.out.println(kickp3+"c");}
+                    if(xpos>450 && xpos<555 && ypos>248 && ypos<277 ){
+                        kickp4++;
+                        amount++;
+                        Player.currentPlayer.advance();
+                 System.out.println(kickp4+"d");}
+                   if(xpos>450 && xpos<555 && ypos>308 && ypos<337 ){
+                        kickp5++;
+                        amount++;
+                        Player.currentPlayer.advance();
+                  System.out.println(kickp5+"e");}
+                     if(xpos>450 && xpos<555 && ypos>368 && ypos<397 ){
+                        kickp6++;
+                        amount++;
+                        Player.currentPlayer.advance();
+                 System.out.println(kickp6+"f");}
+                   if(xpos>450 && xpos<555 && ypos>428 && ypos<457 ){
+                        kickp7++;
+                        amount++;
+                        Player.currentPlayer.advance();
+  
+                 System.out.println(kickp7+"g");}
+                    if (amount == numPlayers)
+                        vote = false;
                     
                     
                     
