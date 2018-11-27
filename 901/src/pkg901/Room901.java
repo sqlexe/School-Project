@@ -71,26 +71,33 @@ import javax.sound.sampled.*;
                     if(xpos>450 && xpos<555 && ypos>68 && ypos<97 )
                     {
                        kickp1++;
+                       Player.currentPlayer.advance();
                      
                   }
                  if(xpos>450 && xpos<555 && ypos>128 && ypos<157 )
                  {
                      kickp2++;
+                     Player.currentPlayer.advance();
                   }
                         if(xpos>450 && xpos<555 && ypos>188 && ypos<217  ){
                         kickp3++;
+                        Player.currentPlayer.advance();
                   System.out.println(kickp3+"c");}
                     if(xpos>450 && xpos<555 && ypos>248 && ypos<277 ){
                         kickp4++;
+                        Player.currentPlayer.advance();
                  System.out.println(kickp4+"d");}
                    if(xpos>450 && xpos<555 && ypos>308 && ypos<337 ){
                         kickp5++;
+                        Player.currentPlayer.advance();
                   System.out.println(kickp5+"e");}
                      if(xpos>450 && xpos<555 && ypos>368 && ypos<397 ){
                         kickp6++;
+                        Player.currentPlayer.advance();
                  System.out.println(kickp6+"f");}
                    if(xpos>450 && xpos<555 && ypos>428 && ypos<457 ){
                         kickp7++;
+                        Player.currentPlayer.advance();
                  System.out.println(kickp7+"g");}
                }
                     
@@ -134,7 +141,7 @@ import javax.sound.sampled.*;
                       if(xpos<325)
                       if(ypos>200&&ypos<270)
                          if(Player.currentPlayer==Player.players[0]){
-                               System.out.println("memes");
+                               
                              if( Player.players[0].getRole()==Characters.Character.Student)
                                                 Characters.DrawStudentI(frame, nightime, gamescreen, homescreen);
                                                else  if( Player.players[0].getRole()==Characters.Character.Yee)
@@ -158,6 +165,7 @@ import javax.sound.sampled.*;
                        
                         
                         //Player 2
+                        
                         if(xpos>100)
                         if(xpos<325)
                        if(ypos>505&&ypos<601)
