@@ -83,16 +83,16 @@ public class Characters {
     }
     
     
- public  static void DrawYee(Room901 instance,boolean nightime,boolean gamescreen,boolean homeScreen ){
-         Draw.drawImage(MrYee, 440, 840, 0, 1, 1);}
-       public  static void DrawAlex(Room901 instance,boolean nightime,boolean gamescreen,boolean homeScreen ){
-    Draw.drawImage(AlexI, 840, 840, 0, 1, 1);}
-        public  static void DrawTampererI(Room901 instance,boolean nightime,boolean gamescreen,boolean homeScreen ){
-       Draw.drawImage(TampererI, 1240, 250, 0, 1, 1);}
-       public  static void DrawBack(Room901 instance,boolean nightime,boolean gamescreen,boolean homeScreen ){
-        Draw.drawImage(Back, 1240, 840, 0, 1.1, 1.1);}
-        public  static void DrawStudentI(Room901 instance,boolean nightime,boolean gamescreen,boolean homeScreen ){
-       Draw.drawImage(StudentI, 440, 250, 0, 1, 1);}
+ public  static void DrawYee(int xpos, int ypos, double rot, double xscale, double yscale){
+         Draw.drawImage(MrYee, xpos, ypos, rot, xscale, yscale);}
+       public  static void DrawAlex(int xpos, int ypos, double rot, double xscale, double yscale){
+    Draw.drawImage(AlexI, xpos, ypos, rot, xscale, yscale);}
+        public  static void DrawTampererI(int xpos, int ypos, double rot, double xscale, double yscale){
+       Draw.drawImage(TampererI, xpos, ypos, rot, xscale, yscale);}
+       public  static void DrawBack(int xpos, int ypos, double rot, double xscale, double yscale){
+        Draw.drawImage(Back, xpos, ypos, rot, xscale, yscale);}
+        public  static void DrawStudentI(int xpos, int ypos, double rot, double xscale, double yscale){
+       Draw.drawImage(StudentI, xpos, ypos, rot, xscale, yscale);}
 
 
 
