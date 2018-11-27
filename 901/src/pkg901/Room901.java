@@ -179,31 +179,26 @@ import javax.sound.sampled.*;
                 if (e.VK_UP == e.getKeyCode()) {
                 } 
                 else if (e.VK_DOWN == e.getKeyCode()) 
-               {     
+                {     
                     nightime=true;
-               } 
+                } 
                 else if (e.VK_LEFT == e.getKeyCode()) {
                     
                 } 
                 else if (e.VK_RIGHT == e.getKeyCode()) {
                    
-                    
-                  
+ 
                 } 
                 else if (e.VK_SPACE == e.getKeyCode()) {
                    
                 }
                 else if (e.VK_ENTER == e.getKeyCode()) {
-                
-                    
-                    
                     if(homescreen=true)
-                   {
-                       Player.Create(numPlayers);
-                   }
-                   homescreen=false;
-                   nightime=true;
-                   
+                    {
+                        Player.Create(numPlayers);
+                    }
+                    homescreen=false;
+                    nightime=true;  
                 }
 
                 repaint();
