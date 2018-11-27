@@ -46,6 +46,10 @@ import javax.sound.sampled.*;
    int kickp7=0;
    boolean keeplooping=true;
    boolean showcard=true;
+   boolean vote = true;
+   int amount;
+   int playerOut;
+   int high;
    
             
    static Room901 frame;
