@@ -601,6 +601,8 @@ import javax.sound.sampled.*;
               + "ggggggggg",SwingConstants.LEFT);
       textLabel.setPreferredSize(new Dimension(1000, 1000));
       frame.getContentPane().add(textLabel, BorderLayout.CENTER);
+          textLabel.setHorizontalAlignment(JLabel.LEFT);
+    textLabel.setVerticalAlignment(JLabel.TOP);
       //Display the window.
       frame.setLocationRelativeTo(null);
       frame.pack();
