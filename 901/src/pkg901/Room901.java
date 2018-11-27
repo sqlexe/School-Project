@@ -115,6 +115,7 @@ import javax.sound.sampled.*;
                  System.out.println(kickp7+"g");}
                     if (amount == numPlayers)
                         vote = false;
+               }
                     
                     
                     
