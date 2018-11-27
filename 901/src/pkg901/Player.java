@@ -14,6 +14,7 @@ public class Player {
      static int playerNum = 0;
     Characters.Character character;
     private boolean alive;
+    private boolean immune;
 
     
     
@@ -32,6 +33,7 @@ public class Player {
     Player()
     {
         alive=true;
+        immune=false;
     }
     
     public void setRole(Characters.Character role)

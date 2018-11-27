@@ -69,50 +69,50 @@ import javax.sound.sampled.*;
                     
                     Board.click(e.getX() - Window.getX(0),
                         e.getY() - Window.getY(0));  
-               if(gamescreen )         {
-                    if(xpos>450 && xpos<555 && ypos>68 && ypos<97 )
-                    {
-                       kickp1++;
-                       Player.currentPlayer.advance();
-                     
-                  }
-                 if(xpos>450 && xpos<555 && ypos>128 && ypos<157 )
-                 {
-                     kickp2++;
-                     Player.currentPlayer.advance();
-                  }
+                    if(gamescreen ){
+                        if(xpos>450 && xpos<555 && ypos>68 && ypos<97 )
+                        {
+                           kickp1++;
+                           Player.currentPlayer.advance();
+
+                        }
+                        if(xpos>450 && xpos<555 && ypos>128 && ypos<157 )
+                        {
+                            kickp2++;
+                            Player.currentPlayer.advance();
+                        }
                         if(xpos>450 && xpos<555 && ypos>188 && ypos<217  ){
-                        kickp3++;
-                        Player.currentPlayer.advance();
-                  System.out.println(kickp3+"c");}
-                    if(xpos>450 && xpos<555 && ypos>248 && ypos<277 ){
-                        kickp4++;
-                        Player.currentPlayer.advance();
-                 System.out.println(kickp4+"d");}
-                   if(xpos>450 && xpos<555 && ypos>308 && ypos<337 ){
-                        kickp5++;
-                        Player.currentPlayer.advance();
-                  System.out.println(kickp5+"e");}
-                     if(xpos>450 && xpos<555 && ypos>368 && ypos<397 ){
-                        kickp6++;
-                        Player.currentPlayer.advance();
-                 System.out.println(kickp6+"f");}
-                   if(xpos>450 && xpos<555 && ypos>428 && ypos<457 ){
-                        kickp7++;
-                        Player.currentPlayer.advance();
-                 System.out.println(kickp7+"g");}
-               }
+                            kickp3++;
+                            Player.currentPlayer.advance();
+                            System.out.println(kickp3+"c");}
+                        if(xpos>450 && xpos<555 && ypos>248 && ypos<277 ){
+                            kickp4++;
+                            Player.currentPlayer.advance();
+                            System.out.println(kickp4+"d");}
+                       if(xpos>450 && xpos<555 && ypos>308 && ypos<337 ){
+                            kickp5++;
+                            Player.currentPlayer.advance();
+                            System.out.println(kickp5+"e");}
+                         if(xpos>450 && xpos<555 && ypos>368 && ypos<397 ){
+                            kickp6++;
+                            Player.currentPlayer.advance();
+                            System.out.println(kickp6+"f");}
+                       if(xpos>450 && xpos<555 && ypos>428 && ypos<457 ){
+                            kickp7++;
+                            Player.currentPlayer.advance();
+                            System.out.println(kickp7+"g");}
+                    }
                     
                     
                     
                     if(nightime)
-              {
-                  if(xpos>1490 && xpos<1485+265 && ypos>825 && ypos<920 )
-               {
-                   nightime=false;
-                   gamescreen=true;
-               }
-              }            
+                    {
+                        if(xpos>1490 && xpos<1485+265 && ypos>825 && ypos<920 )
+                        {
+                            nightime=false;
+                            gamescreen=true;
+                        }
+                    }            
                          
                     
                     
@@ -120,31 +120,30 @@ import javax.sound.sampled.*;
                     
                     
                     if(homescreen)    
-                 {
+                    {
      //+ code  
-                     if(xpos>xLeft1 && xpos <xLeft2 && ypos>365 && ypos<470)
-                        if(numPlayers <7)
-                        numPlayers++;
+                        if(xpos>xLeft1 && xpos <xLeft2 && ypos>365 && ypos<470)
+                            if(numPlayers <7)
+                                numPlayers++;
                      
 // - code
-                      if(xpos>950)
-                        if(xpos<1020)
-                        if(ypos>650&&ypos<750)
-                        if(numPlayers>3)
-                            numPlayers--;
+                        if(xpos>950)
+                          if(xpos<1020)
+                              if(ypos>650&&ypos<750)
+                                  if(numPlayers>3)
+                                      numPlayers--;
 
- // 
-                 }
+                    }
                     
 
-                                                    System.out.println(Player.currentPlayer+"");
+                    System.out.println(Player.currentPlayer+"");
                        
                        
                         
                         
                         
                         
-                        if(!homescreen)
+                    if(!homescreen)
 
                     Board.click(e.getX(),
                         e.getY());  
@@ -182,31 +181,26 @@ import javax.sound.sampled.*;
                 if (e.VK_UP == e.getKeyCode()) {
                 } 
                 else if (e.VK_DOWN == e.getKeyCode()) 
-               {     
+                {     
                     nightime=true;
-               } 
+                } 
                 else if (e.VK_LEFT == e.getKeyCode()) {
                     
                 } 
                 else if (e.VK_RIGHT == e.getKeyCode()) {
                    
-                    
-                  
+ 
                 } 
                 else if (e.VK_SPACE == e.getKeyCode()) {
                    
                 }
                 else if (e.VK_ENTER == e.getKeyCode()) {
-                
-                    
-                    
                     if(homescreen=true)
-                   {
-                       Player.Create(numPlayers);
-                   }
-                   homescreen=false;
-                   nightime=true;
-                   
+                    {
+                        Player.Create(numPlayers);
+                    }
+                    homescreen=false;
+                    nightime=true;  
                 }
 
                 repaint();
@@ -347,13 +341,15 @@ import javax.sound.sampled.*;
                  
                  if(numPlayers>1){
        //Player 2
-        g.setColor(Color.GRAY);
+              Characters.DrawBack(220,545,0, .90, .90);
+               g.setColor(Color.GRAY);
                g.fillRect(Window.getX(100),Window.getY(480),Window.getX(210),Window.getY(60));     
                 g.setColor(Color.white);
                  g.setFont(new Font("Arial",Font.PLAIN,60));
               g.drawString("Player 2", 110, 575); }
                 if(numPlayers>6){
-     //Player 7      
+     //Player 7  
+              Characters.DrawBack(1710,220,0, .90, .90);
               g.setColor(Color.GRAY);
               g.fillRect(Window.getX(1600),Window.getY(150),Window.getX(210),Window.getY(60));
                g.setColor(Color.white);
@@ -361,39 +357,44 @@ import javax.sound.sampled.*;
               g.drawString("Player 7", 1610, 240); }   
                if(numPlayers>2){
               //Player 3   
+              Characters.DrawBack(370,930,0, .90, .90);
               g.setColor(Color.GRAY);
               g.fillRect(Window.getX(250),Window.getY(850),Window.getX(210),Window.getY(60));
                g.setColor(Color.white);
                  g.setFont(new Font("Arial",Font.PLAIN,60));
               g.drawString("Player 3", 260, 950); }
                if(numPlayers>3){
-              // Player 4       
+              // Player 4     
+              Characters.DrawBack(920,930,0, .90, .90);
               g.setColor(Color.GRAY);
               g.fillRect(Window.getX(800),Window.getY(850),Window.getX(210),Window.getY(60));
                g.setColor(Color.white);
                 g.setFont(new Font("Arial",Font.PLAIN,60));
               g.drawString("Player 4", 810, 950); }
                if(numPlayers>4){
-              // Player 5        
+              // Player 5     
+              Characters.DrawBack(1450,930,0, .90, .90);
               g.setColor(Color.GRAY);
               g.fillRect(Window.getX(1350),Window.getY(850),Window.getX(210),Window.getY(60));
                g.setColor(Color.white);
                  g.setFont(new Font("Arial",Font.PLAIN,60));
               g.drawString("Player 5", 1360, 950); }
                if(numPlayers>5){
-              // Player 6       
+              // Player 6    
+              Characters.DrawBack(1710,545,0, .90, .90);
               g.setColor(Color.GRAY);
               g.fillRect(Window.getX(1600),Window.getY(480),Window.getX(210),Window.getY(60));
               g.setColor(Color.white);
                g.setFont(new Font("Arial",Font.PLAIN,60));
               g.drawString("Player 6", 1610, 575); }   
-               // Player 1   
+               // Player 1  
+             Characters.DrawBack(220,220,0, .90, .90);
              g.setColor(Color.GRAY);
              g.fillRect(Window.getX(100),Window.getY(150),Window.getX(210),Window.getY(60));
              g.setColor(Color.white);
              g.setFont(new Font("Arial",Font.PLAIN,60));
              g.drawString("Player 1", 110, 250);   
-               Characters.DrawBack(Window.getX(100),Window.getY(150),0, 1.1, 1.1);
+               
 
                g.setColor(Color.white);
              
