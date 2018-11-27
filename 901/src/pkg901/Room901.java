@@ -542,6 +542,15 @@ import javax.sound.sampled.*;
                 bgSound.getPlay(true);
             bgSound = new sound ("bgsound.wav");
             keeplooping=true;
+             kickp1=0;
+             kickp2=0;
+             kickp3=0;
+             kickp4=0;
+             kickp5=0;
+             kickp6=0;
+             kickp7=0;
+    
+    
     }
 /////////////////////////////////////////////////////////////////////////
     public void animate() {
