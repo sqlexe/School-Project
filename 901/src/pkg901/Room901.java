@@ -402,7 +402,7 @@ import javax.sound.sampled.*;
               
              
              
-              while(keeplooping){
+              
                  if(Player.currentPlayer==Player.players[0])
                         {
                            g.setColor(Color.YELLOW);
@@ -459,8 +459,7 @@ import javax.sound.sampled.*;
                            g.setFont(new Font("Arial",Font.PLAIN,60));
                                g.drawString("Player 7", 1610, 240);       
                            }
-                            break;
-                        }
+                             
               }
                
               
