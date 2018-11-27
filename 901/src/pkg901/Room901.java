@@ -345,13 +345,15 @@ import javax.sound.sampled.*;
                  
                  if(numPlayers>1){
        //Player 2
-        g.setColor(Color.GRAY);
+              Characters.DrawBack(220,545,0, .90, .90);
+               g.setColor(Color.GRAY);
                g.fillRect(Window.getX(100),Window.getY(480),Window.getX(210),Window.getY(60));     
                 g.setColor(Color.white);
                  g.setFont(new Font("Arial",Font.PLAIN,60));
               g.drawString("Player 2", 110, 575); }
                 if(numPlayers>6){
-     //Player 7      
+     //Player 7  
+              Characters.DrawBack(1710,220,0, .90, .90);
               g.setColor(Color.GRAY);
               g.fillRect(Window.getX(1600),Window.getY(150),Window.getX(210),Window.getY(60));
                g.setColor(Color.white);
@@ -359,39 +361,44 @@ import javax.sound.sampled.*;
               g.drawString("Player 7", 1610, 240); }   
                if(numPlayers>2){
               //Player 3   
+              Characters.DrawBack(370,930,0, .90, .90);
               g.setColor(Color.GRAY);
               g.fillRect(Window.getX(250),Window.getY(850),Window.getX(210),Window.getY(60));
                g.setColor(Color.white);
                  g.setFont(new Font("Arial",Font.PLAIN,60));
               g.drawString("Player 3", 260, 950); }
                if(numPlayers>3){
-              // Player 4       
+              // Player 4     
+              Characters.DrawBack(920,930,0, .90, .90);
               g.setColor(Color.GRAY);
               g.fillRect(Window.getX(800),Window.getY(850),Window.getX(210),Window.getY(60));
                g.setColor(Color.white);
                 g.setFont(new Font("Arial",Font.PLAIN,60));
               g.drawString("Player 4", 810, 950); }
                if(numPlayers>4){
-              // Player 5        
+              // Player 5     
+              Characters.DrawBack(1450,930,0, .90, .90);
               g.setColor(Color.GRAY);
               g.fillRect(Window.getX(1350),Window.getY(850),Window.getX(210),Window.getY(60));
                g.setColor(Color.white);
                  g.setFont(new Font("Arial",Font.PLAIN,60));
               g.drawString("Player 5", 1360, 950); }
                if(numPlayers>5){
-              // Player 6       
+              // Player 6    
+              Characters.DrawBack(1710,545,0, .90, .90);
               g.setColor(Color.GRAY);
               g.fillRect(Window.getX(1600),Window.getY(480),Window.getX(210),Window.getY(60));
               g.setColor(Color.white);
                g.setFont(new Font("Arial",Font.PLAIN,60));
               g.drawString("Player 6", 1610, 575); }   
-               // Player 1   
+               // Player 1  
+             Characters.DrawBack(220,220,0, .90, .90);
              g.setColor(Color.GRAY);
              g.fillRect(Window.getX(100),Window.getY(150),Window.getX(210),Window.getY(60));
              g.setColor(Color.white);
              g.setFont(new Font("Arial",Font.PLAIN,60));
              g.drawString("Player 1", 110, 250);   
-               Characters.DrawBack(Window.getX(100),Window.getY(150),0, 1.1, 1.1);
+               
 
                g.setColor(Color.white);
              
