@@ -1,0 +1,26 @@
+Tamperer
+Wake up and select a player who’s code you’ll mess with to get them out.
+
+Mr.Yee
+Select someone you suspect is doing not so good and find out what their role is.
+
+Alex
+Select a player who’s code will be fixed making them unable to gotten out for the night.
+
+Student
+Has to not be sent to the middle.
+
+
+Rules/Flow of the Game:
+The game starts at the first day, where each player will get a chance to look at their own card.
+In between each person’s turn, the last player who went and the current player will switch seats while everybody who’s turn it isn’t will be facing away from the monitor. 
+After ever player sees their card, it will change to night, where every player has a turn and players with special roles fulfill their action. 
+During the night cycle, all players will be able to select themselves and see their roles. 
+Every player on their turn should click a couple of times even if they are not one of the special roles, to avoid making it clear who is who. 
+Once every player has their turn, whoever was selected to be sent to the middle and was not saved will be sent to the middle and be removed from the game. 
+The game will then change to day. 
+Everybody will see who was sent to the middle and will have the chance to discuss which player they think is the tamperer If asked, 
+a player is required to give their player number but not their role. 
+Once the players have finished they will go in order and vote on who they think the tamperer is. 
+The player with the most votes will be gotten out. 
+This process will repeat until either only the tamperer is left, or the tamperer is gotten out.
