@@ -597,12 +597,12 @@ import javax.sound.sampled.*;
       //Create and set up the window.
       JFrame frame = new JFrame("Rules");
 //      frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-      JLabel textLabel = new JLabel("I'm a label in the window"
-              + "ggggggggg",SwingConstants.LEFT);
+      JLabel textLabel = new JLabel("I'm a label in the window",SwingConstants.LEFT);
+      frame.setIconImage(new ImageIcon("./assets/FeltBG.png").getImage());
       textLabel.setPreferredSize(new Dimension(1000, 1000));
       frame.getContentPane().add(textLabel, BorderLayout.CENTER);
-          textLabel.setHorizontalAlignment(JLabel.LEFT);
-    textLabel.setVerticalAlignment(JLabel.TOP);
+      textLabel.setHorizontalAlignment(JLabel.LEFT);
+      textLabel.setVerticalAlignment(JLabel.TOP);
       //Display the window.
       frame.setLocationRelativeTo(null);
       frame.pack();
