@@ -91,26 +91,25 @@ import javax.sound.sampled.*;
                         if(xpos>450 && xpos<555 && ypos>188 && ypos<217  ){
                         kickp3++;
                         amount++;
-                        Player.currentPlayer.advance();
-                  System.out.println(kickp3+"c");}
-                    if(xpos>450 && xpos<555 && ypos>248 && ypos<277 ){
+                        Player.currentPlayer.advance();}
+               if(numPlayers>=4)
+                     if(xpos>450 && xpos<555 && ypos>248 && ypos<277 ){
                         kickp4++;
                         amount++;
-                        Player.currentPlayer.advance();
-                 System.out.println(kickp4+"d");}
-                   if(xpos>450 && xpos<555 && ypos>308 && ypos<337 ){
+                        Player.currentPlayer.advance();}
+                              if(numPlayers>=5)
+                         if(xpos>450 && xpos<555 && ypos>308 && ypos<337 ){
                         kickp5++;
                         amount++;
-                        Player.currentPlayer.advance();
-                  System.out.println(kickp5+"e");}
+                        Player.currentPlayer.advance();}
+                                if(numPlayers>=6)
                      if(xpos>450 && xpos<555 && ypos>368 && ypos<397 ){
                         kickp6++;
                         amount++;
-                        Player.currentPlayer.advance();
-                 System.out.println(kickp6+"f");}
+                        Player.currentPlayer.advance();}
+                                 if(numPlayers>=7)
                    if(xpos>450 && xpos<555 && ypos>428 && ypos<457 ){
-                       System.out.println("5");
-                       kickp7++;
+                        kickp7++;
                         amount++;
                         Player.currentPlayer.advance();
   }
@@ -474,23 +473,34 @@ import javax.sound.sampled.*;
              g.setColor(Color.GRAY);
                g.fillRect(Window.getX(400),Window.getY(10),Window.getX(200),Window.getY(400));     
                  g.setColor(Color.white);
-                g.setFont(new Font("Arial",Font.PLAIN,30));
-              g.drawString("Player 1", 450, 90);
-                g.drawString("Player 2", 450, 150 );
-                 g.drawString("Player 3", 450, 210);
-              g.drawString("Player 4", 450, 270);
+           
+               g.setFont(new Font("Arial",Font.PLAIN,30));
+              
+               g.drawString("Player 1", 450, 90);
+               g.drawString("Player 2", 450, 150 );
+               g.drawString("Player 3", 450, 210);
+                if(numPlayers>=4)
+               g.drawString("Player 4", 450, 270);
+                if(numPlayers>=5)
                 g.drawString("Player 5", 450, 330);
-                 g.drawString("Player 6", 450, 390);
-                  g.drawString("Player 7", 450, 450);
-                 g.setColor(Color.red);  
-                g.setFont(new Font("Arial",Font.PLAIN,30));
-              g.drawString(""+kickp1, 590, 90);
+                if(numPlayers>=6)
+                g.drawString("Player 6", 450, 390);
+                if(numPlayers>=7)
+                g.drawString("Player 7", 450, 450);
+                
+                g.setColor(Color.red);  
+               g.setFont(new Font("Arial",Font.PLAIN,30));
+               g.drawString(""+kickp1, 590, 90);
                 g.drawString(""+kickp2, 590, 150 );
                  g.drawString(""+kickp3, 590, 210);
-              g.drawString(""+kickp4, 590, 270);
-                g.drawString(""+kickp5, 590, 330);
+                    if(numPlayers>=4)
+                 g.drawString(""+kickp4, 590, 270);
+                 if(numPlayers>=5)
+                    g.drawString(""+kickp5, 590, 330);
+                   if(numPlayers>=6)
                  g.drawString(""+kickp6, 590, 390);
-                  g.drawString(""+kickp7, 590, 450);
+                     if(numPlayers>=7)
+                   g.drawString(""+kickp7, 590, 450);
                  
                  if(numPlayers>1){
        //Player 2
