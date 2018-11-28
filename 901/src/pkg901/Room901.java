@@ -619,7 +619,7 @@ import javax.sound.sampled.*;
               }
                
               
-              
+                 Characters.DrawYee(150, 150, 0, 1.0, 1.0);
       
                  Characters.Draw(this,gamescreen,homescreen,nightime);
                   
