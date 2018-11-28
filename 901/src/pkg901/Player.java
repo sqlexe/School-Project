@@ -48,6 +48,24 @@ public class Player {
     {
         return currentPlayer.character;
     }
+    
+    public static void tampererTurn (int s)
+    {
+        if(!players[s].immune)
+            players[s].alive = false;
+    }
+    public static void alexTurn (int s)
+    {
+        players[s].immune = true;
+        players[s].alive = true;
+    }
+    public static void yeeTurn (int s)
+    {
+            
+        
+    }
+
+
 
 //    public void Advance1()
 //    {
@@ -136,6 +154,7 @@ public class Player {
 
        
     }
+<<<<<<< HEAD
            
     public void Donzo()
     {
@@ -145,5 +164,8 @@ public class Player {
        {
         return alive;   
        }
+=======
+
+>>>>>>> 61e68d7fd90ac75d7fff10ae0aa2abe99c04f967
 }
 
