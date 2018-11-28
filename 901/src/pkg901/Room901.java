@@ -28,7 +28,7 @@ import javax.sound.sampled.*;
 //    Image Tamperer;
 //    Image Back;
     static boolean gamescreen=false;
-    boolean nightime = false;
+    static boolean nightime = false;
     boolean homescreen = true;
     sound bgSound = null;
     sound NightMusic = null;
@@ -130,7 +130,7 @@ import javax.sound.sampled.*;
                          if(homescreen){
                              if(xpos>1490&& xpos<1662 && ypos>428 && ypos<520)
                              {
-                               createWindow();
+                               
                              }
                          }
                     
@@ -201,7 +201,7 @@ import javax.sound.sampled.*;
                 } 
                 else if (e.VK_DOWN == e.getKeyCode()) 
                 {     
-                    nightime=true;
+//                    nightime=true;
                 } 
                 else if (e.VK_LEFT == e.getKeyCode()) {
                     
@@ -287,6 +287,61 @@ import javax.sound.sampled.*;
                 g.setColor(Color.white);
               g.setFont(new Font("Arial",Font.PLAIN,60));
               g.drawString("Continue", 1500, 900); 
+              if(numPlayers>1){
+       //Player 2
+              Characters.DrawBack(220,545,0, .90, .90);
+               g.setColor(Color.GRAY);
+               g.fillRect(Window.getX(100),Window.getY(480),Window.getX(210),Window.getY(60));     
+                g.setColor(Color.white);
+                 g.setFont(new Font("Arial",Font.PLAIN,60));
+              g.drawString("Player 2", 110, 575); }
+                if(numPlayers>6){
+     //Player 7  
+              Characters.DrawBack(1710,220,0, .90, .90);
+              g.setColor(Color.GRAY);
+              g.fillRect(Window.getX(1600),Window.getY(150),Window.getX(210),Window.getY(60));
+               g.setColor(Color.white);
+                 g.setFont(new Font("Arial",Font.PLAIN,60));
+              g.drawString("Player 7", 1610, 240); }   
+               if(numPlayers>2){
+              //Player 3   
+              Characters.DrawBack(370,930,0, .90, .90);
+              g.setColor(Color.GRAY);
+              g.fillRect(Window.getX(250),Window.getY(850),Window.getX(210),Window.getY(60));
+               g.setColor(Color.white);
+                 g.setFont(new Font("Arial",Font.PLAIN,60));
+              g.drawString("Player 3", 260, 950); }
+               if(numPlayers>3){
+              // Player 4     
+              Characters.DrawBack(920,930,0, .90, .90);
+              g.setColor(Color.GRAY);
+              g.fillRect(Window.getX(800),Window.getY(850),Window.getX(210),Window.getY(60));
+               g.setColor(Color.white);
+                g.setFont(new Font("Arial",Font.PLAIN,60));
+              g.drawString("Player 4", 810, 950); }
+               if(numPlayers>4){
+              // Player 5     
+              Characters.DrawBack(1450,930,0, .90, .90);
+              g.setColor(Color.GRAY);
+              g.fillRect(Window.getX(1350),Window.getY(850),Window.getX(210),Window.getY(60));
+               g.setColor(Color.white);
+                 g.setFont(new Font("Arial",Font.PLAIN,60));
+              g.drawString("Player 5", 1360, 950); }
+               if(numPlayers>5){
+              // Player 6    
+              Characters.DrawBack(1710,545,0, .90, .90);
+              g.setColor(Color.GRAY);
+              g.fillRect(Window.getX(1600),Window.getY(480),Window.getX(210),Window.getY(60));
+              g.setColor(Color.white);
+               g.setFont(new Font("Arial",Font.PLAIN,60));
+              g.drawString("Player 6", 1610, 575); }   
+               // Player 1  
+             Characters.DrawBack(220,220,0, .90, .90);
+             g.setColor(Color.GRAY);
+             g.fillRect(Window.getX(100),Window.getY(150),Window.getX(210),Window.getY(60));
+             g.setColor(Color.white);
+             g.setFont(new Font("Arial",Font.PLAIN,60));
+             g.drawString("Player 1", 110, 250); 
      }
 
 
@@ -587,7 +642,7 @@ import javax.sound.sampled.*;
       //Create and set up the window.
       JFrame frame = new JFrame("Rules");
 //      frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-      JLabel textLabel = new JLabel("I'm a label in the window",SwingConstants.LEFT);
+      JLabel textLabel = new JLabel("Check the rules text file. XD",SwingConstants.LEFT);
       frame.setIconImage(new ImageIcon("./assets/FeltBG.png").getImage());
       textLabel.setPreferredSize(new Dimension(1000, 1000));
       frame.getContentPane().add(textLabel, BorderLayout.CENTER);
