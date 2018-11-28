@@ -37,13 +37,13 @@ import javax.sound.sampled.*;
    int xLeft2=1035;
     int yTop1=490;
    int yTop2=540;
- static  int kickp1=0;
-  static int kickp2=0;
-  static int kickp3=0;
-  static int kickp4=0;
-  static int kickp5=0;
-  static int kickp6=0;
-  static int kickp7=0;
+   int kickp1=0;
+   int kickp2=0;
+   int kickp3=0;
+   int kickp4=0;
+   int kickp5=0;
+   int kickp6=0;
+   int kickp7=0;
    boolean keeplooping=true;
    boolean showcard=true;
    boolean vote = true;
@@ -281,7 +281,14 @@ import javax.sound.sampled.*;
   
      if(nightime)
      {
-                 
+         VoteReset();
+//                     kickp1-=1;
+//          kickp2-= 1;
+//          kickp3-=  1;
+//          kickp4-= 1;
+//          kickp5-= 1;
+//          kickp6-=  1;
+//          kickp7-=1;  
                 g.setColor(Color.gray);
                g.fillRect(Window.getX(1485),Window.getY(800),Window.getX(250),Window.getY(60));  
                 g.setColor(Color.white);
@@ -580,7 +587,7 @@ import javax.sound.sampled.*;
             homescreen = true;
             nightime=false;
             numPlayers =3;
-            
+            gamescreen = false;
             if(bgSound != null)
                 bgSound.getPlay(true);
             bgSound = new sound ("bgsound.wav");
@@ -594,6 +601,17 @@ import javax.sound.sampled.*;
              kickp7=0;
     
     
+    }
+    public void VoteReset()
+    {
+        vote = true;
+          kickp1-=kickp1;
+          kickp2-= kickp2;
+          kickp3-=  kickp3;
+          kickp4-= kickp4;
+          kickp5-= kickp5;
+          kickp6-=  kickp6;
+          kickp7-=kickp7;  
     }
 /////////////////////////////////////////////////////////////////////////
     public void animate() {
