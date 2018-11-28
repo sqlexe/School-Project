@@ -105,20 +105,20 @@ public class Player {
             playerNum++;
             if (Room901.gamescreen)
             {
-            if(players.length == playerNum)
-            {
-                playerNum = 0;
-                Room901.nightime = true;
-            }
-            if(players[playerNum].getAlive())
-            {
-                currentPlayer = players[playerNum];
-                keepLooping = false; 
-            }
-            else
-            {
-                currentPlayer = players[playerNum+1];
-            }
+                if(players.length == playerNum)
+                {
+                    playerNum = 0;
+                    Room901.nightime = true;
+                }
+                if(players[playerNum].getAlive())
+                {
+                    currentPlayer = players[playerNum];
+                    keepLooping = false; 
+                }
+                else
+                {
+                    currentPlayer = players[playerNum+1];
+                }
             }
        }
 //       if(Room901.gamescreen)
