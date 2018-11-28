@@ -48,6 +48,24 @@ public class Player {
     {
         return currentPlayer.character;
     }
+    
+    public static void tampererTurn (int s)
+    {
+        if(!players[s].immune)
+            players[s].alive = false;
+    }
+    public static void alexTurn (int s)
+    {
+        players[s].immune = true;
+        players[s].alive = true;
+    }
+    public static void yeeTurn (int s)
+    {
+            
+        
+    }
+
+
 
 //    public void Advance1()
 //    {
@@ -112,5 +130,6 @@ public class Player {
        }
        
     }
+
 }
 
