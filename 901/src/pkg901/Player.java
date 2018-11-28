@@ -93,6 +93,7 @@ public class Player {
        playerNum =0;
        currentPlayer = players[playerNum];
        System.out.println(""+currentPlayer);
+       Room901.nightime = true;
        }
        }
        
