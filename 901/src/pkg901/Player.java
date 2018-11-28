@@ -161,9 +161,9 @@ public class Player {
         alive = false;
     }
     public boolean getAlive()
-       {
+    {
         return alive;   
-       }
+    }
 
 }
 
