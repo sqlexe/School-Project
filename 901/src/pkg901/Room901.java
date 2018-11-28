@@ -595,7 +595,7 @@ import javax.sound.sampled.*;
                                      
                               }
                                           else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Tamperer ){
-                                   Characters.DrawTampererI(150, 150, 0, 1.0, 1.0);   System.out.println("5");
+                                   Characters.DrawTampererI(150, 150, 0, 1.0, 1.0);   System.out.println("6");
                             
                                           }
                                                else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Yee ){
