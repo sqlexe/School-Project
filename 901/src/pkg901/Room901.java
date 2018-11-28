@@ -593,33 +593,35 @@ public class Room901 extends JFrame implements Runnable {
             if (checkcards) {
                 if (Player.currentPlayer == Player.players[0] || Player.currentPlayer.getRole() == Player.currentPlayer.character.Alex) {
                     if (Player.currentPlayer.getRole() == Player.currentPlayer.character.Alex) {
-                        Characters.DrawAlex(150, 150, 0, 1.0, 1.0);
+                        Characters.DrawAlex(930, 220, 0, .90, .90);
 
                     } else if (Player.currentPlayer.getRole() == Player.currentPlayer.character.Tamperer) {
-                        Characters.DrawTampererI(150, 150, 0, 1.0, 1.0);
+                        Characters.DrawTampererI(930, 220, 0, .90, .90);
                         System.out.println("6");
 
                     } else if (Player.currentPlayer.getRole() == Player.currentPlayer.character.Yee) {
-                        Characters.DrawYee(150, 150, 0, 1.0, 1.0);
+                        Characters.DrawYee(930, 220, 0, .90, .90);
 
                     } else {
-                        Characters.DrawStudentI(150, 150, 0, 1.0, 1.0);
+                        Characters.DrawStudentI(930, 220, 0, .90, .90);
                         System.out.println("5");
                     }
                 }
 
             }
+            //look at cards                 
+
             if (checkcards1) {
                 if (Player.currentPlayer == Player.players[1] || Player.currentPlayer.getRole() == Player.currentPlayer.character.Alex) {
                     if (Player.currentPlayer.getRole() == Player.currentPlayer.character.Alex) {
-                        Characters.DrawAlex(150, 150, 0, 1.0, 1.0);
+                        Characters.DrawAlex(930, 220, 0, .90, .90);
                     } else if (Player.currentPlayer.getRole() == Player.currentPlayer.character.Tamperer) {
-                        Characters.DrawTampererI(150, 150, 0, 1.0, 1.0);
+                        Characters.DrawTampererI(930, 220, 0, .90, .90);
                         System.out.println("5");
                     } else if (Player.currentPlayer.getRole() == Player.currentPlayer.character.Yee) {
-                        Characters.DrawYee(150, 150, 0, 1.0, 1.0);
+                        Characters.DrawYee(930, 220, 0, .90, .90);
                     } else {
-                        Characters.DrawStudentI(150, 150, 0, 1.0, 1.0);
+                        Characters.DrawStudentI(930, 220, 0, .90, .90);
                         System.out.println("5");
                     }
                 }
@@ -627,15 +629,15 @@ public class Room901 extends JFrame implements Runnable {
             if (checkcards2) {
                 if (Player.currentPlayer == Player.players[2] || Player.currentPlayer.getRole() == Player.currentPlayer.character.Alex) {
                     if (Player.currentPlayer.getRole() == Player.currentPlayer.character.Alex) {
-                        Characters.DrawAlex(150, 150, 0, 1.0, 1.0);
+                        Characters.DrawAlex(930, 220, 0, .90, .90);
                     } else if (Player.currentPlayer.getRole() == Player.currentPlayer.character.Tamperer) {
-                        Characters.DrawTampererI(150, 150, 0, 1.0, 1.0);
+                        Characters.DrawTampererI(930, 220, 0, .90, .90);
                         System.out.println("5");
                     } else if (Player.currentPlayer.getRole() == Player.currentPlayer.character.Yee) {
-                        Characters.DrawYee(150, 150, 0, 1.0, 1.0);
+                        Characters.DrawYee(930, 220, 0, .90, .90);
 
                     } else {
-                        Characters.DrawStudentI(150, 150, 0, 1.0, 1.0);
+                        Characters.DrawStudentI(930, 220, 0, .90, .90);
                     }
                 }
                 System.out.println("5");
@@ -643,14 +645,14 @@ public class Room901 extends JFrame implements Runnable {
             if (checkcards3) {
                 if (Player.currentPlayer == Player.players[3] || Player.currentPlayer.getRole() == Player.currentPlayer.character.Alex) {
                     if (Player.currentPlayer.getRole() == Player.currentPlayer.character.Alex) {
-                        Characters.DrawAlex(150, 150, 0, 1.0, 1.0);
+                        Characters.DrawAlex(930, 220, 0, .90, .90);
                     } else if (Player.currentPlayer.getRole() == Player.currentPlayer.character.Tamperer) {
-                        Characters.DrawTampererI(150, 150, 0, 1.0, 1.0);
+                        Characters.DrawTampererI(930, 220, 0, .90, .90);
                         System.out.println("5");
                     } else if (Player.currentPlayer.getRole() == Player.currentPlayer.character.Yee) {
-                        Characters.DrawYee(150, 150, 0, 1.0, 1.0);
+                        Characters.DrawYee(930, 220, 0, .90, .90);
                     } else {
-                        Characters.DrawStudentI(150, 150, 0, 1.0, 1.0);
+                        Characters.DrawStudentI(930, 220, 0, .90, .90);
                     }
                 }
                 System.out.println("5");
@@ -659,14 +661,14 @@ public class Room901 extends JFrame implements Runnable {
             if (checkcards4) {
                 if (Player.currentPlayer == Player.players[4] || Player.currentPlayer.getRole() == Player.currentPlayer.character.Alex) {
                     if (Player.currentPlayer.getRole() == Player.currentPlayer.character.Alex) {
-                        Characters.DrawAlex(150, 150, 0, 1.0, 1.0);
+                        Characters.DrawAlex(930, 220, 0, .90, .90);
                     } else if (Player.currentPlayer.getRole() == Player.currentPlayer.character.Tamperer) {
-                        Characters.DrawTampererI(150, 150, 0, 1.0, 1.0);
+                        Characters.DrawTampererI(930, 220, 0, .90, .90);
                         System.out.println("5");
                     } else if (Player.currentPlayer.getRole() == Player.currentPlayer.character.Yee) {
-                        Characters.DrawYee(150, 150, 0, 1.0, 1.0);
+                        Characters.DrawYee(930, 220, 0, .90, .90);
                     } else {
-                        Characters.DrawStudentI(150, 150, 0, 1.0, 1.0);
+                        Characters.DrawStudentI(930, 220, 0, .90, .90);
                     }
                 }
                 System.out.println("5");
@@ -675,14 +677,14 @@ public class Room901 extends JFrame implements Runnable {
             if (checkcards5) {
                 if (Player.currentPlayer == Player.players[5] || Player.currentPlayer.getRole() == Player.currentPlayer.character.Alex) {
                     if (Player.currentPlayer.getRole() == Player.currentPlayer.character.Alex) {
-                        Characters.DrawAlex(150, 150, 0, 1.0, 1.0);
+                        Characters.DrawAlex(930, 220, 0, .90, .90);
                     } else if (Player.currentPlayer.getRole() == Player.currentPlayer.character.Tamperer) {
-                        Characters.DrawTampererI(150, 150, 0, 1.0, 1.0);
+                        Characters.DrawTampererI(930, 220, 0, .90, .90);
                         System.out.println("5");
                     } else if (Player.currentPlayer.getRole() == Player.currentPlayer.character.Yee) {
-                        Characters.DrawYee(150, 150, 0, 1.0, 1.0);
+                        Characters.DrawYee(930, 220, 0, .90, .90);
                     } else {
-                        Characters.DrawStudentI(150, 150, 0, 1.0, 1.0);
+                        Characters.DrawStudentI(930, 220, 0, .90, .90);
                     }
                 }
                 System.out.println("5");
@@ -691,14 +693,14 @@ public class Room901 extends JFrame implements Runnable {
             if (checkcards6) {
                 if (Player.currentPlayer == Player.players[6] || Player.currentPlayer.getRole() == Player.currentPlayer.character.Alex) {
                     if (Player.currentPlayer.getRole() == Player.currentPlayer.character.Alex) {
-                        Characters.DrawAlex(150, 150, 0, 1.0, 1.0);
+                        Characters.DrawAlex(930, 220, 0, .90, .90);
                     } else if (Player.currentPlayer.getRole() == Player.currentPlayer.character.Tamperer) {
-                        Characters.DrawTampererI(150, 150, 0, 1.0, 1.0);
+                        Characters.DrawTampererI(930, 220, 0, .90, .90);
                         System.out.println("5");
                     } else if (Player.currentPlayer.getRole() == Player.currentPlayer.character.Yee) {
-                        Characters.DrawYee(150, 150, 0, 1.0, 1.0);
+                        Characters.DrawYee(930, 220, 0, .90, .90);
                     } else {
-                        Characters.DrawStudentI(150, 150, 0, 1.0, 1.0);
+                        Characters.DrawStudentI(930, 220, 0, .90, .90);
                     }
                 }
                 System.out.println("5");
@@ -707,6 +709,7 @@ public class Room901 extends JFrame implements Runnable {
         }
         Characters.Draw(this, gamescreen, homescreen, nightime);
 
+        //start screen            
         if (homescreen) {
 
             g.setColor(Color.BLACK);
