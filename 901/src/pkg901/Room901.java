@@ -162,44 +162,44 @@ import javax.sound.sampled.*;
                       if(ypos>200&&ypos<270)
                           if( Player.currentPlayer==Player.players[0]||Player.currentPlayer.getRole()==Player.currentPlayer.character.Alex )
                                  if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Alex ){
-                                 reset();}
+                                           Characters.DrawAlex(150, 150, 0, 1.0, 1.0);}
                                       else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Student ){
-                                   reset(); }
+                                Characters.DrawStudentI(150, 150, 0, 1.0, 1.0); }
                                           else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Tamperer ){
-                                    reset();
+                                   Characters.DrawTampererI(150, 150, 0, 1.0, 1.0);
                                           }
                                                else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Yee ){
-                                   reset();
+                                   Characters.DrawYee(150, 150, 0, 1.0, 1.0);
                                                }
                                 //player 2 
                          if(xpos>100)
                         if(xpos<325)
                        if(ypos>505&&ypos<601)
                           if(Player.currentPlayer==Player.players[1]||Player.currentPlayer.getRole()==Player.currentPlayer.character.Tamperer)
-                                 if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Alex ){
-                                 reset();}
+                                  if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Alex ){
+                                           Characters.DrawAlex(150, 150, 0, 1.0, 1.0);}
                                       else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Student ){
-                                   reset(); }
+                                Characters.DrawStudentI(150, 150, 0, 1.0, 1.0); }
                                           else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Tamperer ){
-                                    reset();
+                                   Characters.DrawTampererI(150, 150, 0, 1.0, 1.0);
                                           }
                                                else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Yee ){
-                                   reset();
+                                   Characters.DrawYee(150, 150, 0, 1.0, 1.0);
                                                }
                               //Player 3
                         if(xpos>260)
                         if(xpos<475)
                           if(ypos>877&&ypos<975)
                           if(Player.currentPlayer==Player.players[2]||Player.currentPlayer.getRole()==Player.currentPlayer.character.Tamperer)
-                                 if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Alex ){
-                                 reset();}
+                                if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Alex ){
+                                           Characters.DrawAlex(150, 150, 0, 1.0, 1.0);}
                                       else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Student ){
-                                   reset(); }
+                                Characters.DrawStudentI(150, 150, 0, 1.0, 1.0); }
                                           else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Tamperer ){
-                                    reset();
+                                   Characters.DrawTampererI(150, 150, 0, 1.0, 1.0);
                                           }
                                                else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Yee ){
-                                   reset();
+                                   Characters.DrawYee(150, 150, 0, 1.0, 1.0);
                                                }
                               //Player 4
                           if(numPlayers>=4)
@@ -207,15 +207,15 @@ import javax.sound.sampled.*;
                               if(xpos<475+550)
                                 if(ypos>877&&ypos<975)
                                   if(Player.currentPlayer==Player.players[3]||Player.currentPlayer.getRole()==Player.currentPlayer.character.Tamperer)
-                                         if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Alex ){
-                                 reset();}
+                                     if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Alex ){
+                                           Characters.DrawAlex(150, 150, 0, 1.0, 1.0);}
                                       else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Student ){
-                                   reset(); }
+                                Characters.DrawStudentI(150, 150, 0, 1.0, 1.0); }
                                           else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Tamperer ){
-                                    reset();
+                                   Characters.DrawTampererI(150, 150, 0, 1.0, 1.0);
                                           }
                                                else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Yee ){
-                                   reset();
+                                   Characters.DrawYee(150, 150, 0, 1.0, 1.0);
                                                }
                                       
                         //Player 5
@@ -224,15 +224,15 @@ import javax.sound.sampled.*;
                               if(xpos<475+550+550)
                                 if(ypos>877&&ypos<975)
                                      if(Player.currentPlayer==Player.players[4]||Player.currentPlayer.getRole()==Player.currentPlayer.character.Tamperer)
-                                              if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Alex ){
-                                 reset();}
+                                               if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Alex ){
+                                           Characters.DrawAlex(150, 150, 0, 1.0, 1.0);}
                                       else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Student ){
-                                   reset(); }
+                                Characters.DrawStudentI(150, 150, 0, 1.0, 1.0); }
                                           else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Tamperer ){
-                                    reset();
+                                   Characters.DrawTampererI(150, 150, 0, 1.0, 1.0);
                                           }
                                                else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Yee ){
-                                   reset();
+                                   Characters.DrawYee(150, 150, 0, 1.0, 1.0);
                                                }
 //Player 6
                           if(numPlayers>=6)
@@ -240,15 +240,15 @@ import javax.sound.sampled.*;
                             if(xpos<1826)
                              if(ypos>505&&ypos<601)
                               if(Player.currentPlayer==Player.players[5]||Player.currentPlayer.getRole()==Player.currentPlayer.character.Tamperer)
-                                if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Alex ){
-                                 reset();}
+                                 if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Alex ){
+                                           Characters.DrawAlex(150, 150, 0, 1.0, 1.0);}
                                       else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Student ){
-                                   reset(); }
+                                Characters.DrawStudentI(150, 150, 0, 1.0, 1.0); }
                                           else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Tamperer ){
-                                    reset();
+                                   Characters.DrawTampererI(150, 150, 0, 1.0, 1.0);
                                           }
                                                else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Yee ){
-                                   reset();
+                                   Characters.DrawYee(150, 150, 0, 1.0, 1.0);
                                                }
                                
 //Player 7
@@ -257,7 +257,16 @@ import javax.sound.sampled.*;
                         if(xpos<1826)
                      if(ypos>200&&ypos<270)
                            if(Player.currentPlayer==Player.players[6]||Player.currentPlayer.getRole()==Player.currentPlayer.character.Tamperer)
-                                
+                                 if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Alex ){
+                                           Characters.DrawAlex(150, 150, 0, 1.0, 1.0);}
+                                      else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Student ){
+                                Characters.DrawStudentI(150, 150, 0, 1.0, 1.0); }
+                                          else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Tamperer ){
+                                   Characters.DrawTampererI(150, 150, 0, 1.0, 1.0);
+                                          }
+                                               else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Yee ){
+                                   Characters.DrawYee(150, 150, 0, 1.0, 1.0);
+                                               }
                          
                          if(!homescreen)
 
