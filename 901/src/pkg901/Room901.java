@@ -364,12 +364,12 @@ import javax.sound.sampled.*;
               g.drawString("Player 4", 810, 950); }
                if(numPlayers>4){
               // Player 5     
-              Characters.DrawBack(1450,930,0, .90, .90);
+              Characters.DrawBack(1350,930,0, .90, .90);
               g.setColor(Color.GRAY);
-              g.fillRect(Window.getX(1350),Window.getY(850),Window.getX(210),Window.getY(60));
+              g.fillRect(Window.getX(1250),Window.getY(850),Window.getX(210),Window.getY(60));
                g.setColor(Color.white);
                  g.setFont(new Font("Arial",Font.PLAIN,60));
-              g.drawString("Player 5", 1360, 950); }
+              g.drawString("Player 5", 1260, 950); }
                if(numPlayers>5){
               // Player 6    
               Characters.DrawBack(1710,545,0, .90, .90);
