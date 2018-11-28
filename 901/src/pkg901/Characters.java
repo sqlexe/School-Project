@@ -57,21 +57,41 @@ public class Characters {
 
     }
     public static void Assign(Player players[]){
-        
+        boolean keepLooping = true;
         //alex
-        int pick = (int)(Math.random()*(players.length-1));
-        if(players[pick].character==null)
-            players[pick].setRole(Character.Alex);
+        while(keepLooping)
+        {
+            int pick = (int)(Math.random()*(players.length));
+            if(players[pick].character==null)
+            {
+                players[pick].setRole(Character.Alex);
+                keepLooping=false;
+            }
+        }
         
         //Yee
-        pick = (int)(Math.random()*(players.length-1));
-        if(players[pick].character==null)
-            players[pick].setRole(Character.Yee);
+        keepLooping = true;
+        while(keepLooping)
+        {
+            int pick = (int)(Math.random()*(players.length));
+            if(players[pick].character==null)
+            {
+                players[pick].setRole(Character.Yee);
+                keepLooping=false;
+            }
+        }
         
         //Tamperer
-        pick = (int)(Math.random()*(players.length-1));
-        if(players[pick].character==null)
-            players[pick].setRole(Character.Tamperer);
+        keepLooping = true;
+        while(keepLooping)
+        {
+            int pick = (int)(Math.random()*(players.length));
+            if(players[pick].character==null)
+            {
+                players[pick].setRole(Character.Tamperer);
+                keepLooping=false;
+            }
+        }
         
         for(int i=0; i<players.length;i++)
         {
