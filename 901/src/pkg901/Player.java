@@ -15,6 +15,7 @@ public class Player {
     Characters.Character character;
     private boolean alive;
     private boolean immune;
+    private boolean displayed;
     
     
     
@@ -61,10 +62,14 @@ public class Player {
     }
     public static void yeeTurn (int s)
     {
-            
+        players[s].displayed = true;
         
     }
-
+    public static void displayReset()
+    {
+        for(int i=0; i<players.length;i++)
+            players[i].displayed=false;
+    }
 
 
 //    public void Advance1()
