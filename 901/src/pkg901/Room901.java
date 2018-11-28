@@ -243,7 +243,7 @@ import javax.sound.sampled.*;
                    
                 }
                 else if (e.VK_ENTER == e.getKeyCode()) {
-                    if(homescreen=true)
+                    if(homescreen==true)
                     {
                         Player.Create(numPlayers);
                     }
