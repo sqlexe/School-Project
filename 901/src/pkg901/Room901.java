@@ -109,7 +109,8 @@ import javax.sound.sampled.*;
                         Player.currentPlayer.advance();
                  System.out.println(kickp6+"f");}
                    if(xpos>450 && xpos<555 && ypos>428 && ypos<457 ){
-                        kickp7++;
+                       System.out.println("5");
+                       kickp7++;
                         amount++;
                         Player.currentPlayer.advance();
   
@@ -173,25 +174,32 @@ import javax.sound.sampled.*;
                       if(ypos>877&&ypos<975)
                         
                        //Player 4
-                        if(xpos>805)
+                          if(numPlayers>=4)
+                          if(xpos>805)
                         if(xpos<475+550)
                        if(ypos>877&&ypos<975)
                            
                               //Player 5
-                        if(xpos>1355)
+                        if(numPlayers>=5)
+                           if(xpos>1355)
                         if(xpos<475+550+550)
                         if(ypos>877&&ypos<975)
                            
                              //Player 6
-                        if(xpos>1605)
+                         if(numPlayers>=6)
+                            if(xpos>1605)
                         if(xpos<1826)
                        if(ypos>505&&ypos<601)
                          
                               //Player 7
-                        if(xpos>1605)
+                         if(numPlayers>=7)
+                           if(xpos>1605)
                         if(xpos<1826)
                      if(ypos>200&&ypos<270)
-                           if(!homescreen)
+                         
+                         
+                         
+                         if(!homescreen)
 
                     Board.click(e.getX(),
                         e.getY());  
