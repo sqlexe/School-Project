@@ -154,7 +154,7 @@ public class Player {
 
        
     }
-<<<<<<< HEAD
+
            
     public void Donzo()
     {
@@ -164,8 +164,6 @@ public class Player {
        {
         return alive;   
        }
-=======
 
->>>>>>> 61e68d7fd90ac75d7fff10ae0aa2abe99c04f967
 }
 
