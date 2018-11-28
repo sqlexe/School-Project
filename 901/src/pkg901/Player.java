@@ -15,7 +15,7 @@ public class Player {
     Characters.Character character;
     private boolean alive;
     private boolean immune;
-
+    
     
     
     public static void Create(int numPlayers)
@@ -98,38 +98,74 @@ public class Player {
 //        
     public void advance()
     {
-       playerNum++;
-       if(Room901.gamescreen)
-       {
-//           System.out.println("This is a test");
-       if(playerNum <players.length)
-       {
-       currentPlayer = players[playerNum]; 
+      
+       boolean keepLooping = true;
+       while (keepLooping)
+       { 
+            playerNum++;
+            if (Room901.gamescreen)
+            {
+            if(players.length == playerNum)
+            {
+                playerNum = 0;
+                Room901.nightime = true;
+            }
+            if(players[playerNum].getAlive())
+            {
+                currentPlayer = players[playerNum];
+                keepLooping = false; 
+            }
+            else
+            {
+                currentPlayer = players[playerNum+1];
+            }
+            }
+       }
+//       if(Room901.gamescreen)
+//       {
+////           System.out.println("This is a test");
+//       if(playerNum <players.length)
+//       {
+//           
+//       currentPlayer = players[playerNum]; 
+////       System.out.println(""+currentPlayer);
+//       }
+//       else
+//       {
+//       playerNum =0;
+//       currentPlayer = players[playerNum];
 //       System.out.println(""+currentPlayer);
-       }
-       else
-       {
-       playerNum =0;
-       currentPlayer = players[playerNum];
-       System.out.println(""+currentPlayer);
-//      Room901.kickp1-=Room901.kickp1;
-//          Room901.kickp2-= Room901.kickp2;
-//          Room901.kickp3-=  Room901.kickp3;
-//          Room901.kickp4-= Room901.kickp4;
-//          Room901.kickp5-= Room901.kickp5;
-//          Room901.kickp6-=  Room901.kickp6;
-//          Room901.kickp7-=Room901.kickp7;
-       
-       
-       Room901.nightime = true;
-         
-       
-       
-       
-       }
-       }
+////      Room901.kickp1-=Room901.kickp1;
+////          Room901.kickp2-= Room901.kickp2;
+////          Room901.kickp3-=  Room901.kickp3;
+////          Room901.kickp4-= Room901.kickp4;
+////          Room901.kickp5-= Room901.kickp5;
+////          Room901.kickp6-=  Room901.kickp6;
+////          Room901.kickp7-=Room901.kickp7;
+//       
+//       
+//       
+//         
+//       
+// 
+//       
+//       }
+//       }     
+
        
     }
+<<<<<<< HEAD
+           
+    public void Donzo()
+    {
+        alive = false;
+    }
+    public boolean getAlive()
+       {
+        return alive;   
+       }
+=======
 
+>>>>>>> 61e68d7fd90ac75d7fff10ae0aa2abe99c04f967
 }
 
