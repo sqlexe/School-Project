@@ -430,7 +430,6 @@ public class Room901 extends JFrame implements Runnable {
                         Window.getWidth2(), Window.getHeight2(), this);
 
                 if (next) {
-                    //continue
                     g.setColor(Color.gray);
                     g.fillRect(Window.getX(1485), Window.getY(800), Window.getX(250), Window.getY(60));
                     g.setColor(Color.white);
@@ -440,9 +439,9 @@ public class Room901 extends JFrame implements Runnable {
 
             }
 
-//            g.setColor(Color.GRAY);
-//            g.fillRect(Window.getX(400), Window.getY(10), Window.getX(200), Window.getY(400));
-//            g.setColor(Color.white);
+            g.setColor(Color.GRAY);
+            g.fillRect(Window.getX(400), Window.getY(10), Window.getX(200), Window.getY(400));
+            g.setColor(Color.white);
 
             g.setFont(new Font("Arial", Font.PLAIN, 30));
 
