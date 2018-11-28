@@ -83,6 +83,7 @@ public class Player {
        playerNum++;
        if(Room901.gamescreen)
        {
+           System.out.println("This is a test");
        if(playerNum <players.length)
        {
        currentPlayer = players[playerNum]; 
@@ -93,16 +94,16 @@ public class Player {
        playerNum =0;
        currentPlayer = players[playerNum];
        System.out.println(""+currentPlayer);
-      Room901.kickp1-=Room901.kickp1;
-          Room901.kickp2-= Room901.kickp2;
-          Room901.kickp3-=  Room901.kickp3;
-          Room901.kickp4-= Room901.kickp4;
-          Room901.kickp5-= Room901.kickp5;
-          Room901.kickp6-=  Room901.kickp6;
-          Room901.kickp7-=Room901.kickp7;
+//      Room901.kickp1-=Room901.kickp1;
+//          Room901.kickp2-= Room901.kickp2;
+//          Room901.kickp3-=  Room901.kickp3;
+//          Room901.kickp4-= Room901.kickp4;
+//          Room901.kickp5-= Room901.kickp5;
+//          Room901.kickp6-=  Room901.kickp6;
+//          Room901.kickp7-=Room901.kickp7;
        
        
-       Room901.nightime = true;
+//       Room901.nightime = true;
          
        
        
