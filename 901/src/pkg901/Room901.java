@@ -73,8 +73,9 @@ import javax.sound.sampled.*;
                     
                     Board.click(e.getX() - Window.getX(0),
                         e.getY() - Window.getY(0));  
+            //Code for voting system and the turn changing        
                     if(gamescreen && vote == true)         {
-                    if(xpos>450 && xpos<555 && ypos>68 && ypos<97 )
+                   if(xpos>450 && xpos<555 && ypos>68 && ypos<97 )
                     {
                        kickp1++;
                        amount++;
@@ -118,7 +119,7 @@ import javax.sound.sampled.*;
                }
                     
                     
-                    
+                 //continue button at nightime   
                     if(nightime)
                     {
                         if(xpos>1490 && xpos<1485+265 && ypos>825 && ypos<920 )
@@ -130,7 +131,7 @@ import javax.sound.sampled.*;
                          if(homescreen){
                              if(xpos>1490&& xpos<1662 && ypos>428 && ypos<520)
                              {
-                               
+                              
                              }
                          }
                     
@@ -155,14 +156,42 @@ import javax.sound.sampled.*;
                     }
                     
 
-                    System.out.println(Player.currentPlayer+"");
-                       
-                       
+                    //Player 1
+                      if(xpos>100)
+                      if(xpos<325)
+                      if(ypos>200&&ypos<270)
+                     
+                      
+                      //player 2 
+                         if(xpos>100)
+                        if(xpos<325)
+                       if(ypos>505&&ypos<601)
                         
+                          //Player 3
+                        if(xpos>260)
+                        if(xpos<475)
+                      if(ypos>877&&ypos<975)
                         
-                        
-                        
-                    if(!homescreen)
+                       //Player 4
+                        if(xpos>805)
+                        if(xpos<475+550)
+                       if(ypos>877&&ypos<975)
+                           
+                              //Player 5
+                        if(xpos>1355)
+                        if(xpos<475+550+550)
+                        if(ypos>877&&ypos<975)
+                           
+                             //Player 6
+                        if(xpos>1605)
+                        if(xpos<1826)
+                       if(ypos>505&&ypos<601)
+                         
+                              //Player 7
+                        if(xpos>1605)
+                        if(xpos<1826)
+                     if(ypos>200&&ypos<270)
+                           if(!homescreen)
 
                     Board.click(e.getX(),
                         e.getY());  
