@@ -44,7 +44,13 @@ import javax.sound.sampled.*;
    int kickp5=0;
    int kickp6=0;
    int kickp7=0;
-   boolean keeplooping=true;
+   boolean checkcards=false;
+   boolean checkcards1=false;
+   boolean  checkcards2=false;
+   boolean  checkcards3=false;   
+   boolean  checkcards4=false;
+   boolean  checkcards5=false;
+   boolean  checkcards6=false;
    boolean showcard=true;
    boolean vote = true;
    int amount;
@@ -127,18 +133,7 @@ import javax.sound.sampled.*;
                             gamescreen=true;
                         }
                     }            
-                         if(homescreen){
-                             if(xpos>1490&& xpos<1662 && ypos>428 && ypos<520)
-                             {
-                              
-                             }
-                         }
-                    
-                    
-                    
-                    
-                    
-                    if(homescreen)    
+                      if(homescreen)    
                     {
      //+ code  
                         if(xpos>xLeft1 && xpos <xLeft2 && ypos>365 && ypos<470)
@@ -159,114 +154,43 @@ import javax.sound.sampled.*;
                       if(xpos>100)
                       if(xpos<325)
                       if(ypos>200&&ypos<270)
-                          if( Player.currentPlayer==Player.players[0]||Player.currentPlayer.getRole()==Player.currentPlayer.character.Alex )
-                                 if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Alex ){
-                                           Characters.DrawAlex(150, 150, 0, 1.0, 1.0);}
-                                      else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Student ){
-                                Characters.DrawStudentI(150, 150, 0, 1.0, 1.0); }
-                                          else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Tamperer ){
-                                   Characters.DrawTampererI(150, 150, 0, 1.0, 1.0);
-                                          }
-                                               else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Yee ){
-                                   Characters.DrawYee(150, 150, 0, 1.0, 1.0);
-                                               }
+                          checkcards=true;
                                 //player 2 
                          if(xpos>100)
                         if(xpos<325)
                        if(ypos>505&&ypos<601)
-                          if(Player.currentPlayer==Player.players[1]||Player.currentPlayer.getRole()==Player.currentPlayer.character.Tamperer)
-                                  if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Alex ){
-                                           Characters.DrawAlex(150, 150, 0, 1.0, 1.0);}
-                                      else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Student ){
-                                Characters.DrawStudentI(150, 150, 0, 1.0, 1.0); }
-                                          else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Tamperer ){
-                                   Characters.DrawTampererI(150, 150, 0, 1.0, 1.0);
-                                          }
-                                               else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Yee ){
-                                   Characters.DrawYee(150, 150, 0, 1.0, 1.0);
-                                               }
+                             checkcards1=true;
                               //Player 3
                         if(xpos>260)
                         if(xpos<475)
                           if(ypos>877&&ypos<975)
-                          if(Player.currentPlayer==Player.players[2]||Player.currentPlayer.getRole()==Player.currentPlayer.character.Tamperer)
-                                if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Alex ){
-                                           Characters.DrawAlex(150, 150, 0, 1.0, 1.0);}
-                                      else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Student ){
-                                Characters.DrawStudentI(150, 150, 0, 1.0, 1.0); }
-                                          else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Tamperer ){
-                                   Characters.DrawTampererI(150, 150, 0, 1.0, 1.0);
-                                          }
-                                               else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Yee ){
-                                   Characters.DrawYee(150, 150, 0, 1.0, 1.0);
-                                               }
+                           checkcards2=true;
                               //Player 4
                           if(numPlayers>=4)
                             if(xpos>805)
                               if(xpos<475+550)
                                 if(ypos>877&&ypos<975)
-                                  if(Player.currentPlayer==Player.players[3]||Player.currentPlayer.getRole()==Player.currentPlayer.character.Tamperer)
-                                     if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Alex ){
-                                           Characters.DrawAlex(150, 150, 0, 1.0, 1.0);}
-                                      else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Student ){
-                                Characters.DrawStudentI(150, 150, 0, 1.0, 1.0); }
-                                          else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Tamperer ){
-                                   Characters.DrawTampererI(150, 150, 0, 1.0, 1.0);
-                                          }
-                                               else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Yee ){
-                                   Characters.DrawYee(150, 150, 0, 1.0, 1.0);
-                                               }
-                                      
-                        //Player 5
+                                     checkcards3=true;
+                                    //Player 5
                         if(numPlayers>=5)
                            if(xpos>1355)
                               if(xpos<475+550+550)
                                 if(ypos>877&&ypos<975)
-                                     if(Player.currentPlayer==Player.players[4]||Player.currentPlayer.getRole()==Player.currentPlayer.character.Tamperer)
-                                               if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Alex ){
-                                           Characters.DrawAlex(150, 150, 0, 1.0, 1.0);}
-                                      else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Student ){
-                                Characters.DrawStudentI(150, 150, 0, 1.0, 1.0); }
-                                          else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Tamperer ){
-                                   Characters.DrawTampererI(150, 150, 0, 1.0, 1.0);
-                                          }
-                                               else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Yee ){
-                                   Characters.DrawYee(150, 150, 0, 1.0, 1.0);
-                                               }
-//Player 6
+                                   checkcards4=true;
+                                    //Player 6
                           if(numPlayers>=6)
                            if(xpos>1605)
                             if(xpos<1826)
                              if(ypos>505&&ypos<601)
-                              if(Player.currentPlayer==Player.players[5]||Player.currentPlayer.getRole()==Player.currentPlayer.character.Tamperer)
-                                 if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Alex ){
-                                           Characters.DrawAlex(150, 150, 0, 1.0, 1.0);}
-                                      else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Student ){
-                                Characters.DrawStudentI(150, 150, 0, 1.0, 1.0); }
-                                          else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Tamperer ){
-                                   Characters.DrawTampererI(150, 150, 0, 1.0, 1.0);
-                                          }
-                                               else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Yee ){
-                                   Characters.DrawYee(150, 150, 0, 1.0, 1.0);
-                                               }
+                              checkcards5=true;
                                
 //Player 7
                          if(numPlayers>=7)
                            if(xpos>1605)
                         if(xpos<1826)
                      if(ypos>200&&ypos<270)
-                           if(Player.currentPlayer==Player.players[6]||Player.currentPlayer.getRole()==Player.currentPlayer.character.Tamperer)
-                                 if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Alex ){
-                                           Characters.DrawAlex(150, 150, 0, 1.0, 1.0);}
-                                      else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Student ){
-                                Characters.DrawStudentI(150, 150, 0, 1.0, 1.0); }
-                                          else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Tamperer ){
-                                   Characters.DrawTampererI(150, 150, 0, 1.0, 1.0);
-                                          }
-                                               else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Yee ){
-                                   Characters.DrawYee(150, 150, 0, 1.0, 1.0);
-                                               }
-                         
+                           checkcards6=true;
+                            
                          if(!homescreen)
 
                     Board.click(e.getX(),
@@ -627,10 +551,100 @@ import javax.sound.sampled.*;
                            }
                              
               }
-               
-              
-                    
-                 Characters.Draw(this,gamescreen,homescreen,nightime);
+                                if(checkcards){
+                                    if( Player.currentPlayer==Player.players[0]||Player.currentPlayer.getRole()==Player.currentPlayer.character.Alex )
+                                 if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Alex ){
+                                           Characters.DrawAlex(150, 150, 0, 1.0, 1.0);Player.currentPlayer.advance();}
+                                      else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Student ){
+                                Characters.DrawStudentI(150, 150, 0, 1.0, 1.0); Player.currentPlayer.advance();}
+                                          else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Tamperer ){
+                                   Characters.DrawTampererI(150, 150, 0, 1.0, 1.0);Player.currentPlayer.advance();
+                                          }
+                                               else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Yee ){
+                                   Characters.DrawYee(150, 150, 0, 1.0, 1.0);Player.currentPlayer.advance();
+                                               }
+                                }
+               if(checkcards1){
+                     if(Player.currentPlayer==Player.players[1]||Player.currentPlayer.getRole()==Player.currentPlayer.character.Tamperer)
+                                  if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Alex ){
+                                           Characters.DrawAlex(150, 150, 0, 1.0, 1.0);Player.currentPlayer.advance();}
+                                      else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Student ){
+                                Characters.DrawStudentI(150, 150, 0, 1.0, 1.0); Player.currentPlayer.advance();}
+                                          else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Tamperer ){
+                                   Characters.DrawTampererI(150, 150, 0, 1.0, 1.0);Player.currentPlayer.advance();
+                                          }
+                                               else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Yee ){
+                                   Characters.DrawYee(150, 150, 0, 1.0, 1.0);Player.currentPlayer.advance();
+                                               }
+                 }
+                   if(checkcards2){
+                     if(Player.currentPlayer==Player.players[2]||Player.currentPlayer.getRole()==Player.currentPlayer.character.Tamperer)
+                                  if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Alex ){
+                                           Characters.DrawAlex(150, 150, 0, 1.0, 1.0);Player.currentPlayer.advance();}
+                                      else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Student ){
+                                Characters.DrawStudentI(150, 150, 0, 1.0, 1.0); Player.currentPlayer.advance();}
+                                          else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Tamperer ){
+                                   Characters.DrawTampererI(150, 150, 0, 1.0, 1.0);Player.currentPlayer.advance();
+                                          }
+                                               else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Yee ){
+                                   Characters.DrawYee(150, 150, 0, 1.0, 1.0);Player.currentPlayer.advance();
+                                               }
+                 }
+                   if(checkcards3){
+                     if(Player.currentPlayer==Player.players[3]||Player.currentPlayer.getRole()==Player.currentPlayer.character.Tamperer)
+                                  if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Alex ){
+                                           Characters.DrawAlex(150, 150, 0, 1.0, 1.0);  Player.currentPlayer.advance();}
+                                      else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Student ){
+                                Characters.DrawStudentI(150, 150, 0, 1.0, 1.0);  Player.currentPlayer.advance(); }
+                                          else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Tamperer ){
+                                   Characters.DrawTampererI(150, 150, 0, 1.0, 1.0);  Player.currentPlayer.advance();
+                                          }
+                                               else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Yee ){
+                                   Characters.DrawYee(150, 150, 0, 1.0, 1.0);  Player.currentPlayer.advance();
+                                               }
+                 }
+                   if(checkcards4){
+                     if(Player.currentPlayer==Player.players[4]||Player.currentPlayer.getRole()==Player.currentPlayer.character.Tamperer)
+                                  if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Alex ){
+                                           Characters.DrawAlex(150, 150, 0, 1.0, 1.0);  Player.currentPlayer.advance();}
+                                      else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Student ){
+                                Characters.DrawStudentI(150, 150, 0, 1.0, 1.0);   Player.currentPlayer.advance();}
+                                          else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Tamperer ){
+                                   Characters.DrawTampererI(150, 150, 0, 1.0, 1.0);  Player.currentPlayer.advance();
+                                          }
+                                               else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Yee ){
+                                   Characters.DrawYee(150, 150, 0, 1.0, 1.0);  Player.currentPlayer.advance();
+                                               }
+                 }
+                   if(checkcards5){
+                     if(Player.currentPlayer==Player.players[5]||Player.currentPlayer.getRole()==Player.currentPlayer.character.Tamperer)
+                                  if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Alex ){
+                                           Characters.DrawAlex(150, 150, 0, 1.0, 1.0);  Player.currentPlayer.advance();}
+                                      else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Student ){
+                                Characters.DrawStudentI(150, 150, 0, 1.0, 1.0);  Player.currentPlayer.advance(); }
+                                          else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Tamperer ){
+                                   Characters.DrawTampererI(150, 150, 0, 1.0, 1.0);  Player.currentPlayer.advance();
+                                          }
+                                               else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Yee ){
+                                   Characters.DrawYee(150, 150, 0, 1.0, 1.0);  Player.currentPlayer.advance();
+                                               }
+                 }
+                      if(checkcards6){
+                     if(Player.currentPlayer==Player.players[6]||Player.currentPlayer.getRole()==Player.currentPlayer.character.Tamperer)
+                                  if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Alex ){
+                                           Characters.DrawAlex(150, 150, 0, 1.0, 1.0);
+                                             Player.currentPlayer.advance();}
+                                  else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Student ){
+                                Characters.DrawStudentI(150, 150, 0, 1.0, 1.0);  Player.currentPlayer.advance(); }
+                                          else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Tamperer ){
+                                   Characters.DrawTampererI(150, 150, 0, 1.0, 1.0);  Player.currentPlayer.advance();
+                                          }
+                                               else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Yee ){
+                                   Characters.DrawYee(150, 150, 0, 1.0, 1.0);  Player.currentPlayer.advance();
+                                               }
+                 }
+                   
+                   Characters.Draw(this,gamescreen,homescreen,nightime);
                   
                  
                  
@@ -706,7 +720,13 @@ import javax.sound.sampled.*;
             if(bgSound != null)
                 bgSound.getPlay(true);
             bgSound = new sound ("bgsound.wav");
-            keeplooping=true;
+            checkcards=false;
+              checkcards1=false;
+           checkcards2=false;
+            checkcards3=false;   
+            checkcards4=false;
+             checkcards5=false;
+              checkcards6=false;
              kickp1=0;
              kickp2=0;
              kickp3=0;
