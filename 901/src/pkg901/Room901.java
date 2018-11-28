@@ -114,8 +114,8 @@ import javax.sound.sampled.*;
                         amount++;
                         Player.currentPlayer.advance();
   }
-                    if (amount == numPlayers)
-                        vote = false;
+//                    if (amount == numPlayers)
+//                        vote = false;
                }
                     
                     
