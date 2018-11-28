@@ -113,8 +113,7 @@ import javax.sound.sampled.*;
                        kickp7++;
                         amount++;
                         Player.currentPlayer.advance();
-  
-                 System.out.println(kickp7+"g");}
+  }
                     if (amount == numPlayers)
                         vote = false;
                }
