@@ -160,45 +160,104 @@ import javax.sound.sampled.*;
                       if(xpos>100)
                       if(xpos<325)
                       if(ypos>200&&ypos<270)
-                          if(Player.currentPlayer==Player.players[0])
-                               
-                      //player 2 
+                          if( Player.currentPlayer==Player.players[0]||Player.currentPlayer.getRole()==Player.currentPlayer.character.Alex )
+                                 if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Alex ){
+                                 reset();}
+                                      else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Student ){
+                                   reset(); }
+                                          else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Tamperer ){
+                                    reset();
+                                          }
+                                               else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Yee ){
+                                   reset();
+                                               }
+                                //player 2 
                          if(xpos>100)
                         if(xpos<325)
                        if(ypos>505&&ypos<601)
-                          if(Player.currentPlayer==Player.players[1])
-                          //Player 3
+                          if(Player.currentPlayer==Player.players[1]||Player.currentPlayer.getRole()==Player.currentPlayer.character.Tamperer)
+                                 if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Alex ){
+                                 reset();}
+                                      else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Student ){
+                                   reset(); }
+                                          else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Tamperer ){
+                                    reset();
+                                          }
+                                               else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Yee ){
+                                   reset();
+                                               }
+                              //Player 3
                         if(xpos>260)
                         if(xpos<475)
-                      if(ypos>877&&ypos<975)
-                          if(Player.currentPlayer==Player.players[2])
-                       //Player 4
+                          if(ypos>877&&ypos<975)
+                          if(Player.currentPlayer==Player.players[2]||Player.currentPlayer.getRole()==Player.currentPlayer.character.Tamperer)
+                                 if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Alex ){
+                                 reset();}
+                                      else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Student ){
+                                   reset(); }
+                                          else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Tamperer ){
+                                    reset();
+                                          }
+                                               else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Yee ){
+                                   reset();
+                                               }
+                              //Player 4
                           if(numPlayers>=4)
-                          if(xpos>805)
-                        if(xpos<475+550)
-                       if(ypos>877&&ypos<975)
-                             if(Player.currentPlayer==Player.players[3])
-                             
-                           
+                            if(xpos>805)
+                              if(xpos<475+550)
+                                if(ypos>877&&ypos<975)
+                                  if(Player.currentPlayer==Player.players[3]||Player.currentPlayer.getRole()==Player.currentPlayer.character.Tamperer)
+                                         if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Alex ){
+                                 reset();}
+                                      else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Student ){
+                                   reset(); }
+                                          else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Tamperer ){
+                                    reset();
+                                          }
+                                               else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Yee ){
+                                   reset();
+                                               }
+                                      
                         //Player 5
                         if(numPlayers>=5)
                            if(xpos>1355)
-                        if(xpos<475+550+550)
-                        if(ypos>877&&ypos<975)
-                             if(Player.currentPlayer==Player.players[4])
-                             //Player 6
-                         if(numPlayers>=6)
-                            if(xpos>1605)
-                        if(xpos<1826)
-                       if(ypos>505&&ypos<601)
-                           if(Player.currentPlayer==Player.players[5])
-                              //Player 7
+                              if(xpos<475+550+550)
+                                if(ypos>877&&ypos<975)
+                                     if(Player.currentPlayer==Player.players[4]||Player.currentPlayer.getRole()==Player.currentPlayer.character.Tamperer)
+                                              if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Alex ){
+                                 reset();}
+                                      else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Student ){
+                                   reset(); }
+                                          else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Tamperer ){
+                                    reset();
+                                          }
+                                               else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Yee ){
+                                   reset();
+                                               }
+//Player 6
+                          if(numPlayers>=6)
+                           if(xpos>1605)
+                            if(xpos<1826)
+                             if(ypos>505&&ypos<601)
+                              if(Player.currentPlayer==Player.players[5]||Player.currentPlayer.getRole()==Player.currentPlayer.character.Tamperer)
+                                if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Alex ){
+                                 reset();}
+                                      else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Student ){
+                                   reset(); }
+                                          else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Tamperer ){
+                                    reset();
+                                          }
+                                               else if(Player.currentPlayer.getRole()==Player.currentPlayer.character.Yee ){
+                                   reset();
+                                               }
+                               
+//Player 7
                          if(numPlayers>=7)
                            if(xpos>1605)
                         if(xpos<1826)
                      if(ypos>200&&ypos<270)
-                           if(Player.currentPlayer==Player.players[6])
-                         
+                           if(Player.currentPlayer==Player.players[6]||Player.currentPlayer.getRole()==Player.currentPlayer.character.Tamperer)
+                                
                          
                          if(!homescreen)
 
